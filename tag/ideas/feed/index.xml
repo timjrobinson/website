@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ideas &#8211; TimJRobinson</title>
+	<atom:link href="/tag/ideas/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Mon, 27 Feb 2017 06:06:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>One project every month</title>
+		<link>/one-project-every-month/</link>
+					<comments>/one-project-every-month/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Mon, 27 Feb 2017 03:51:05 +0000</pubDate>
+				<category><![CDATA[projects]]></category>
+		<category><![CDATA[cello]]></category>
+		<category><![CDATA[educational honesty]]></category>
+		<category><![CDATA[farmbot]]></category>
+		<category><![CDATA[ideas]]></category>
+		<category><![CDATA[krav maga]]></category>
+		<category><![CDATA[learning skills]]></category>
+		<category><![CDATA[mass reforestation]]></category>
+		<category><![CDATA[paper towers]]></category>
+		<category><![CDATA[reverse giving charity]]></category>
+		<category><![CDATA[spanish]]></category>
+		<category><![CDATA[study time]]></category>
+		<category><![CDATA[web basic]]></category>
+		<guid isPermaLink="false">/?p=156</guid>
+
+					<description><![CDATA[I constantly have ideas of software I want to build, skills I want to learn, sites I want to create. I&#8217;ve been writing these ideas into Evernote since 2009. The problem is I often start working on an idea but give up a week or two later when something else comes along. Life is too <a class="read-more" href="/one-project-every-month/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I constantly have ideas of software I want to build, skills I want to learn, sites I want to create. I&#8217;ve been writing these ideas into Evernote since 2009. The problem is I often start working on an idea but give up a week or two later when something else comes along. Life is too short for that, so now I&#8217;m going to get focused.</p>
+<p>A few months ago I started organizing all these ideas on a Trello board to figure out how I want to spend the next 5 years of my life.</p>
+<p>I had 125 ideas in total, which I&#8217;ve whittled down to my 10 favourite. This year I&#8217;ll be spending 1-2 months building a prototype or learning the basics of each. Then at the end of the year I should know what I want to spend a few years focusing 100% of my energy on.</p>
+<p>My top 10 ideas for 2017 are:</p>
+<h4>Paper Towers</h4>
+<p>This is the open source version of <a href="http://www.towerstorm.com/">Tower Storm</a>. My original vision for Tower Storm is a Tower Defense game with as much depth as DOTA. Unfortunately this scope is far too huge for an indie company. However it has one major strength: It&#8217;s a web game that doesn&#8217;t require compiling and is configured through JSON scripts. So if I open source it others can build their own TD games using this engine / framework. They can make maps, minions, towers, game modes and more and share them around and help each other, and it can turn into something much bigger and more fun than I could produce by myself. I&#8217;d love to see what the community creates once this is released.</p>
+<h4>Learn Spanish</h4>
+<p>I&#8217;m currently at a level where I can hold a basic conversation. I want to get to a level where I can start thinking in Spanish and be able to hold ongoing conversation consisting of more than introductions and small talk.</p>
+<h4>Krav Maga</h4>
+<p>This is mostly about self defense, and hopefully it&#8217;ll be a lot of fun too. My first lesson is this Monday.</p>
+<h4>Study Time</h4>
+<p>Think Popcorn Time for MOOC&#8217;s. Software where you can learn anything you desire and it&#8217;s completely peer to peer and streamed via torrents. This way knowledge and lessons can live on forever even when MOOC sites <a href="https://www.class-central.com/report/coursera-old-platform-shutdown-download-courses/">take down their courses</a> or shut down.</p>
+<h4>Learn the Cello</h4>
+<p>I&#8217;ve learnt the Clarinet and Tenor Sax, but have yet to figure out a stringed instrument. I love the sound of a Cello and my goal is to play the <a href="https://www.youtube.com/watch?v=9mcdMrZMKhc">Rains Of Castamere</a>.</p>
+<h4>Educational Honesty</h4>
+<p>I&#8217;ve been reading <a href="https://www.amazon.com/dp/B0023ZLLH6/">Amusing ourselves to death</a>, it was written in 1985 and is absolutely on point with how woefully unintelligent public discourse has become on topics that we should be taking seriously. I want to build a site focused on educating, not influencing. A place where intelligent debate is praised, and all opinions are considered. Twitter, Meme&#8217;s and the comment sections on most websites are what I consider &#8220;Information junk food&#8221;. We had a crisis with actual Junk food in the 70&#8217;s, 80&#8217;s and 90&#8217;s, but if you look around recently you&#8217;ll notice these trends are reversing, people are now eating healthier and taking better care of their bodies. We must now do the same with our brains. I believe with good information we can do just that and live healthier mental lives, just like how we fought back against real junk food.</p>
+<h4>Reverse giving charity</h4>
+<p>It&#8217;s well known in psychology that if you get given a gift you feel more obliged to give back in return, this is why food samples and waiters giving mints at the end of a meal work so well. I&#8217;d like to try a charity built around this idea. Imagine giving people free coffee from countries in Africa or South America, and included with that is information about the country it came from, the issues it faces, and how you can help fix those issues, via donations or spreading the word. I think you&#8217;d have much more success garnering support in this way than the usual begging on the street, and so want to try it out. I may join an existing charity or start my own (depending on difficulty).</p>
+<h4>Build a <a href="https://farmbot.io/">Farmbot</a></h4>
+<p>The <a href="https://farmbot.io/">Farmbot</a> is one of the coolest pieces of technology I&#8217;ve ever seen in my life, and it&#8217;s completely open source! I&#8217;d like to try building one of these from scratch and helping refine their wiki with information on where to source parts and fixing bugs and issues with the documentation or software. Imagine if we could get Farmbot cheap enough and reliable enough that anyone can homestead and get the basic food they need to live completely free.</p>
+<h4>Web Basic</h4>
+<p>I recently read <a href="http://www.nicolasbize.com/blog/30-years-later-qbasic-is-still-the-best/">an article</a> on how q-basic is still the best beginners programming language, and I have to agree. Q-Basic was the language I started with when I was 11 and it makes far more sense to non-coders than most other languages. But installing q-basic, compiling, and sharing programs is not so beginner friendly. So why not bring Q-Basic to the web. Imagine if you could create a new <a href="http://c9.io/">Cloud9</a> project and just start coding in Q-Basic, hit run, and the program is compiled to Javascript and rendered using Canvas. Kids could start learning and coding in seconds and send their projects to friends minutes later (just send them the preview link!). This social feedback loop could bring so much joy to kids and lowering that barrier to entry could entice many new kids to learn coding that had never considered it before.</p>
+<h4>Mass Reforestation</h4>
+<p>We&#8217;ve had mass deforestation for 100 years now and the effects have been devastating. Now we need to reverse this process, but how? <a href="http://www.biocarbonengineering.com/story">With drones of course!</a> Imagine if we could create a drone that surveys a piece of land, uses AI to figures out the perfect combination and density of trees and fauna to re-invigorate that land, and then goes ahead and does it all by itself. The technology is available now, we just need someone to compile the knowledge build the software. The mass reforestation site will share ideas and technology on the latest efforts to reforest the world so that everyone can take part. Eventually with enough people and drones out there we&#8217;ll be able to accomplish mass reforestation.</p>
+<h3>What about the other 115 ideas?</h3>
+<p>I still really want to see them happen, I&#8217;m just not particularly excited about doing them myself. So I&#8217;m going to share them here on this blog, please steal them as I post them and help make the world a better place <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fone-project-every-month%2F&amp;linkname=One%20project%20every%20month" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fone-project-every-month%2F&amp;linkname=One%20project%20every%20month" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fone-project-every-month%2F&amp;linkname=One%20project%20every%20month" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fone-project-every-month%2F&amp;linkname=One%20project%20every%20month" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fone-project-every-month%2F&amp;linkname=One%20project%20every%20month" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fone-project-every-month%2F&#038;title=One%20project%20every%20month" data-a2a-url="/one-project-every-month/" data-a2a-title="One project every month"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/one-project-every-month/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>A Distributed, Open Source, Peer to Peer, Encrypted Data Store</title>
+		<link>/a-distributed-open-source-peer-to-peer-encrypted-data-store/</link>
+					<comments>/a-distributed-open-source-peer-to-peer-encrypted-data-store/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Mon, 18 Jun 2012 06:55:44 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[ideas]]></category>
+		<category><![CDATA[new technology]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/a-distributed-open-source-peer-to-peer-encrypted-data-store/</guid>
+
+					<description><![CDATA[The thing I love and hate most about Facebook is that it has ALL my data. It&#8217;s fantastic that third party programs such as AirTime are able to link into Facebook and get all my data to personalize their site experience to me, but it&#8217;s bad that Facebook is the one in control of all <a class="read-more" href="/a-distributed-open-source-peer-to-peer-encrypted-data-store/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>The thing I love and hate most about Facebook is that it has ALL my data. It&#8217;s fantastic that third party programs such as AirTime are able to link into Facebook and get all my data to personalize their site experience to me, but it&#8217;s bad that Facebook is the one in control of all this data, and one company having a monopoly over everyone&#8217;s information is a really bad idea.</p>
+<p>What I&#8217;d love to see created is something similar to Bitcoin but for data. An open source network of computers that allow you to store any arbitrary data in the network encrypted with your own private key, then retrieve that data at any time anywhere. I&#8217;d imagine it&#8217;d be a key-value library system similar to Redis. Apps could then easily integrate with this network to either store or retrieve any data when you give them the key for it. You could possibly have different keys for different types of data or sections of data.</p>
+<p>Basically it would allow everything that Facebook does currently but with a data store that no one controls and no one can access unless you give them explicit permission to.</p>
+<p>What could be possible using this data store:</p>
+<ul>
+<li>A radio for your car that via 3G connects to the data store, grabs all your favourite bands / songs / music and streams them + finds and streams related music automatically (like pandora). You could then press if you like or dislike songs and it would save that back to the data store. Then at home on your PC you could load up your favourite music buying site, connect it to the data store, see all the songs you&#8217;ve recently enjoyed in your car and purchase them instantly. It would completely disrupt the current radio and music industry and be amazing for the indie music scene.</p>
+</li>
+<li>
+<p>Your fridge auto monitors the food you put into it, and saves out what you&#8217;ve consumed to the database, then a shopping list app automatically generates a shopping list based on your personal food preferences and what&#8217;s currently missing in your fridge. Taking it one step further it a local grocer (or even farmer!) could tap into the database and auto ship you your weekly food based on what you&#8217;ve consumed.</p>
+</li>
+<li>
+<p>Dating sites could grab data for your likes / dislikes, partner preferences and so on to automatically find amazing matches for you (and most people are currently wary of linking dating sites to Facebook).</p>
+</li>
+</ul>
+<p>It would help create an amazingly interconnected world without the need to interface with Facebook or any other companies. Also there are already scripts out there for exporting Facebook data, so it should be easy enough to port your data into this new data store in seconds.</p>
+<p>Of course a lot of this is currently possible via Facebook, but most companies are afraid of Facebook and building technology that integrates deeply with it for fear of it not being around in the future or general fear of giving up so much data to another company. With a data store such as this companies are free to integrate as much as they like without worry of anyone taking it away from them, blocking them out or it shutting down.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&#038;title=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" data-a2a-url="/a-distributed-open-source-peer-to-peer-encrypted-data-store/" data-a2a-title="A Distributed, Open Source, Peer to Peer, Encrypted Data Store"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/a-distributed-open-source-peer-to-peer-encrypted-data-store/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

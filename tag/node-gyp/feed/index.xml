@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>node-gyp &#8211; TimJRobinson</title>
+	<atom:link href="/tag/node-gyp/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Wed, 24 Jun 2020 02:58:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Fixing node-gyp: Permission Denied when running as root</title>
+		<link>/fixing-node-gyp-permission-denied-when-running-as-root/</link>
+					<comments>/fixing-node-gyp-permission-denied-when-running-as-root/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Wed, 24 Jun 2020 02:58:11 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[node-gyp]]></category>
+		<category><![CDATA[nodejs]]></category>
+		<category><![CDATA[root user]]></category>
+		<category><![CDATA[ubuntu]]></category>
+		<guid isPermaLink="false">/?p=281</guid>
+
+					<description><![CDATA[This node-gyp permission denied issue happens when, as the root user, you globally install node modules that require compilation with node-gyp. As root is the default user on Digital Ocean this seems to affect many people and should probably be fixed at the root cause. Luckily there is a pretty simple workaround for this: The <a class="read-more" href="/fixing-node-gyp-permission-denied-when-running-as-root/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>This node-gyp permission denied issue happens when, as the root user, you globally install node modules that require compilation with node-gyp. As root is the default user on Digital Ocean this seems to affect many people and should probably be fixed at the root cause. </p>
+
+
+
+<p>Luckily there is a pretty simple workaround for this:</p>
+
+
+
+<pre class="wp-block-code"><code>npm config set user 0</code></pre>
+
+
+
+<p>The other solution is to create a regular user and install everything as them. This is safer as installing modules as root means they could do anything to your system. I&#8217;d recommend installing all node modules as a normal user without root access if you&#8217;re on a machine with anything important on it. </p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Ffixing-node-gyp-permission-denied-when-running-as-root%2F&amp;linkname=Fixing%20node-gyp%3A%20Permission%20Denied%20when%20running%20as%20root" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Ffixing-node-gyp-permission-denied-when-running-as-root%2F&amp;linkname=Fixing%20node-gyp%3A%20Permission%20Denied%20when%20running%20as%20root" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Ffixing-node-gyp-permission-denied-when-running-as-root%2F&amp;linkname=Fixing%20node-gyp%3A%20Permission%20Denied%20when%20running%20as%20root" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Ffixing-node-gyp-permission-denied-when-running-as-root%2F&amp;linkname=Fixing%20node-gyp%3A%20Permission%20Denied%20when%20running%20as%20root" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Ffixing-node-gyp-permission-denied-when-running-as-root%2F&amp;linkname=Fixing%20node-gyp%3A%20Permission%20Denied%20when%20running%20as%20root" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Ffixing-node-gyp-permission-denied-when-running-as-root%2F&#038;title=Fixing%20node-gyp%3A%20Permission%20Denied%20when%20running%20as%20root" data-a2a-url="/fixing-node-gyp-permission-denied-when-running-as-root/" data-a2a-title="Fixing node-gyp: Permission Denied when running as root"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/fixing-node-gyp-permission-denied-when-running-as-root/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>filecoin &#8211; TimJRobinson</title>
+	<atom:link href="/tag/filecoin/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Fri, 20 Mar 2020 03:00:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>New Site &#8211; A Decentralized World</title>
+		<link>/new-site-a-decentralized-world/</link>
+					<comments>/new-site-a-decentralized-world/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Fri, 20 Mar 2020 03:00:41 +0000</pubDate>
+				<category><![CDATA[decentralization]]></category>
+		<category><![CDATA[a decentralized world]]></category>
+		<category><![CDATA[filecoin]]></category>
+		<category><![CDATA[golem]]></category>
+		<category><![CDATA[jack dorsey]]></category>
+		<category><![CDATA[scuttlebutt]]></category>
+		<category><![CDATA[sia]]></category>
+		<category><![CDATA[twitter]]></category>
+		<guid isPermaLink="false">/?p=257</guid>
+
+					<description><![CDATA[I&#8217;ve started a new site about something I&#8217;ve been passionate about for many years &#8211; decentralization. It&#8217;s called A Decentralized World. I&#8217;ve been obsessed with the technologies that have been invented in the last decade to make this possible; technologies such as Scuttlebutt for decentralized social media, Sia and Filecoin for decentralized file storage, Ethereum <a class="read-more" href="/new-site-a-decentralized-world/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p> I&#8217;ve started a new site about something I&#8217;ve been passionate about for many years &#8211; decentralization. It&#8217;s called<a href="https://adecentralizedworld.com/"> A Decentralized World</a>. I&#8217;ve been obsessed with the technologies that have been invented in the last decade to make this possible; technologies such as <a href="https://scuttlebutt.nz/">Scuttlebutt</a> for decentralized social media, <a href="https://sia.tech/">Sia</a> and <a href="https://filecoin.io/">Filecoin </a>for decentralized file storage, <a href="https://ethereum.org/">Ethereum</a> and <a href="https://golem.network/">Golem</a> for decentralized compute. I want to push these technologies into the mainstream because I think they could make all our online lives so much more vibrant and fun, and not just for now, but for the next 100 years. </p>
+
+
+
+<p>I fear that the internet, once a place filled with freedom and innovation, is being taken over by corporations. They did this by providing a &#8220;free&#8221; service, which we flocked to. Then, as their investors wanted a return on their investment, they slowly squeezed their users, making their platforms more and more profit-seeking. This is fine if you&#8217;re happy to pay for the product, but it breaks down when you&#8217;re a free user, because you become more exploited over time. </p>
+
+
+
+<p>This isn&#8217;t a problem that can be fixed by a better, kinder corporation, because the incentives are broken from the beginning. Eventually a company has to start making money to keep their servers running, which means they have to change the product to suit whoever is funding their company. If they don&#8217;t start to make money they die. If not, hostile investors replace the board with a more capitalism-friendly set of executives, and milk the userbase for profit. This profit motivation leads them to focus on addicting users, pushing &#8220;sponsored content&#8221;, and creating algorithms that rank your social feed not based on your needs, but the needs of the company. </p>
+
+
+
+<p>So if all corporations are trapped in this profit cycle, and eventually every social media corporation becomes corrupted by capitalism over time, what&#8217;s the solution? The solution is that we build open source peer-to-peer networks that do the same thing that corporations used to do, but with open protocols and open clients. Imagine downloading a social media app that automatically connects to your friends&#8217; apps. You could then do everything you can currently do on Facebook, but directly with your friends sans central servers or corporations. Now imagine you and your friends don&#8217;t have to use the same app, just apps that run on the same protocol. Anyone can create their own app, and, as long as they use the same protocol, they can run it on that peer-to-peer network. That is the promise of Scuttlebutt and a decentralized web in general. </p>
+
+
+
+<p>Interestingly Jack Dorsey, the CEO of Twitter <a href="https://twitter.com/jack/status/1204766078468911106">is also looking to fund similar applications</a> that can deliver on this promise of an open social protocol that open source apps can be built against. </p>
+
+
+
+<p>I want to explore these technologies and show what they are, how they work, and, if you&#8217;re a developer, how you can help contribute by either building apps on top of them or making them better. Then we can all live in a happy online world instead of one constantly being squeezed for profits. If you&#8217;re interested in joining me on this journey, check out <a href="https://adecentralizedworld.com/">A Decentralized World</a> and let me know what you think. </p>
+
+
+
+<p></p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fnew-site-a-decentralized-world%2F&amp;linkname=New%20Site%20%E2%80%93%20A%20Decentralized%20World" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fnew-site-a-decentralized-world%2F&amp;linkname=New%20Site%20%E2%80%93%20A%20Decentralized%20World" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fnew-site-a-decentralized-world%2F&amp;linkname=New%20Site%20%E2%80%93%20A%20Decentralized%20World" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fnew-site-a-decentralized-world%2F&amp;linkname=New%20Site%20%E2%80%93%20A%20Decentralized%20World" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fnew-site-a-decentralized-world%2F&amp;linkname=New%20Site%20%E2%80%93%20A%20Decentralized%20World" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fnew-site-a-decentralized-world%2F&#038;title=New%20Site%20%E2%80%93%20A%20Decentralized%20World" data-a2a-url="/new-site-a-decentralized-world/" data-a2a-title="New Site – A Decentralized World"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/new-site-a-decentralized-world/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>php &#8211; TimJRobinson</title>
+	<atom:link href="/tag/php/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Wed, 11 Jan 2012 12:13:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>MySQL using SELECT IN (x, y, z) vs one at a time</title>
+		<link>/mysql-using-select-in-x-y-z-vs-one-at-a-time/</link>
+					<comments>/mysql-using-select-in-x-y-z-vs-one-at-a-time/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Wed, 11 Jan 2012 12:13:57 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[mysql]]></category>
+		<category><![CDATA[optimization]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[speed coding]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/mysql-using-select-in-x-y-z-vs-one-at-a-time/</guid>
+
+					<description><![CDATA[Finally deployed the Zentester heatmapping re-write today and wanted to share a 3 things I&#8217;ve learnt on the way on optimization. Do &#8220;WHERE IN ()&#8221; instead of &#8220;WHERE =&#8221; Wherever possible &#8211; The biggest thing I discovered was that when selecting individual rows from a database by doing something like: SELECT * FROM database WHERE <a class="read-more" href="/mysql-using-select-in-x-y-z-vs-one-at-a-time/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Finally deployed the Zentester heatmapping re-write today and wanted to share a 3 things I&#8217;ve learnt on the way on optimization.</p>
+<ol>
+<li>Do &#8220;WHERE IN ()&#8221; instead of &#8220;WHERE =&#8221; Wherever possible &#8211; The biggest thing I discovered was that when selecting individual rows from a database by doing something like:</li>
+</ol>
+<pre><code>SELECT * FROM database WHERE id = 5
+SELECT * FROM database WHERE id = 6
+</code></pre>
+<p>It&#8217;s much much faster to select them all at once rather than doing it one row at a time. How much faster? In one section of the heatmapping I was grabbing visitor id&#8217;s from ipaddresses from the visitors database like so:</p>
+<pre><code>SELECT id FROM visitors WHERE ipaddress LIKE 'xxx.xxx.xxx.xxx'
+</code></pre>
+<p>The ipaddress column was a primary key but even then every time I did this query it took approximately 0.1 seconds. I combined all of these into one huge SQL query looking something like this:</p>
+<pre><code>SELECT id FROM visitors WHERE ipaddress IN ('xxx.xxx.xxx.xxx', 'yyy.yyy.yyy.yyy', 'zzz.zzz.zzz.zz')
+</code></pre>
+<p>Loading 1000 different rows in this way took just 0.7 seconds. Which equated to a 150 x speed increase over the old approach.</p>
+<ol>
+<li>PHP Arrays are really fast &#8211; I used to think PHP Associative arrays were slow and It&#8217;d be better to just grab everything from MySQL one at a time rather than caching it in php. Oh how wrong I was. I changed the overall code structure of my data processing from the following (psudo code):</li>
+</ol>
+<pre><code>while (data) {
+$visitorData = SELECT * FROM visitors WHERE ipaddress IN data-&gt;ipaddress
+$pageData = SELECT * FROM pagedata WHERE page IN data-&gt;page
+$siteData = SELECT * FROM sitedata WHERE site IN data-&gt;site
+//Process and insert data into another database
+}
+</code></pre>
+<p>To this:</p>
+<pre><code>while (data) {
+$ipAddressArray[] = $data-&gt;ipaddress;
+$pageArray[] = $data-&gt;page
+$siteArray[] = $data-&gt;site
+}
+
+$ipData = SELECT * FROM visitors WHERE ipaddress IN ($ipAddressArray) 
+while ($ipData) {
+$ipAddressMap[$ipData-&gt;ipaddress] = $ipData-&gt;visitorid;
+}
+
+$pageData = SELECT * FROM pages WHERE page IN ($pageArray)
+while ($pageData) {
+$pageMap[$pageData-&gt;page] = $pageData-&gt;id;
+}
+
+$siteData = SELECT * FROM sites WHERE site IN ($siteArray)
+while ($siteData) {
+$siteMap[$siteData-&gt;site] = $siteData-&gt;id;
+}
+
+while (data) {
+//process data using the maps instead of constantly querying the database
+}
+</code></pre>
+<p>Instead of looping through all the data to be processed and processing it one at a time It&#8217;s figuring out up front every single piece of data that&#8217;s going to be needed from the database and grabbing it in just a few queries.</p>
+<p>Then all this data is stored in associate php arrays (which actually hash the keys of the array so you can make the array keys literally anything, in one case ip addresses were used as the key). Then everything is processed grabbing the data out of these php associative arrays rather than pulling it from the database every single time.</p>
+<p>I&#8217;m processing approximately 10,000 rows of data at a time and after implementing this change it went from taking 5 &#8211; 10 minutes to process down to 10 &#8211; 15 seconds.</p>
+<ol>
+<li>Batch your inserts &#8211; I also got a small speed increase by combining all my inserts into one large statement, though don&#8217;t make this statement too large or MySQL will run out of memory when you try to run it (I discovered about 5000 inserts at once works best for me). Batching inserting took the insert time from about 60 seconds down to about 10, so it wasn&#8217;t as huge of an increase as the batched SELECT but it is noticeable especially when you&#8217;re dealing with lots of data.</li>
+</ol>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&#038;title=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" data-a2a-url="/mysql-using-select-in-x-y-z-vs-one-at-a-time/" data-a2a-title="MySQL using SELECT IN (x, y, z) vs one at a time"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/mysql-using-select-in-x-y-z-vs-one-at-a-time/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

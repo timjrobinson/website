@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>coffee script &#8211; TimJRobinson</title>
+	<atom:link href="/tag/coffee-script/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Sat, 17 Dec 2011 07:05:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Coffeescript Classes and Public / Private functions</title>
+		<link>/coffeescript-classes-and-public-private-functions/</link>
+					<comments>/coffeescript-classes-and-public-private-functions/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Sat, 17 Dec 2011 07:05:54 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[coffee script]]></category>
+		<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/coffeescript-classes-and-public-private-functions/</guid>
+
+					<description><![CDATA[So I&#8217;ve seen some coders confused by how they should declare their functions in Coffeescript. Here&#8217;s some notes I took while learning on how to make the equivilant of Public and Private functions for your class in Coffeescript. Because of the way javascript works it&#8217;s not possible to have private functions in the way you&#8217;re <a class="read-more" href="/coffeescript-classes-and-public-private-functions/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>So I&#8217;ve seen some coders confused by how they should declare their functions in Coffeescript. Here&#8217;s some notes I took while learning on how to make the equivilant of Public and Private functions for your class in Coffeescript. Because of the way javascript works it&#8217;s not possible to have private functions in the way you&#8217;re used to with C / Java howevever you can come close.</p>
+<p><strong>Public Function </strong>&#8211; This is your bread and butter function, it is what most coders use by default with coffeescript and is accessible from outside the class.  Notice how it uses a colon after the function name instead of an equals sign.</p>
+<pre><code>class SomeClass
+functionName: -&gt;
+alert('hello world');        
+</code></pre>
+<p><strong>Private function &#8211; </strong>This will create a private function as it makes the function a variable inside the class. So the function is a closure and can only be accessed by functions of that class. Notice how it uses an equal sign instead of a colon.</p>
+<pre><code>class SomeClass
+functionName = -&gt;
+alert('hello world');
+</code></pre>
+<p>There are two catches with Private Functions. The first is because they are a completely seperate function the @ (this) variable will not point to the main object (even though it is called from another internal function). If you wish to use @ in a private function whenever you call the private function it you must use .call(this) which will load the function but use the main class object as the @ variable inside it. For example:</p>
+<pre><code>class Dog
+dogName: "fido"
+constructor: (@dogName) -&gt;
+
+doStuff: -&gt;
+alert('the dog is walking');
+sayHello.call(this);
+
+sayHello = -&gt;
+alert("Hi! I'm "+@dogName);
+
+ralph = new Dog("ralph");
+ralph.doStuff();
+
+peter = new Dog("peter");
+peter.doStuff();
+</code></pre>
+<p>If you run this example yourself you&#8217;ll notice both dogs have separate names and have the private function sayName. The sayName function cannot be called from outside the class (if you try and call it you&#8217;ll get an error) which is exactly how private functions should work.</p>
+<p>The second catch is that this private function is shared for every dog. This isn&#8217;t really an issue for private functions as whenever you use @ the @ variables are specific to each dog. Though it is an issue if you wish to create private variables for your dog, as if you create them in this way they will be shared between every dog which is most likely not what you want.</p>
+<p>If you have any questions or queries let me know via the contact form.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fcoffeescript-classes-and-public-private-functions%2F&#038;title=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" data-a2a-url="/coffeescript-classes-and-public-private-functions/" data-a2a-title="Coffeescript Classes and Public / Private functions"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/coffeescript-classes-and-public-private-functions/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

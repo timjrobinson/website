@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>startup idea &#8211; TimJRobinson</title>
+	<atom:link href="/tag/startup-idea/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Sat, 08 Feb 2020 22:40:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Request: Buttons for logging life events for a quantified self</title>
+		<link>/request-buttons-for-logging-life-events-for-a-quantified-self/</link>
+					<comments>/request-buttons-for-logging-life-events-for-a-quantified-self/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Sat, 08 Feb 2020 22:40:17 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[hardware project]]></category>
+		<category><![CDATA[quantified self]]></category>
+		<category><![CDATA[startup idea]]></category>
+		<guid isPermaLink="false">/?p=251</guid>
+
+					<description><![CDATA[I love the idea of the quantified self, where you record your life inputs (exercise, sleep, food, supplements, etc) and outputs (happiness, focus, energy, etc) and draw correlations between them. My main barrier to this is the data entry itself &#8211; It&#8217;s hard to record events on a consistent basis. I&#8217;d prefer it to be <a class="read-more" href="/request-buttons-for-logging-life-events-for-a-quantified-self/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>I love the idea of the quantified self, where you record your life inputs (exercise, sleep, food, supplements, etc) and outputs (happiness, focus, energy, etc) and draw correlations between them. My main barrier to this is the data entry itself &#8211; It&#8217;s hard to record events on a consistent basis. I&#8217;d prefer it to be either completely automatic or so easy that I don&#8217;t need to actively think about it. </p>
+
+
+
+<p>I&#8217;m seeking a device to track life events with a single button press. There are some solutions available, but I haven&#8217;t found any that are:</p>
+
+
+
+<ul><li>Easy to setup (no hardware hacking required)</li><li>Reasonably priced (&lt;$10 per input button)</li><li>Hardware based (so that it&#8217;s right in front of me as the event happens, I don&#8217;t have to remember to open an app)</li></ul>
+
+
+
+<h2>Solution</h2>
+
+
+
+<p>An ideal solution would be a series of buttons I can stick to the wall where I have something I want to track. Each button sends a request to an API endpoint with a payload of data related to that button. So for tracking my supplements I could have a button for &#8220;Protein Powder&#8221;, &#8220;Magnesium&#8221;, &#8220;Vitamin D&#8221; etc that I press as I take them, and they each record an event in say AWS CloudWatch Metrics. </p>
+
+
+
+<p>It could work this like: I buy this device, it is a raspberry pi or other cheap compute option with a USB port. I plug it in at home and it creates it&#8217;s own WiFi network that I can join on my laptop. It then has a simple website that I can go to in my browser. On this website I can:</p>
+
+
+
+<ul><li>Make it connect to my home WiFi network for outbound access</li><li>Select a service or API endpoint I would like it to send messages to</li><li>Bind key presses to different API payloads. </li></ul>
+
+
+
+<p>I can plug a keyboard or other button like device into the USB port, and then in the web interface I can click &#8220;bind button&#8221;, press a button on the keyboard, and choose the payload that button will send. </p>
+
+
+
+<p>Out of the box it could be configured for say CloudWatch Metrics. You choose that you want to send your requests there, input your AWS access key, and then for each button you type a string for what it represents, like &#8220;Protein Powder&#8221;, or &#8220;Vitamin D&#8221;. It handles formatting the payload to what makes most sense for the service you&#8217;re sending the data to.  You should also be able to have a metric like &#8220;Happiness Level&#8221; and bind the numbers 1 -> 10 to send the &#8220;happiness&#8221; payload with the number you pressed as a dimension. </p>
+
+
+
+<p>It could get more providers over time, and you could create your own via a configuration file on the device. Then you can select your provider in the web interface and all the button payloads are automatically formatted correctly for that provider. </p>
+
+
+
+<p>You could place these devices anywhere you want to measure a life input or output: Beside your supplements, in your kitchen, at your work desk to measure productivity, at a doorway to mark your happiness as you enter and leave a room etc. </p>
+
+
+
+<p>The company could sell this device by itself, and could also sell a 4&#215;4 grid or 10 x 1 row of buttons with spaces for labels as an add-on to make tracking even easier.  </p>
+
+
+
+<p>This doesn&#8217;t seem too complicated to create, but I don&#8217;t have the time right now, and would like someone to scale this, building a company selling these to others. I think there&#8217;s a market for it and I&#8217;d like everyone to be able to build their own quantified lives and discover what makes them productive and happy. I would pay up to $100 for a device like this, maybe more for early access.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Frequest-buttons-for-logging-life-events-for-a-quantified-self%2F&amp;linkname=Request%3A%20Buttons%20for%20logging%20life%20events%20for%20a%20quantified%20self" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Frequest-buttons-for-logging-life-events-for-a-quantified-self%2F&amp;linkname=Request%3A%20Buttons%20for%20logging%20life%20events%20for%20a%20quantified%20self" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Frequest-buttons-for-logging-life-events-for-a-quantified-self%2F&amp;linkname=Request%3A%20Buttons%20for%20logging%20life%20events%20for%20a%20quantified%20self" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Frequest-buttons-for-logging-life-events-for-a-quantified-self%2F&amp;linkname=Request%3A%20Buttons%20for%20logging%20life%20events%20for%20a%20quantified%20self" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Frequest-buttons-for-logging-life-events-for-a-quantified-self%2F&amp;linkname=Request%3A%20Buttons%20for%20logging%20life%20events%20for%20a%20quantified%20self" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Frequest-buttons-for-logging-life-events-for-a-quantified-self%2F&#038;title=Request%3A%20Buttons%20for%20logging%20life%20events%20for%20a%20quantified%20self" data-a2a-url="/request-buttons-for-logging-life-events-for-a-quantified-self/" data-a2a-title="Request: Buttons for logging life events for a quantified self"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/request-buttons-for-logging-life-events-for-a-quantified-self/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>traffic control &#8211; TimJRobinson</title>
+	<atom:link href="/tag/traffic-control/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Thu, 26 Nov 2015 19:35:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Linux Traffic control hfsc what is [default $CLASSID]</title>
+		<link>/linux-traffic-control-hscf-what-is-default-classid/</link>
+					<comments>/linux-traffic-control-hscf-what-is-default-classid/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Thu, 26 Nov 2015 19:35:49 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[cloud9]]></category>
+		<category><![CDATA[hfsc]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[tc]]></category>
+		<category><![CDATA[traffic control]]></category>
+		<category><![CDATA[traffic shaping]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/linux-traffic-control-hscf-what-is-default-classid/</guid>
+
+					<description><![CDATA[While learning our traffic control setup at Cloud9 I came across this line: tc qdisc add dev $IFACE root handle 1: hfsc default 12 Most of it is explained by these great in depth guides to tc and hfsc traffic shaping: http://linux-tc-notes.sourceforge.net/tc/doc/sch_hfsc.txt http://linux-ip.net/articles/hfsc.en/ And the man page at: http://manpages.ubuntu.com/manpages/trusty/man8/tc-hfsc.8.html The only thing I couldn&#8217;t figure <a class="read-more" href="/linux-traffic-control-hscf-what-is-default-classid/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>While learning our traffic control setup at Cloud9 I came across this line:</p>
+<pre><code>tc qdisc add dev $IFACE root handle 1: hfsc default 12
+</code></pre>
+<p>Most of it is explained by these great in depth guides to tc and hfsc traffic shaping:</p>
+<p>http://linux-tc-notes.sourceforge.net/tc/doc/sch_hfsc.txt<br />
+http://linux-ip.net/articles/hfsc.en/</p>
+<p>And the man page at:</p>
+<p>http://manpages.ubuntu.com/manpages/trusty/man8/tc-hfsc.8.html</p>
+<p>The only thing I couldn&#8217;t figure out was what <code>default 12</code> means. I originally thought it was some inbuilt default policy that comes included with tc. But it actually refers to the class that you&#8217;ve defined that it should fall back to using when nothing else matches.</p>
+<p>So in our case we had the following other classes defined:</p>
+<pre><code>tc class add dev $IFACE parent 1:1 classid 1:10 hfsc rt m1 $HALF_MAXUP d 10ms m2 $MAX_UPRATE
+tc class add dev $IFACE parent 1:1 classid 1:11 hfsc ls m2 $HALF_MAXUP ul m2 $MAX_UPRATE
+tc class add dev $IFACE parent 1:1 classid 1:12 hfsc ls m2 $LOW_MAXUP ul m2 $LOW_MAXUP
+tc class add dev $IFACE parent 1:1 classid 1:13 hfsc ls m2 $VERY_LOW_MAXUP ul m2 $VERY_LOW_MAXUP
+</code></pre>
+<p><code>$IFACE</code> is the interface we&#8217;re running the rules on and the rates such as <code>$HALF_MAXUP</code> are network speeds in kbps that we&#8217;ve set and are still experimenting with.</p>
+<p>Below this we then had a bunch of rules that prioritize different traffic types which look like below:</p>
+<pre><code># prioritize SSH
+$TC filter add dev $IFACE protocol ip parent 1: prio 1 u32 match ip sport 22 0xffff flowid 1:10
+$TC filter add dev $IFACE protocol ip parent 1: prio 1 u32 match ip dport 22 0xffff flowid 1:10
+
+# prioritize DNS
+$TC filter add dev $IFACE protocol ip parent 1: prio 2 u32 match ip sport 53 0xffff match ip protocol 0x6 0xff flowid 1:10
+$TC filter add dev $IFACE protocol ip parent 1: prio 2 u32 match ip dport 53 0xffff match ip protocol 0x6 0xff flowid 1:10
+
+# prioritize application traffic
+$TC filter add dev $IFACE protocol ip parent 1: prio 3 u32 match ip sport 8080 0xffff flowid 1:11
+$TC filter add dev $IFACE protocol ip parent 1: prio 3 u32 match ip sport 8081 0xffff flowid 1:11
+$TC filter add dev $IFACE protocol ip parent 1: prio 3 u32 match ip sport 8082 0xffff flowid 1:11
+
+# Make UDP and ICMP really slow, they are rarely used for legitimate purposes
+$TC filter add dev $IFACE protocol ip parent 1: prio 4 u32 match ip protocol 17 0xff flowid 1:13
+$TC filter add dev $IFACE protocol ip parent 1: prio 4 u32 match ip protocol 1 0xff flowid 1:13
+</code></pre>
+<p>These rules ensure our users are able to ssh, resolve sites and host their applications at full speed, while throttling those who may be attempting to use Cloud9 for nefarious reasons. We also have other blocking rules not included here for security reasons.</p>
+<p>So all outbound traffic that doesn&#8217;t match these rules is subject to the rules of class 1:12 which gives users <code>$LOW_MAXUP</code> bandwidth with a <code>$LOW_MAXUP</code> burst speed for uploads. That&#8217;s what the <code>default 12</code> at the end means.</p>
+<p>Let me know if you have any questions about this or suggestions on how to improve our traffic shaping. I&#8217;m no expert on this and didn&#8217;t write most of these rules, but just sharing what I&#8217;ve learnt to help others having the same confusions.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Flinux-traffic-control-hscf-what-is-default-classid%2F&amp;linkname=Linux%20Traffic%20control%20hfsc%20what%20is%20%5Bdefault%20%24CLASSID%5D" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Flinux-traffic-control-hscf-what-is-default-classid%2F&amp;linkname=Linux%20Traffic%20control%20hfsc%20what%20is%20%5Bdefault%20%24CLASSID%5D" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Flinux-traffic-control-hscf-what-is-default-classid%2F&amp;linkname=Linux%20Traffic%20control%20hfsc%20what%20is%20%5Bdefault%20%24CLASSID%5D" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Flinux-traffic-control-hscf-what-is-default-classid%2F&amp;linkname=Linux%20Traffic%20control%20hfsc%20what%20is%20%5Bdefault%20%24CLASSID%5D" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Flinux-traffic-control-hscf-what-is-default-classid%2F&amp;linkname=Linux%20Traffic%20control%20hfsc%20what%20is%20%5Bdefault%20%24CLASSID%5D" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Flinux-traffic-control-hscf-what-is-default-classid%2F&#038;title=Linux%20Traffic%20control%20hfsc%20what%20is%20%5Bdefault%20%24CLASSID%5D" data-a2a-url="/linux-traffic-control-hscf-what-is-default-classid/" data-a2a-title="Linux Traffic control hfsc what is [default $CLASSID]"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/linux-traffic-control-hscf-what-is-default-classid/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

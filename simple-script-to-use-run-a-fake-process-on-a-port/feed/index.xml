@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Simple script to use / run a fake process on a port	</title>
+	<atom:link href="/simple-script-to-use-run-a-fake-process-on-a-port/feed/" rel="self" type="application/rss+xml" />
+	<link>/simple-script-to-use-run-a-fake-process-on-a-port/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Wed, 11 Nov 2015 21:05:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		By: Justin Dray		</title>
+		<link>/simple-script-to-use-run-a-fake-process-on-a-port/#comment-13</link>
+
+		<dc:creator><![CDATA[Justin Dray]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2015 21:05:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/simple-script-to-use-run-a-fake-process-on-a-port/#comment-13</guid>
+
+					<description><![CDATA[You can also use `nc -l PORT` (that&#039;s an L)]]></description>
+			<content:encoded><![CDATA[<p>You can also use `nc -l PORT` (that&#8217;s an L)</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

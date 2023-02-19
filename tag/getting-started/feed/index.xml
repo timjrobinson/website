@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Getting Started &#8211; TimJRobinson</title>
+	<atom:link href="/tag/getting-started/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Sun, 26 Feb 2017 09:54:33 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Switching to Ghost</title>
+		<link>/welcome-to-ghost-2/</link>
+					<comments>/welcome-to-ghost-2/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Fri, 30 May 2014 06:22:20 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Getting Started]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/welcome-to-ghost-2/</guid>
+
+					<description><![CDATA[A few months ago my web host was hacked and the villains that broke in began using it to send spam email. I didn&#8217;t even notice until I began getting auto-replies from people I&#8217;ve never emailed quoting the spam messages my server was sending. Now trying to track down a break in and find any <a class="read-more" href="/welcome-to-ghost-2/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>A few months ago my web host was hacked and the villains that broke in began using it to send spam email. I didn&#8217;t even notice until I began getting auto-replies from people I&#8217;ve never emailed quoting the spam messages my server was sending.</p>
+<p>Now trying to track down a break in and find any backdoors installed on your server is a painful experience when running just one site. This server was running over 50 sites.</p>
+<p>I&#8217;m trying to cut my life to the bare minimum in all areas and <a href="http://sivers.org/hellyeah">saying no</a> to everything that isn&#8217;t exactly what I want to do. Soon after this hack took place I realized I haden&#8217;t cleaned up my online life. Back when I was doing Internet Marketing full time I purchased hundreds of domains with full intentions of turning them into niche sites each making a few dollars a day so I could achieve completely passive income (the dream.. right?). Unfortunately as what happens to most people that travel down this route it didn&#8217;t go quite as planned and 3 years later I&#8217;m left with hundreds of domains not pulling in much traffic and costing a boatload of money to maintain.</p>
+<p>There&#8217;s little use in keeping these old sites around when they&#8217;re simply being money sinks and the rest of my life has moved onto bigger and better things. Even though I haven&#8217;t looked at them in years they still give mental and financial baggage when I&#8217;m doing tasks such as backing up my sites, switching hosts or navigating cpanel.</p>
+<p>So I&#8217;ve gone ahead and deleted them all. I&#8217;m down to about 30 domains most if not all related to <a href="http://www.zentester.com/">ZenTester</a> and <a href="http://www.towerstorm.com/">Tower Storm</a>. If I don&#8217;t begin working or selling these remaining domains in the next 6 months I&#8217;ll be unregistering them too.</p>
+<p>After this great purge I discovered there&#8217;s only one domain on this web host that I wanted to keep running, this very blog you&#8217;re reading now.</p>
+<p>Being that I&#8217;m moving web hosts anyway I thought why not upgrade my blog to advance with my programming career. I made the switch from PHP to NodeJS coding over 2 years ago now so if I want a blog I can hack on without wanting to tear my hair out (ok WordPress isn&#8217;t that bad, but I am sick of PHP) I might as well use Ghost.</p>
+<p>So here I am, typing in Ghost. It&#8217;s kind of nice, in an elegant zen kind of way. It doesn&#8217;t have the features of WordPress, but it doesn&#8217;t have the bloat either, and so far it&#8217;s going ok.</p>
+<p><strong>Update 26/02/2017 &#8211; <a href="/back-to-wordpress/">I&#8217;m back on WordPress</a></strong></p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fwelcome-to-ghost-2%2F&amp;linkname=Switching%20to%20Ghost" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fwelcome-to-ghost-2%2F&amp;linkname=Switching%20to%20Ghost" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fwelcome-to-ghost-2%2F&amp;linkname=Switching%20to%20Ghost" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fwelcome-to-ghost-2%2F&amp;linkname=Switching%20to%20Ghost" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fwelcome-to-ghost-2%2F&amp;linkname=Switching%20to%20Ghost" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fwelcome-to-ghost-2%2F&#038;title=Switching%20to%20Ghost" data-a2a-url="/welcome-to-ghost-2/" data-a2a-title="Switching to Ghost"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/welcome-to-ghost-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

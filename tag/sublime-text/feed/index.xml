@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>sublime text &#8211; TimJRobinson</title>
+	<atom:link href="/tag/sublime-text/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Tue, 05 Feb 2013 10:33:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Sublime Text Navigation History Plugin</title>
+		<link>/sublime-text-navigation-history-plugin/</link>
+					<comments>/sublime-text-navigation-history-plugin/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Tue, 05 Feb 2013 10:33:22 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[speed coding]]></category>
+		<category><![CDATA[sublime text]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/sublime-text-navigation-history-plugin/</guid>
+
+					<description><![CDATA[Ever wanted to be able to jump between files or functions in sublime text and easily jump back to where you were before? Well worry no longer 🙂 Over the past 6 months I&#8217;ve been using a navigation script from http://www.sublimetext.com/forum/viewtopic.php?f=5&#38;t=2738 to make jumping around code faster. For some reason no one has put this into <a class="read-more" href="/sublime-text-navigation-history-plugin/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Ever wanted to be able to jump between files or functions in sublime text and easily jump back to where you were before? Well worry no longer <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Over the past 6 months I&#8217;ve been using a navigation script from <a href="http://www.sublimetext.com/forum/viewtopic.php?f=5&amp;t=2738">http://www.sublimetext.com/forum/viewtopic.php?f=5&amp;t=2738</a> to make jumping around code faster. For some reason no one has put this into package control, so I added it today, pull request is pending and once it&#8217;s merged you can search for &#8220;Navigation history&#8221; to find it.</p>
+<p>I also made one slight improvement so that when you use Sublime Text 3&#8217;s new goto functionality you can easily get back to exactly where you were before.</p>
+<p>The github repository is here: <a href="https://github.com/timjrobinson/SublimeNavigationHistory">https://github.com/timjrobinson/SublimeNavigationHistory</a></p>
+<p>Enjoy, and if you encounter any bugs or problems please create an issue for it on Github.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fsublime-text-navigation-history-plugin%2F&amp;linkname=Sublime%20Text%20Navigation%20History%20Plugin" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fsublime-text-navigation-history-plugin%2F&amp;linkname=Sublime%20Text%20Navigation%20History%20Plugin" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fsublime-text-navigation-history-plugin%2F&amp;linkname=Sublime%20Text%20Navigation%20History%20Plugin" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fsublime-text-navigation-history-plugin%2F&amp;linkname=Sublime%20Text%20Navigation%20History%20Plugin" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fsublime-text-navigation-history-plugin%2F&amp;linkname=Sublime%20Text%20Navigation%20History%20Plugin" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fsublime-text-navigation-history-plugin%2F&#038;title=Sublime%20Text%20Navigation%20History%20Plugin" data-a2a-url="/sublime-text-navigation-history-plugin/" data-a2a-title="Sublime Text Navigation History Plugin"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/sublime-text-navigation-history-plugin/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

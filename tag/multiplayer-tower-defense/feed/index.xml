@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>multiplayer tower defense &#8211; TimJRobinson</title>
+	<atom:link href="/tag/multiplayer-tower-defense/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Sun, 23 Dec 2012 01:13:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Multiplayer online Tower Defense incoming :)</title>
+		<link>/multiplayer-online-tower-defense-incoming/</link>
+					<comments>/multiplayer-online-tower-defense-incoming/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Sun, 23 Dec 2012 01:13:35 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[multiplayer tower defense]]></category>
+		<category><![CDATA[pvp td]]></category>
+		<category><![CDATA[tower defense]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/multiplayer-online-tower-defense-incoming/</guid>
+
+					<description><![CDATA[The past few months I&#8217;ve been working on a browser based multiplayer tower defense game called Tower Storm, because it&#8217;s something I&#8217;ve been wanting to build for years. I had originally planned for it to be PvE where players work together to kill monsters similar to Azure Tower Defense, however we soon realised while PvE <a class="read-more" href="/multiplayer-online-tower-defense-incoming/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>The past few months I&#8217;ve been working on a browser based multiplayer tower defense game called <a href="http://www.towerstorm.com/">Tower Storm</a>, because it&#8217;s something I&#8217;ve been wanting to build for years.</p>
+<p>I had originally planned for it to be PvE where players work together to kill monsters similar to Azure Tower Defense, however we soon realised while PvE is easier for most people to understand it doesn&#8217;t have enough replayability without constantly adding new content.</p>
+<p>So I&#8217;m focusing on PvP first in the style of <a href="http://www.youtube.com/watch?v=52Od3eFgyGE">Wintermaul Wars</a> because I absolutely love it&#8217;s gameplay.</p>
+<p>I&#8217;ve been play testing with friends on the home lan for a while, hopefully will have a version online soon.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fmultiplayer-online-tower-defense-incoming%2F&#038;title=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" data-a2a-url="/multiplayer-online-tower-defense-incoming/" data-a2a-title="Multiplayer online Tower Defense incoming :)"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/multiplayer-online-tower-defense-incoming/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

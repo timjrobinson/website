@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>robots &#8211; TimJRobinson</title>
+	<atom:link href="/tag/robots/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Wed, 18 Jun 2014 16:02:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Hundreds of robots in every home</title>
+		<link>/hundreds-of-robots-in-every-home/</link>
+					<comments>/hundreds-of-robots-in-every-home/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Wed, 18 Jun 2014 16:02:00 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[automatic cooking]]></category>
+		<category><![CDATA[automation]]></category>
+		<category><![CDATA[food hackers]]></category>
+		<category><![CDATA[home automation]]></category>
+		<category><![CDATA[robotics]]></category>
+		<category><![CDATA[robots]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/hundreds-of-robots-in-every-home/</guid>
+
+					<description><![CDATA[I used to have hundreds dreams and ideas I wanted to pursue. So many that I jumped from task to task like mad trying to make something happen and only ended up scratching the surface of a few. Recently I&#8217;ve realized there only 2 major ideas I keep coming back to that I wish to <a class="read-more" href="/hundreds-of-robots-in-every-home/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I used to have hundreds dreams and ideas I wanted to pursue. So many that I jumped from task to task like mad trying to make something happen and only ended up scratching the surface of a few. Recently I&#8217;ve realized there only 2 major ideas I keep coming back to that I wish to pursue more than anything else:</p>
+<ul>
+<li>Building Tower Storm into a big successful game that millions of people play and enjoy and I earn enough off to never have to worry about money again.</p>
+</li>
+<li>
+<p>Building a robotics company that makes producing your own food automatically a possibility for everyone on the planet.</p>
+</li>
+</ul>
+<p>Tower Storm is already in progress, so in this post I want to talk about my vision for the future of robots.</p>
+<p>I don&#8217;t believe there will be human like robots in every home as in bionical man, but I do think there will be hundreds of machines that will do most menial chores automatically. They&#8217;re already being made, in a crude unrecognisable form, via 3D Printers and open source circuitboards.</p>
+<p>This reminds me of computers in the 70&#8217;s, they were toys that you had to solder and program yourself, there was no way everyone was going to have one let alone use it all the time. I feel that robots are at a similar stage.</p>
+<p>What is needed now is a standard platform that all robots can build upon to work together to accomplish larger tasks. The robots would be modular and accomplish one function in a simple way on their own and they could then be combined in thousands of ways or sold in pre-packed sets to the non geeks out there.</p>
+<p>Lets take cooking for an example. Making a spaghetti is somewhat complicated, but each step and microstep is pretty simple. Lets break down the steps:</p>
+<ul>
+<li>Cook Sauce
+<ul>
+<li>Put pot on hotplate</li>
+<li>Turn hotplate on</li>
+<li>Cook Onions
+<ul>
+<li>Peel onion</li>
+<li>Slice onion</li>
+<li>Transfer onion to pot</li>
+<li>Stir for 2 minutes</li>
+</ul>
+</li>
+<li>Add Mince
+<ul>
+<li>Defrost mince</li>
+<li>Transfer to pot</li>
+<li>Stir for 2 minutes</li>
+</ul>
+</li>
+<li>Add jar of sauce
+<ul>
+<li>Open jar</li>
+<li>Pour jar into pot</li>
+</ul>
+</li>
+<li>Stir for 10 Minutes</li>
+</ul>
+</li>
+<li>Cook Pasta
+<ul>
+<li>Open pasta packet</li>
+</ul>
+</li>
+<li>Put sauce on pasta</li>
+<li>Add cheese on sauce</li>
+</ul>
+<p>When you lay it out like that you can see there are a lot of small steps, but none are too complicated for a robot to do. So why don&#8217;t they do it? Well I believe they will 10 &#8211; 20 years from now, we simply need to build a system for robots to work together in a neat way (like unix pipes) so they can collaborate and make tasks like preparing dinner completely automated.</p>
+<p>We&#8217;ve already got the infrastructure with 3D Printers and arduinos to make this happen, if the community created open source designs for robots that can do each of these tasks then anyone, anywhere could build robots that automate many of their cooking tasks for them, eventually not needing to cook at all.</p>
+<p>What has me even more excited than cooking is producing food automatically. It seems even more complicated than cooking, but if we break it down into separate components we could build robots that create and maintain tiny at home vegetable farms or fruit trees.</p>
+<p>Then if these designs are open sourced anyone anywhere in the world can live effortlessly off the grid with all their food made for them by a team of robots. Once we&#8217;ve automated much of the first worlds food supply we can even help out those less fortunate in the world. Everyone in the world could use them to have their own completely automated unlimited production farm.</p>
+<p>This is what excites me most about 3D Printing and open source circuitboards. Not gadgets and toys but machines that can bring complete automation to everything we don&#8217;t want to do in our lives. so everyone in the world is free to focus on what they enjoy, creating amazing things and learning and giving back to society.</p>
+<p>Sure it&#8217;s insanely complicated, but it&#8217;s doable,</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fhundreds-of-robots-in-every-home%2F&#038;title=Hundreds%20of%20robots%20in%20every%20home" data-a2a-url="/hundreds-of-robots-in-every-home/" data-a2a-title="Hundreds of robots in every home"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/hundreds-of-robots-in-every-home/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

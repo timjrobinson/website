@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>open source &#8211; TimJRobinson</title>
+	<atom:link href="/category/open-source/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Thu, 26 Mar 2020 07:11:34 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>NEATo &#8211; The Evolutionary AI Battle Simulator</title>
+		<link>/neato-the-evolutionary-ai-battle-simulator/</link>
+					<comments>/neato-the-evolutionary-ai-battle-simulator/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Thu, 26 Mar 2020 06:51:15 +0000</pubDate>
+				<category><![CDATA[open source]]></category>
+		<category><![CDATA[projects]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[evolutionary ai]]></category>
+		<category><![CDATA[evolutionary ai battle]]></category>
+		<category><![CDATA[evolutionary battle simulation]]></category>
+		<category><![CDATA[machine learning]]></category>
+		<category><![CDATA[mar io]]></category>
+		<guid isPermaLink="false">/?p=260</guid>
+
+					<description><![CDATA[Every year at Amazon there is virtual battle bot competition where engineers from all over the company create bots in JavaScript that fight in a 2D sandbox environment. It&#8217;s an optional&#160;event where you&#160;code the bots in your spare time and it&#8217;s a lot of fun.&#160; The battles are fought one-on-one over 2 minutes. The bots <a class="read-more" href="/neato-the-evolutionary-ai-battle-simulator/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p></p>
+
+
+
+<figure class="wp-block-video"><video autoplay loop src="/wp-content/uploads/2020/03/render-with-text.mp4"></video></figure>
+
+
+
+<p>Every year at Amazon there is virtual battle bot competition where engineers from all over the company create bots in JavaScript that fight in a 2D sandbox environment. It&#8217;s an optional&nbsp;event where you&nbsp;code the bots in your spare time and it&#8217;s a lot of fun.&nbsp;</p>
+
+
+
+<p>The battles are fought one-on-one over 2 minutes. The bots are circles shooting smaller circular bullets. Each bot&nbsp;is able to perform the actions move, rotate, and/or shoot every 75ms and knows the position of the enemy and all bullets every tick. The bots each have 5 lives and can have 5 bullets on screen at once. The tournament is single elimination and the prize is some token gifts and bragging rights. </p>
+
+
+
+<p>This year instead of hand-coding a bot I decided to try my hand at writing an <a href="https://github.com/timjrobinson/evolutionary-ai-battle">Evolutionary&nbsp;AI&nbsp;program</a>, which I&#8217;d been fascinated with after seeing <a href="https://www.youtube.com/watch?v=qv6UVOQ0F44">this&nbsp;AI</a> learn to play Mario all by itself. Could I create and train a bot good enough to defeat the Human created bots?</p>
+
+
+
+<p>Now I&#8217;m no&nbsp;AI&nbsp;expert, and this bot isn&#8217;t going to beat Alpha Zero any time soon. It&#8217;s pretty simple in it&#8217;s implementation. It&#8217;s a neural network that starts with some input nodes and output nodes, then randomly adds nodes, links between nodes, changes the weights for the links and disables/enables nodes. It&#8217;s based off the <a href="http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf">Evolving Neural Networks through Augmenting Topologies (NEAT) paper</a>.  Each neural network is called a genome and they are organized into species of similar genomes. When a genome performs well in battle it gets a high fitness rating and then goes on to have new child genomes with random mutations. If a genome performs poorly it is eliminated. The inputs to the neural network are the position of the walls, bullets, and opponent, and the outputs are the actions the bot should take. </p>
+
+
+
+<p>You can train in headless mode and it will run hundreds of battles in parallel, scaling to as many CPU cores as your PC has. During training you can watch the latest generation fight it out in your browser. After making the bots train by fighting each other for a few hundred generations the bots are able to fight at a decent level. I entered a bot with around 600 generations of training into the tournament and it ended up making it through the first 2 rounds and being eliminated in the 3rd.</p>
+
+
+
+<p>Rather than let that code go to waste I thought why&nbsp;not open source what I&#8217;ve made, and create a custom battle environment so others can learn how an&nbsp;Evolutionary&nbsp;Neural Network works and build their own&nbsp;AI&#8217;s. So I&#8217;ve done that as well as written an in depth explanation of how everything works in the README and thoroughly documented the code. <a href="https://github.com/timjrobinson/evolutionary-ai-battle">You can check it out here</a>.&nbsp;Enjoy training your own bot to use in your next game of battle bots and good luck!</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fneato-the-evolutionary-ai-battle-simulator%2F&amp;linkname=NEATo%20%E2%80%93%20The%20Evolutionary%20AI%20Battle%20Simulator" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fneato-the-evolutionary-ai-battle-simulator%2F&amp;linkname=NEATo%20%E2%80%93%20The%20Evolutionary%20AI%20Battle%20Simulator" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fneato-the-evolutionary-ai-battle-simulator%2F&amp;linkname=NEATo%20%E2%80%93%20The%20Evolutionary%20AI%20Battle%20Simulator" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fneato-the-evolutionary-ai-battle-simulator%2F&amp;linkname=NEATo%20%E2%80%93%20The%20Evolutionary%20AI%20Battle%20Simulator" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fneato-the-evolutionary-ai-battle-simulator%2F&amp;linkname=NEATo%20%E2%80%93%20The%20Evolutionary%20AI%20Battle%20Simulator" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fneato-the-evolutionary-ai-battle-simulator%2F&#038;title=NEATo%20%E2%80%93%20The%20Evolutionary%20AI%20Battle%20Simulator" data-a2a-url="/neato-the-evolutionary-ai-battle-simulator/" data-a2a-title="NEATo – The Evolutionary AI Battle Simulator"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/neato-the-evolutionary-ai-battle-simulator/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		<enclosure url="/wp-content/uploads/2020/03/render-with-text.mp4" length="1381094" type="video/mp4" />
+
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments for TimJRobinson	</title>
+	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Sun, 28 Apr 2019 22:23:45 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		Comment on How to mock and unit test moment.js by megabyte01		</title>
+		<link>/how-to-mock-and-unit-test-moment-js/#comment-27</link>
+
+		<dc:creator><![CDATA[megabyte01]]></dc:creator>
+		<pubDate>Sat, 08 Sep 2018 00:57:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-mock-and-unit-test-moment-js/#comment-27</guid>
+
+					<description><![CDATA[Thanks for sharing! jasmine.clock().mockDate(time) was exactly what I needed!]]></description>
+			<content:encoded><![CDATA[<p>Thanks for sharing! jasmine.clock().mockDate(time) was exactly what I needed!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to get docker ps data in JSON format by Piotr		</title>
+		<link>/how-to-get-docker-ps-data-in-json-format/#comment-26</link>
+
+		<dc:creator><![CDATA[Piotr]]></dc:creator>
+		<pubDate>Wed, 25 Apr 2018 12:27:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-get-docker-ps-data-in-json-format/#comment-26</guid>
+
+					<description><![CDATA[Thank you!]]></description>
+			<content:encoded><![CDATA[<p>Thank you!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Bleh		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-25</link>
+
+		<dc:creator><![CDATA[Bleh]]></dc:creator>
+		<pubDate>Wed, 14 Mar 2018 21:23:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-25</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/how-to-structure-your-nodejs-models-2/#comment-23&quot;&gt;Bleh&lt;/a&gt;.
+
+nevermind, i see it is a static method on the User function/&quot;namespace&quot;, and the rest are instance methods on the user objects. JS is weird man.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/how-to-structure-your-nodejs-models-2/#comment-23">Bleh</a>.</p>
+<p>nevermind, i see it is a static method on the User function/&#8221;namespace&#8221;, and the rest are instance methods on the user objects. JS is weird man.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Anders Borg		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-24</link>
+
+		<dc:creator><![CDATA[Anders Borg]]></dc:creator>
+		<pubDate>Wed, 14 Mar 2018 21:15:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-24</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/how-to-structure-your-nodejs-models-2/#comment-23&quot;&gt;Bleh&lt;/a&gt;.
+
+What I think he means is that the user class should not have a method for getting a list of all users. A method that would return &quot;IDs of all users this user is related to (somehow)&quot; makes sense though. There could be a users class with user as a sub-class though.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/how-to-structure-your-nodejs-models-2/#comment-23">Bleh</a>.</p>
+<p>What I think he means is that the user class should not have a method for getting a list of all users. A method that would return &#8220;IDs of all users this user is related to (somehow)&#8221; makes sense though. There could be a users class with user as a sub-class though.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Bleh		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-23</link>
+
+		<dc:creator><![CDATA[Bleh]]></dc:creator>
+		<pubDate>Wed, 14 Mar 2018 21:07:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-23</guid>
+
+					<description><![CDATA[You say that &quot;But you don’t want the method for fetching users to be part of each user because that doesn’t make any sense&quot;, however it seems to me that it is still part of every user object? or am i missing something?
+
+
+Thanks for the article, im new to nodejs and this defs helped to get me going with my models :)]]></description>
+			<content:encoded><![CDATA[<p>You say that &#8220;But you don’t want the method for fetching users to be part of each user because that doesn’t make any sense&#8221;, however it seems to me that it is still part of every user object? or am i missing something?</p>
+<p>Thanks for the article, im new to nodejs and this defs helped to get me going with my models 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Francis Tito		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-22</link>
+
+		<dc:creator><![CDATA[Francis Tito]]></dc:creator>
+		<pubDate>Fri, 16 Feb 2018 12:10:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-22</guid>
+
+					<description><![CDATA[how can i structure my model and route using normal mysql command like select from database ,i did but i think my queries does not pass through the model becouse there some condition i provide in the model for a particular field but when i text add user may be even if am not fall those condition still it function and add user as well]]></description>
+			<content:encoded><![CDATA[<p>how can i structure my model and route using normal mysql command like select from database ,i did but i think my queries does not pass through the model becouse there some condition i provide in the model for a particular field but when i text add user may be even if am not fall those condition still it function and add user as well</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Saul Luz		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-21</link>
+
+		<dc:creator><![CDATA[Saul Luz]]></dc:creator>
+		<pubDate>Fri, 26 May 2017 14:37:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-21</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/how-to-structure-your-nodejs-models-2/#comment-19&quot;&gt;Anders Borg&lt;/a&gt;.
+
+I&#039;m new on nodejs, not js. This article seems to me good. About your question: look for mongoose. []&#039;s
+...
+After a better search I think you alright: http://mongoosejs.com/docs/api.html#model-js]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/how-to-structure-your-nodejs-models-2/#comment-19">Anders Borg</a>.</p>
+<p>I&#8217;m new on nodejs, not js. This article seems to me good. About your question: look for mongoose. []&#8217;s<br />
+&#8230;<br />
+After a better search I think you alright: <a href="http://mongoosejs.com/docs/api.html#model-js" rel="nofollow ugc">http://mongoosejs.com/docs/api.html#model-js</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Chanlito		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-20</link>
+
+		<dc:creator><![CDATA[Chanlito]]></dc:creator>
+		<pubDate>Tue, 23 May 2017 14:17:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-20</guid>
+
+					<description><![CDATA[How to structure your NodeJS Models? according to this article it&#039;s more like &quot;How to structure your NodeJS Models Terribly.&quot;]]></description>
+			<content:encoded><![CDATA[<p>How to structure your NodeJS Models? according to this article it&#8217;s more like &#8220;How to structure your NodeJS Models Terribly.&#8221;</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to structure your NodeJS Models by Anders Borg		</title>
+		<link>/how-to-structure-your-nodejs-models-2/#comment-19</link>
+
+		<dc:creator><![CDATA[Anders Borg]]></dc:creator>
+		<pubDate>Sat, 22 Apr 2017 20:19:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-structure-your-nodejs-models-2/#comment-19</guid>
+
+					<description><![CDATA[I was with you until I saw the stringify. Do you mean you are storing the whole user profile as JSON in one database cell? Can you effectively search for individual values later? I&#039;m not using JS on the server side yet, so this looked odd to me.]]></description>
+			<content:encoded><![CDATA[<p>I was with you until I saw the stringify. Do you mean you are storing the whole user profile as JSON in one database cell? Can you effectively search for individual values later? I&#8217;m not using JS on the server side yet, so this looked odd to me.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on How to mock and unit test moment.js by Leandros		</title>
+		<link>/how-to-mock-and-unit-test-moment-js/#comment-18</link>
+
+		<dc:creator><![CDATA[Leandros]]></dc:creator>
+		<pubDate>Tue, 21 Mar 2017 21:04:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-mock-and-unit-test-moment-js/#comment-18</guid>
+
+					<description><![CDATA[Just stumbled onto this and I have to disagree with this implementation completely.
+What is happening here is that the unit test is relying on something which exists outside of the unit&#039;s world which is something that you should never care about. Instead of the unit test using the actual moment implementation you should stub getCurrentTime and return what you want in order to unit test this. This way you can test various scenarios which could be time sensitive.]]></description>
+			<content:encoded><![CDATA[<p>Just stumbled onto this and I have to disagree with this implementation completely.<br />
+What is happening here is that the unit test is relying on something which exists outside of the unit&#8217;s world which is something that you should never care about. Instead of the unit test using the actual moment implementation you should stub getCurrentTime and return what you want in order to unit test this. This way you can test various scenarios which could be time sensitive.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

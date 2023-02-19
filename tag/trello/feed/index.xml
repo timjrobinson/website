@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>trello &#8211; TimJRobinson</title>
+	<atom:link href="/tag/trello/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Mon, 20 Jul 2020 14:09:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>How to combine Getting Things Done with Trello</title>
+		<link>/how-to-combine-getting-things-done-with-trello/</link>
+					<comments>/how-to-combine-getting-things-done-with-trello/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Mon, 20 Jul 2020 14:06:20 +0000</pubDate>
+				<category><![CDATA[productivity]]></category>
+		<category><![CDATA[getting things done]]></category>
+		<category><![CDATA[trello]]></category>
+		<category><![CDATA[workflow]]></category>
+		<guid isPermaLink="false">/?p=323</guid>
+
+					<description><![CDATA[Have you read the book Getting Things Done (GTD) but struggled to implement it? Do you have different todo lists on paper, on your phone, on your laptop, without any consistency? Do you want a 21st century technical solution for GTD that keeps everything synced and your system is always available from any device?&#160; I&#8217;ve <a class="read-more" href="/how-to-combine-getting-things-done-with-trello/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[
+<p>Have you read the book Getting Things Done (GTD) but struggled to implement it? Do you have different todo lists on paper, on your phone, on your laptop, without any consistency? Do you want a 21st century technical solution for GTD that keeps everything synced and your system is always available from any device?&nbsp;</p>
+
+
+
+<p>I&#8217;ve used dozens of task management systems over the years and always found them good in the beginning but quickly turn to frustration after I&#8217;ve used them for a few months and have hundreds or thousands of tasks to sort through.</p>
+
+
+
+<p>Today I&#8217;m going to show you how after all this trial and error I&#8217;ve figured out how to fully implement GTD using Trello. I&#8217;ve been using this system of Trello with GTD for a few years without fail now. This article will teach you my full workflow that you can steal to achieve productivity and flow levels you&#8217;ve always dreamed of.&nbsp;</p>
+
+
+
+<p>If you have a working GTD system that could do with a little improvement I hope to teach you some new tricks and information to get your system working even better, and if you haven&#8217;t implemented anything this will be an awesome beginning of your productivity journey.</p>
+
+
+
+<p>I&#8217;m a naturally unorganized, forgetful person who has real trouble sticking to a schedule, or even a basic routine (I&#8217;ve worked 9-5 for 10 years and still have trouble waking up at the same time every day). Yet this system has allowed me to manage multiple projects and keep track of everything that needs to get done without fail.</p>
+
+
+
+<p>People that know me are amazed I can manage to be productive and successful with so little natural organizational ability. This is my secret and so I want to share it with the world.</p>
+
+
+
+<p>After implementing this system you&#8217;ll be a GTD ninja, able to do all of the following:</p>
+
+
+
+<ul><li>Whenever you have a new input to your life, such as an idea, todo, product recommendation etc, you&#8217;ll have a place to jot them down that you know you&#8217;ll come back to to re-prioritize later.</li><li>Whenever you&#8217;re in work mode you&#8217;ll have one place to go to see all the tasks on your plate right now.</li><li>You&#8217;ll be able to keep track of tasks over days or weeks when waiting for others to get back to you.&nbsp;</li><li>You&#8217;ll be able to keep track of projects you want to do over the next decade, without them cluttering up your task manager.</li></ul>
+
+
+
+<h2><strong>The Getting Things Done Flowchart</strong></h2>
+
+
+
+<p>Let&#8217;s take a recap on what GTD is all about. If you haven&#8217;t read<a href="https://amzn.to/30r6Xzm"> Getting Things Done by David Allen</a> yet I highly recommend reading it first. GTD is about having a system for organizing and handling all information inputs into your life, and is summarized by this flowchart:</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/wpveuCxagMYasxUs4QGnhmQeGjYU--wIaonbT7WGrxZRKQV_-gAbcZzhLUmYm3rLgIm9V3eEwzGV9_qYawuvFY2op8FltXGOQjNv5S2I5DCkirIdkt5Ku2JVa-J4BrZfa38Plw3v" alt=""/></figure>
+
+
+
+<p>Each of those bubbles is a place where inputs should flow depending on relevant triggers. Throughout this article I&#8217;ll explain how to create each of these locations and ensure that whenever any new task comes into your life you&#8217;ll know exactly where to put it.&nbsp;</p>
+
+
+
+<h2><strong>What is Trello</strong></h2>
+
+
+
+<p>Over the years, I&#8217;ve tried dozens of todo list apps. Most are useful in the beginning, but quickly turn to disarray as you amass more than a few hundred tasks. Trello is a Kanban task management application that easily handles organizing thousands of tasks as you accrue them over the years, ensuring you never need to declare task bankruptcy and switch to another system ever again.</p>
+
+
+
+<p>Instead of a single todo list, you have boards. Each board contains multiple columns and each column has multiple cards, one card for each distinct task you&#8217;re managing. On my own Trello boards, I have thousands of cards, some for projects that may be years away. Most tasks are placed on boards that are hidden from view and only analyzed during weekly or quarterly reviews. As a result, I do not get overwhelmed while in the workday zone.</p>
+
+
+
+<p>As an added bonus, Trello provides an amazing mobile app that keeps everything in sync across all your devices.</p>
+
+
+
+<h2><strong>What doesn&#8217;t belong in Trello</strong></h2>
+
+
+
+<p>GTD is about information management, not just task management. Trello is best utilized only for tasks, so rather than attempting to squash my entire workflow into one tool, I use two other supplementary tools to keep track of non-task information.</p>
+
+
+
+<p>For abstract thoughts and notes on a subject, video, article or presentation (the &#8220;Reference&#8221; bubble in the GTD flowchart above) I use<a href="https://evernote.com/"> Evernote</a>. If I have an idea I&#8217;m pondering but there isn&#8217;t an action item, it goes in Evernote. If I want to continue thinking about it more I&#8217;ll add a card to my Trello inbox with a next action of &#8220;Follow up on note&#8221;.</p>
+
+
+
+<p>For interesting articles and content I want to read later I use<a href="https://getpocket.com/"> Pocket</a>. This allows me to save articles and read them all in one app later without having to transfer them to my task management system back and forth constantly. I used to use Trello for this but realized consuming new content and working on tasks / projects require different head-space&#8217;s (shallow vs deep work) so I didn&#8217;t want them to intermingle with my task management system.&nbsp;</p>
+
+
+
+<h2><strong>Trello Boards</strong></h2>
+
+
+
+<p>Next, I will demonstrate how I have successfully organized my own tasks using Trello. To start, I have 5 main Trello boards: Next Actions, Inbox, Backlog, Big Ideas and Entertainment.</p>
+
+
+
+<h3><strong>Next Actions</strong></h3>
+
+
+
+<p>This is the board in which all the stuff I&#8217;m currently working on or want to get done in the next week goes. I have this board open most of the time while working.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh5.googleusercontent.com/pHQmfx-rrrWLgSkxnf7Ww-XbTh2_lIgdydUEsxCTFm0emWU3fUVra0iLB8vSGSPQ9wbnzsM0hMIeQhbujZzCy-7mgBt_RxwrstDswYPeNAXkjqr-Nl7MmRkulUi-gUMTjFFJ6Z3n" alt=""/><figcaption>From left to right: Unscheduled, Scheduled, Hold, Today, Doing, Done</figcaption></figure>
+
+
+
+<p>It has the following columns in this order:</p>
+
+
+
+<p><strong>Unscheduled</strong> &#8211; This is the &#8220;Next Actions&#8221; bubble of the GTD chart above. Where tasks for the week first end up. They haven&#8217;t had a specific time allocated to them yet.&nbsp;</p>
+
+
+
+<p><strong>Scheduled</strong> &#8211; This is the &#8220;Calendar&#8221; bubble of the GTD chart above. Where tasks go after I&#8217;ve allocated time for them on the calendar. I don&#8217;t put most of my tasks on my calendar because I suck at sticking to exact schedules, but that might work better for you if you want a little more structure.&nbsp;</p>
+
+
+
+<p><strong>Hold</strong> &#8211; This is the &#8220;Delegate It&#8221; bubble of the GTD chart. Where tasks go when I&#8217;m waiting for someone else, and I can&#8217;t proceed any further without their input. For example if I&#8217;m waiting on someone to email me back, or something I need to buy is currently sold out and I need to check back later.&nbsp;</p>
+
+
+
+<p><strong>Today</strong> &#8211; The tasks I want to get done today.&nbsp;</p>
+
+
+
+<p><strong>Doing</strong> &#8211; The task/s I&#8217;m working on at the moment.&nbsp;</p>
+
+
+
+<p><strong>Done</strong> &#8211; These are completed tasks. If I later find there&#8217;s more work to do I usually create a new card instead of moving cards out of here.</p>
+
+
+
+<h3><strong>Input</strong></h3>
+
+
+
+<p>The input board contains a backlog of things I want to do, but not in the next week. They are sometimes individual tasks with next actions, and sometimes projects that haven&#8217;t been broken up into tasks yet.&nbsp;</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh6.googleusercontent.com/dIC1qAp9LxyHCo97Tlg2YAzvB_PPv9b1AVnvRQW0hspkk0cybdeeDv2UFsYl7XrLMOdaVA9N7Axp_CsOq3S_vVyByTv42CuZmt88Vppcc5KNhgKj5n1QRZcCOSch21C0NLOzTPcT" alt=""/><figcaption>From left to right: Inbox, Someday/Maybe, Next 90 Days, Next 30 Days, Done</figcaption></figure>
+
+
+
+<p>It contains the following columns:</p>
+
+
+
+<p><strong>Inbox</strong> &#8211; The &#8220;In-Basket&#8221; bubble in the GTD chart above. Where all new cards go, unless they urgently need to be done in the next week. In that case, they go straight to the Unscheduled column of Next Actions.&nbsp;</p>
+
+
+
+<p><strong>Someday / Maybe</strong> &#8211; The &#8220;Someday/Maybe&#8221; bubble in the GTD chart above. It contains ideas and tasks I&#8217;d like to do but aren&#8217;t in my primary area of focus right now. I generally move tasks here immediately if I can&#8217;t think of an action I can take from the task, or if I don&#8217;t expect I&#8217;ll ever make time to do it.&nbsp;</p>
+
+
+
+<p><strong>Next 90 Days</strong> &#8211; Ideas and tasks related to my primary area of focus but aren&#8217;t urgent.&nbsp;</p>
+
+
+
+<p><strong>Next 30 Days</strong> &#8211; Tasks I want to get done in the next month, are in my primary area of focus, and are important.&nbsp;</p>
+
+
+
+<p><strong>Done</strong> &#8211; I have a done column here to easily drag tasks into if I discover I did them in the past when cleaning up my columns.&nbsp;</p>
+
+
+
+<h3><strong>Someday / Maybe</strong></h3>
+
+
+
+<p>This Trello board is the graveyard of ideas I find interesting, but will likely never complete. During the quarterly review process, I clean up my Input board and throw all tasks I didn&#8217;t get done and don&#8217;t believe I&#8217;ll get to in the next 3 months in the Someday / Maybe list, which is then sent to this board. I like to keep the cards at hand because they could turn into blog posts or social media posts describing the idea, hoping somebody else completes it.&nbsp;</p>
+
+
+
+<h3><strong>Big Ideas</strong></h3>
+
+
+
+<p>Big Ideas is a board for projects or companies I would like to create at some point in the future but haven&#8217;t started on yet. They are projects that definitely need to be broken up into many cards and are usually at least 3+ months of work to do. This board is different from the others in that every list is a category.&nbsp;</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh3.googleusercontent.com/d_59Absf5jpBw33RnApQ5R4r1dFHBBOkDgJLMRzJ-qw_Ox2mAenLeG0j_ee_f0qndRL348kakc3_dL65PfF53_ldvmyxEQ6J330OBwnPhbCGQIsqsTE1xzG4dOw06ckpZ_6b99uG" alt=""/><figcaption>From left to right: New, Fun Tech, Holidays, Skills, Non-Software Companies, Software Companies, Open source software. There are more but they didn&#8217;t fit into this screenshot.</figcaption></figure>
+
+
+
+<p>My categories are listed above and quite self-explanatory. You&#8217;ll probably have different categories but the overall concept is the same. When you have a big project idea, you can place it here, then during the quarterly review you can come back to this board to see if there are any projects you&#8217;d like to tackle in the next 3 months.&nbsp;</p>
+
+
+
+<p>If you decide to take any on, you can move the card to your Input Board&#8217;s &#8220;Next 90 days&#8221; column. When starting work on a project I&#8217;ll break it up into a bunch of smaller tasks and link them back to the main card, because it&#8217;s no fun to have one card sitting in &#8220;Doing&#8221; for 2 months straight.&nbsp;</p>
+
+
+
+<h3><strong>Entertainment</strong></h3>
+
+
+
+<p>Imagine having all the best, most recommended pieces of entertainment at your fingertips whenever you have a few hours to relax. You&#8217;ll never be bored again! And when a friend asks for a recommendation you&#8217;ll be able to help them out with your database of all the best entertainment, crowdsourced from your friends.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh5.googleusercontent.com/6f-MWCX1-p-1yM6ngUK58wvdmx5y3kgRbO2FoaZ-LojZq0h7SXvd1TmeKwH1tH3tkgGv007o2wVHrH09Z8pdDJrKauVpnfyVwWU7FeqFZ9h2ZnTlYYf4tJgyY9niwpNBNSUMNcu6" alt=""/><figcaption>From left to right: New, Cooking, Restaurants, Games, Articles, Books. There are more but they didn&#8217;t fit into this screenshot.</figcaption></figure>
+
+
+
+<p>The entertainment board is similar to Big Ideas, but stores Books, TV Shows and pieces of entertainment my friends have recommended. This is completely unrelated to work but allows me to never be stuck at 8pm on a Saturday night wondering what to do after a few glasses of wine.&nbsp;</p>
+
+
+
+<p>The categories on this board are: New (the input column when I&#8217;m sorting my Inbox and haven&#8217;t figured out what it is yet), Cooking, Restaurants, Games, Articles, Book, Short Videos, TV Series, Movies, Audio, To Learn, To Visit. I generally put all recommendations in my Input Inbox first, and sort them into the correct categories later.&nbsp;</p>
+
+
+
+<h2><strong>Combining GTD + Trello</strong></h2>
+
+
+
+<p>Let&#8217;s put this system together and show how any new tasks that come in can be effortlessly put into the correct bucket based on their demands.&nbsp;</p>
+
+
+
+<p>All of the bubbles in the GTD workflow image correspond to some place on a Trello Board. But I don&#8217;t recommend following that flowchart as soon as you&#8217;re given a task or have an idea. Instead, open up the Input board and add a new card to the Inbox column.&nbsp;</p>
+
+
+
+<p>Over time your inbox column will fill up with ideas, tasks, important things you want to get done. You&#8217;ll probably have more than ever now that your brain knows you have a good place to store them. To keep this column from overflowing I pull out my phone and start sorting the tasks every time I have some downtime at work, are waiting for a meeting, on transport, or even sitting on the loo.</p>
+
+
+
+<p>How do you sort the tasks? With the GTD flowchart. When you decide the task is a project or has a next action you then need to decide if it&#8217;s something that needs to be done in the Next Week, Next Month, or Next Quarter, and move it to the appropriate column.&nbsp;</p>
+
+
+
+<p>The input board is a combination of projects and next action cards. I like to keep them together on this board because the time period is more important than the task granularity. It&#8217;s only when I move cards from the Input Board to the Next Actions board that I ensure every task has a Next Action attached. So if there is a project on the Input Board I&#8217;d like to tackle, I don&#8217;t copy it across, I break it into smaller individual tasks first and move them to Next Actions, linking them back to the original project card.&nbsp;</p>
+
+
+
+<h3><strong>Example Use Cases</strong></h3>
+
+
+
+<p>&#8220;I&#8217;m at a meetup and someone mentioned a cool website I should check out&#8221; &#8211; Create a card in your &#8220;Input&#8221; column of the &#8220;Inbox&#8221; with the name of the site, then put your phone away and keep talking.&nbsp;</p>
+
+
+
+<p>&#8220;I was reading an article and had an idea for my company&#8221; &#8211; Create a card in your &#8220;Input&#8221; column of the &#8220;Inbox&#8221; with the title as the idea and description as further information. You can judge later during the weekly review if it&#8217;s worth tackling.&nbsp;</p>
+
+
+
+<p>&#8220;I received this email that links to a cool article that I want to read&#8221; &#8211; In the past I used to add these to my &#8220;Entertainment&#8221; board, but realized I rarely made the effort to retrieve and read the articles. Now instead I save the article out to<a href="https://getpocket.com/"> Pocket</a> and then I can easily open the pocket app and read them all when I&#8217;m free.&nbsp;</p>
+
+
+
+<p>&#8220;I realized I need to get my car serviced in the next few weeks&#8221; &#8211; Create a task in the &#8220;Scheduled&#8221; column of Next Actions. Set a date for that task for when you want to think about this next, or when you want to make the booking. If you could make the booking any time, add it to the unscheduled column and get to it when processing your tasks during the workday.&nbsp;</p>
+
+
+
+<h3><strong>The Weekly Review Process</strong></h3>
+
+
+
+<p>How do cards get from the Input board to the Next Actions board? Through the weekly review. This can also be done on a higher cadence but I prefer weekly. This review involves taking a look at your Input board and:</p>
+
+
+
+<ul><li>Sorting anything in the Inbox if there are cards left to be sorted</li><li>Taking a look at the Next 30 days column and seeing what you want to get done next week, then moving them to Next Actions. If a card doesn&#8217;t have a next action it&#8217;s time to add one or break it into smaller tasks before adding it to that board.&nbsp;</li><li>Taking a look at the Next 90 days column and seeing if everything in it still makes sense, moving it into Someday/Maybe if it&#8217;s no longer relevant or the Next 30 days if it should be done sooner.&nbsp;</li></ul>
+
+
+
+<p>If you find the Next 30 or Next 90 day columns have too much to sort through each week, you could do them in a monthly review and keep the weekly review solely for clearing our your inbox.&nbsp;</p>
+
+
+
+<h3><strong>The Quarterly Review Process</strong></h3>
+
+
+
+<p>The Quarterly Review process is where I clean out the Input board, moving cards I&#8217;m not going to get around to, to the Someday/Maybe board. This way the Input board doesn&#8217;t get too clogged up with old stale tasks I&#8217;m no longer interested in doing. I&#8217;ve never had a time where I&#8217;ve managed to clear my Input Board through action, because I&#8217;m way too optimistic about how much I can get done, and new stuff always comes up.&nbsp;</p>
+
+
+
+<p>I use a Trello plugin called &#8220;Card Repeats&#8221; to make certain cards get re-created at certain intervals. For the Quarterly review I have one card that comes back on the 1st day of every quarter (Jan 1st, April 1st, July 1st and October 1st) which has a checklist of all the tasks I have to do in the quarterly review. This card looks like this:</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh5.googleusercontent.com/Xv7GcBDXzuDBphnSPmfkK7KaVOX0cdtpn39Aap-Gc6nV_xP-zcir2ZAOKQ8ADt5Kc6B1vmZc-CKxS0ki7vbU-JjIcss7T1Mv9sHTxBrZUOxQEEz_DQkn5udGVUrvtKo7YI-F-Cvk" alt=""/></figure>
+
+
+
+<p>Every time it pops up, I schedule a few hours to get it done, and simply follow the steps on the card. The &#8220;Projects board&#8221; in this screenshot is the Input board. I used to have a separate projects board but it became too irritating to jump to that board on a regular basis and I would frequently forget about it.</p>
+
+
+
+<p>Card repeats is a premium feature of Trello, so if you&#8217;d rather keep it free you could add this Quarterly Review to your calendar and add the instructions to an Evernote document, then link to that from the Calendar entry.&nbsp;</p>
+
+
+
+<h2><strong>In Summary</strong></h2>
+
+
+
+<p>After you&#8217;ve set up this system for task capture and management and started easing into the flow of weekly and quarterly reviews you&#8217;ll find it easier than you ever thought possible to keep track of what needs to be done. You&#8217;ll never let a task slip through your fingers again. You&#8217;ll also find an increase in creativity and your ability to enter a flow state becomes seamless as you no longer have dozens of tasks fluttering through your mind taking up precious mental bandwidth.&nbsp;</p>
+
+
+
+<p>I hope this system works as well for you as it has for me. If you have any questions, suggestions for improvement, or need clarification on how to use this system let me know and I&#8217;ll be happy to help you out.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-combine-getting-things-done-with-trello%2F&amp;linkname=How%20to%20combine%20Getting%20Things%20Done%20with%20Trello" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-combine-getting-things-done-with-trello%2F&amp;linkname=How%20to%20combine%20Getting%20Things%20Done%20with%20Trello" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-combine-getting-things-done-with-trello%2F&amp;linkname=How%20to%20combine%20Getting%20Things%20Done%20with%20Trello" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-combine-getting-things-done-with-trello%2F&amp;linkname=How%20to%20combine%20Getting%20Things%20Done%20with%20Trello" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-combine-getting-things-done-with-trello%2F&amp;linkname=How%20to%20combine%20Getting%20Things%20Done%20with%20Trello" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fhow-to-combine-getting-things-done-with-trello%2F&#038;title=How%20to%20combine%20Getting%20Things%20Done%20with%20Trello" data-a2a-url="/how-to-combine-getting-things-done-with-trello/" data-a2a-title="How to combine Getting Things Done with Trello"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/how-to-combine-getting-things-done-with-trello/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<title>programming | TimJRobinson</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="/xmlrpc.php">
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//static.addtoany.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="TimJRobinson &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="TimJRobinson &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="TimJRobinson &raquo; programming Tag Feed" href="/tag/programming/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="casper-google-fonts-css" href="//fonts.googleapis.com/css?family=Noto+Serif%3A400%2C700%2C400italic%7COpen+Sans%3A700%2C400&#038;ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="casper-style-css" href="/wp-content/themes/casper/style.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
+<style id="addtoany-inline-css" type="text/css">@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}</style>
+<script type="text/javascript" id="addtoany-core-js-before">window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<script type="text/javascript" async src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" async src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-2436267-3&#038;ver=6.1.1" id="wk-analytics-script-js"></script>
+<script type="text/javascript" id="wk-analytics-script-js-after">function shouldTrack(){
+var trackLoggedIn = false;
+var loggedIn = false;
+if(!loggedIn){
+return true;
+} else if( trackLoggedIn ) {
+return true;
+}
+return false;
+}
+function hasWKGoogleAnalyticsCookie() {
+return (new RegExp('wp_wk_ga_untrack_' + document.location.hostname)).test(document.cookie);
+}
+if (!hasWKGoogleAnalyticsCookie() && shouldTrack()) {
+//Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-2436267-3');
+}</script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/tags/8">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+
+   	<style type="text/css">.blog-title a, .blog-description, .social-icons a { color: #ffffff; }
+		
+						                        	body:not(.home) .site-head:after { display: none; }
+        	body:not(.home) #masthead{ height: auto; border: none; }
+        	body:not(.home) .blog-title, body:not(.home) .blog-description { display: none; }
+        	body:not(.home) .inner { padding-top: 1em; }
+        	body:not(.home) .main-navigation { position: relative; }
+        
+		
+							.main-navigation a { color: ; }</style>
+    		<style type="text/css" id="wp-custom-css">.wp-block-image figcaption {
+	font-size: 0.5em;
+	line-height: 1.5em;
+	margin: 0em 3em 0em 3em;
+}
+
+body {
+	background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #222;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+	color: #222;
+}
+
+#disqus_thread {
+	margin: 10px auto;
+}</style>
+		</head>
+
+<body class="archive tag tag-programming tag-8">
+
+
+
+<main id="content" class="content" role="main">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			<header class="page-header">
+				<h1 class="page-title">
+					programming				</h1>
+							</header><!-- .page-header -->
+
+						
+				
+<article id="post-86" class="post-86 post type-post status-publish format-standard hentry category-uncategorized tag-javascript tag-mocha tag-mocking tag-moment tag-moment-timezone tag-moment-js tag-programming tag-unit-test tag-unit-testing">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/how-to-mock-and-unit-test-moment-js/" rel="bookmark"><time class="entry-date published" datetime="2014-06-17T16:02:57+00:00">June 17, 2014</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/how-to-mock-and-unit-test-moment-js/" rel="bookmark">How to mock and unit test moment.js</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>I&#8217;ve been using moment.js in some client work for a rather complex booking form.Unfortunately date related functionality is almost impossible to manually test so we implemented unit tests to ensure everything worked as it should. Code like this is perfect for unit testing because it&#8217;s completely rules based.</p>
+<p>Mocking moment.js seemed hard at first but wasn&#8217;t too complicated after a bit of thought. Here&#8217;s an example of how to mock it using mocha.</p>
+<p>First we have the booking manager validate function that needs to be tested. This function ensures that customers cannot make bookings for the next day after 3pm. It also ensures customers cannot make bookings for saturday and monday after 3pm on friday.</p>
+<pre><code>/** booking-manager.js **/
+
+BookingManager = {
+getCurrentTime: function () {
+return moment().tz(config.TIMEZONE)    
+},
+validate: function(formData) {
+var bookingDay, currentTime;
+currentTime = this.getCurrentTime();
+bookingDay = moment(formData.dateAndTime.date, "YYYYMMDD").tz(config.TIMEZONE);
+if (bookingDay.isBefore(currentTime, 'day') || bookingDay.isSame(currentTime, 'day')) {
+return false;
+}
+if (currentTime.format('HH') &gt;= config.NEXT_DAY_CUTOFF_TIME) {
+if (bookingDay.isSame(moment(currentTime).add('days', 1), 'day')) {
+return false;
+}
+if (currentTime.day() === 5 &amp;&amp; bookingDay.day() === 1) {
+return false;
+}
+}
+if ((currentTime.day() === 6 || currentTime.day() === 0) &amp;&amp; bookingDay.day() === 1) {
+return false;
+}
+return true;
+}
+}
+
+</code></pre>
+<p>Now we need to test this function to ensure it works. The problem is we have to test booking restrictions are working on every day of the week. So we need to mock out the getCurrentTime function to pretend we&#8217;re submitting the form at different times.</p>
+<pre><code>/* booking-manager-unit-test.js **/
+
+describe("BookingManager", function() {
+var currentDayOfWeek, currentHour, originalGetCurrentTime, formData;
+currentHour = null;
+currentDayOfWeek = null;
+originalGetCurrentTime = null;
+formData = null;
+
+beforeEach(function() {
+var currentDayOfWeek, currentHour, originalGetCurrentTime;
+currentHour = 12;
+currentDayOfWeek = 1;
+formData = { dateAndTime: { date: null }};
+originalGetCurrentTime = bookingManager.getCurrentTime;
+bookingManager.getCurrentTime = function() {
+var currentTime;
+currentTime = originalGetCurrentTime.call(bookingManager);
+currentTime.day(currentDayOfWeek);
+currentTime.hour(currentHour);
+return currentTime;
+};
+});
+
+afterEach(function() {
+return bookingManager.getCurrentTime = originalGetCurrentTime;
+});
+});
+
+
+
+</code></pre>
+<p>This is the meat of the mocking. We set up two variables currentHour and currentDayOfWeek. Then we use these in our mock getCurrentTime function to fake the current time.</p>
+<pre><code>describe("validate", function() {
+it("Should return false if the booking date is the current day or before", function() {
+var formData, today;
+today = bookingManager.getCurrentTime();
+formData.dateAndTime.date = today.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is a next day booking and the time is past 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 16;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is a next day booking and the time hour is 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 15;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on saturday for monday", function() {
+var currentDayOfWeek, formData, monday;
+currentDayOfWeek = 6;
+monday = bookingManager.getCurrentTime().add('days', 2);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on sunday for monday", function() {
+var currentDayOfWeek, formData, monday;
+currentDayOfWeek = 0;
+monday = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on friday after 3pm for monday", function() {
+var currentDayOfWeek, currentHour, formData, monday;
+currentDayOfWeek = 5;
+currentHour = 15;
+monday = bookingManager.getCurrentTime().add('days', 3);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return true if the booking is made on friday before 3pm for monday", function() {
+var currentDayOfWeek, currentHour, formData, monday;
+currentDayOfWeek = 5;
+currentHour = 13;
+monday = bookingManager.getCurrentTime().add('days', 3);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+
+it("Should return true if the booking is a next day booking and the time is before 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 12;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+
+it("Should return true if it's past 3pm but the booking is not a next day booking", function() {
+var currentHour, formData, future;
+currentHour = 16;
+future = bookingManager.getCurrentTime().add('days', 2);
+formData.dateAndTime.date = future.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+});
+
+
+</code></pre>
+<p>As you can see using this mock function is quite easy. You simply change the currentHour or currentDayOfWeek variables and that&#8217;s what the time becomes.</p>
+<p>Have fun coding and let me know if you find any issues with the above code or feel it can be improved.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/how-to-mock-and-unit-test-moment-js/" data-a2a-title="How to mock and unit test moment.js">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+				
+<article id="post-83" class="post-83 post type-post status-publish format-standard hentry category-uncategorized tag-app-structure tag-mvc tag-programming">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/how-to-structure-your-nodejs-models-2/" rel="bookmark"><time class="entry-date published" datetime="2014-06-12T15:32:02+00:00">June 12, 2014</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/how-to-structure-your-nodejs-models-2/" rel="bookmark">How to structure your NodeJS Models</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>In MVC your models are objects that save out to the data store and do basic low level manipulations on your data. Over the past few years I&#8217;ve worked with  many different ways of structuring models and have finally come to a solution I feel is elegant, simple and easy to understand. It&#8217;s the exact structure I use for <a href="http://www.towerstorm.com/">Tower Storm</a> and it&#8217;s based mainly off the way the <a href="https://www.npmjs.org/package/mongoose">mongoose</a> npm package works.</p>
+<p>Here&#8217;s an example of the most common model of all time: User. The database functions in these examples are all psudocode but should be pretty self explanitory as to what they&#8217;re doing. You can get a copy of the source code at <a href="https://github.com/timjrobinson/nodejsmodels">https://github.com/timjrobinson/nodejsmodels</a></p>
+<p>The trouble with writing models is sometimes you want an instance of an object which you can change. Like you want to change a specific users username. And other times you want to get all users of a specific type. But you don&#8217;t want the method for fetching users to be part of each user because that doesn&#8217;t make any sense.</p>
+<pre><code>/** user.js **/
+
+var User = function (data) {
+this.data = data;
+}
+
+User.prototype.data = {}
+
+User.prototype.changeName = function (name) {
+this.data.name = name;
+}
+
+User.findById = function (id, callback) {
+db.get('users', {id: id}).run(function (err, data) {
+if (err) return callback(err);
+callback(null, new User(data));
+});
+}
+
+module.exports = User;
+
+</code></pre>
+<p>So what we&#8217;ve done is created a User class that can both be an instance of a user and has a static method to find users. This means you can use the same User model to do anything you need to do with users. Each user also has a data object. This is where any data that should be saved back to the database is stored. Here&#8217;s an example of how you&#8217;d use it:</p>
+<pre><code>/** app.js **/
+
+User = require("./user.js")
+
+var toby = new User({name: "Toby"});
+
+User.findById(42, function (err, user) {
+user.changeName("Brian");
+});
+</code></pre>
+<p>We first created a user called Toby. Then we found a user of id 42 from the database and once it was returned we changed that users name to Brian.</p>
+<p>Now a model like this is still missing quite a few important features. Firstly it can&#8217;t save out to the database, lets fix that with a save function:</p>
+<pre><code>/** user.js **/
+
+User.prototype.save = function (callback) {
+var self = this;
+db.get('users', {id: this.data.id}).update(JSON.stringify(this.data)).run(function (err, result) {
+if (err) return callback(err);
+callback(null, self); 
+});
+}
+</code></pre>
+<p>This is why we stored all the users data in this.data rather than straight onto the user. Because it makes saving and loading the user from the database super easy. You just stringify it to save and do new User(data) when loading.</p>
+<p>Now it&#8217;s bad practice to access all it&#8217;s data by changing user.data.something and sometimes you may forget and wonder why user.name is always undefined when the user clearly has a name. So lets add getters and setters to the model.</p>
+<pre><code>/** user.js **/
+
+User.prototype.get = function (name) {
+return this.data[name];
+}
+
+User.prototype.set = function (name, value) {
+this.data[name] = value;
+}
+</code></pre>
+<p>I also like to enforce some sort of database schema. Otherwise with many developers on a team it&#8217;ll be hard to keep track of all the different variables the user could have.</p>
+<pre><code>/** schemas.js **/
+
+schemas = {
+user: {
+id: null,
+name: null,
+password: null
+}
+}
+
+module.exports = schemas;
+</code></pre>
+<pre><code>/** user.js **/
+
+var schemas = require("./schemas.js");
+var _ = require("lodash");
+
+User.prototype.sanitize = function (data) {
+data = data || {};
+schema = schemas.user;
+return _.pick(_.defaults(data, schema), _.keys(schema)); 
+}
+</code></pre>
+<p>That last line in sanitize uses a couple of lodash functions to only keep variables that are in the user schema. &#95;.defaults merges all variables from schemas.user into data that don&#8217;t exist already. &#95;.keys gets all the keys from the schema. &#95;.pick only keeps the variables who&#8217;s names were returned by &#95;.keys. Basically it ensures this.data matches our schema exactly.</p>
+<p>Now we can use this sanitize function both in the constructor of user and also before saving. That way every user will look exactly the same in the database with no stray data. Here&#8217;s what these functions look like now:</p>
+<pre><code>user.js
+
+var User = function (data) {
+this.data = this.sanitize(data);
+}
+
+User.prototype.save = function (callback) {
+var self = this;
+this.data = this.sanitize(this.data);
+db.get('users', {id: this.data.id}).update(JSON.stringify(this.data)).run(function (err, result) {
+if (err) return callback(err);
+callback(null, self); 
+});
+}
+</code></pre>
+<p>We now have an easy to use User model that can retrieve users from the database, change their properties and save them back with all data being sanitized and checked automatically.</p>
+<p>Now many of our models will use similar functions for get/set/save/sanitize. So instead of copy and pasting code you should create a generic model that you can extend all your other models from. Inheritence is kind of tricky to implement with Javascript so unless you&#8217;re an amazing coder I&#8217;d recommend looking into <a href="http://www.joezimjs.com/javascript/javascript-prototypal-inheritance-and-what-es6-classes-have-to-say-about-it/">es6&#8217;s classes</a> or using <a href="http://www.coffeescript.org/">coffeescript</a>, which is what I use for Tower Storm.</p>
+<p>You can download and play with all the source code (including a little mock database for getting and saving data) for the tutorial at: <a href="https://github.com/timjrobinson/nodejsmodels">https://github.com/timjrobinson/nodejsmodels</a></p>
+<p>Let me know if you have any questions or feel this model structure could be improved.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/how-to-structure-your-nodejs-models-2/" data-a2a-title="How to structure your NodeJS Models">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-structure-your-nodejs-models-2%2F&amp;linkname=How%20to%20structure%20your%20NodeJS%20Models" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-structure-your-nodejs-models-2%2F&amp;linkname=How%20to%20structure%20your%20NodeJS%20Models" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-structure-your-nodejs-models-2%2F&amp;linkname=How%20to%20structure%20your%20NodeJS%20Models" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-structure-your-nodejs-models-2%2F&amp;linkname=How%20to%20structure%20your%20NodeJS%20Models" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-structure-your-nodejs-models-2%2F&amp;linkname=How%20to%20structure%20your%20NodeJS%20Models" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+				
+<article id="post-74" class="post-74 post type-post status-publish format-standard hentry category-uncategorized tag-continuous-integration tag-programming tag-tower-storm tag-unit-testing">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/tower-storm-and-my-30-second-2-button-deployment-process/" rel="bookmark"><time class="entry-date published" datetime="2013-04-26T20:17:11+00:00">April 26, 2013</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/tower-storm-and-my-30-second-2-button-deployment-process/" rel="bookmark">Tower Storm and my 30 second 2 button deployment process</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>2 years ago I read an amazing book <a title="The Lean Startup" href="http://www.amazon.com/gp/product/0307887898/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0307887898&amp;linkCode=as2&amp;tag=tjrblog-20">The Lean Startup</a> which made me completely rethink how I developed applications and websites. In the past I&#8217;d make a change to an application, spend 30 minutes going through the main features and release. Inevitably a few days later customers would come back saying x, y and z are all broken. So I&#8217;d fix them and re-release and now 3 other completely different features would be broken. This happened consistently but with limited time and money I thought it was impossible to improve this process.</p>
+<p>Today I can make a change to <a title="Tower Storm" href="http://www.towerstorm.com/">Tower Storm</a> and within 30 seconds have this change live online with very little (soon to be none) manual testing and no old bugs are coming back to bite me. In this post I want to show you how I&#8217;ve done it.</p>
+<p><strong>Automated Testing</strong></p>
+<p>The first step is to eliminate this 30+ minutes of testing that I had to manually do after every change. There is absolutely no way you can quickly release and iterate on your app without either:</p>
+<p>a. An army of testers who are always able to detect any bug and will happily retest everything in your application upon every single change<br>
+b. Automated tests that find regressions and issues in your application for you</p>
+<p>Being that you&#8217;re running a <em>lean</em> startup here I don&#8217;t think you&#8217;ve got thousands of dollars to burn on many dedicated testers so lets explore the world of automated testing.</p>
+<p>Automated testing is where you create code that tests the functions of your application to determine if it&#8217;s doing what it should be doing. For example if you have a function that should remove every comma from a string and you want to ensure that it works for a variety of different strings you might create a test like so:</p>
+<pre><code>function testRemoveComma() {
+var sentence = "this,is,a,sentence";
+var expectedSentence = "thisisasentence";
+var actualSentence = removeComma(sentence);
+assert.equals(expectedSentence, actualSentence);
+
+}
+</code></pre>
+<p>In this javascript example we first create a sentence with commas in it, then we specify what we expect back from our function. Then we call that function and ensure that what we got back from it matches what we expect back from it.</p>
+<p>This example is what is known as a &#8220;unit test&#8221;, it is a test that checks one function by giving it inputs and receiving outputs and it doesn&#8217;t do other tasks such as connecting to your database or reading files. It should only check one function only. If that function calls other functions you need to use a technique called &#8216;<a title="Mocking" href="http://en.wikipedia.org/wiki/Mock_object">mocking</a>&#8216; so that they don&#8217;t really get called. I&#8217;ll go into more detail on how to create unit tests and mock objects in a variety of languages in a later post.</p>
+<p>To start unit testing you&#8217;ll need a library to run these tests. Generally there is one or two good testing libraries for most languages. For Javascript I&#8217;d recommend mocha for Node.js testing or Jasmine for client side testing, for Java JUnit with Mockito is awesome and for PHP PHPUnit works well.</p>
+<p>Unit tests are the simplest, fastest and often most fragile tests. They aren&#8217;t the best for ensuring your app is bug free but they are perfect for eliminating existing bugs and ensuring they never occur again.</p>
+<p>The thing I love about unit tests is because they are so fast and easy to write you can do a process known as test driven development. This is where you write unit tests for your code before you write a single line of code. So in the remove comma example above we could write an empty removeComma function, then write the above test and run it only to see it fail, then after it has failed we create our removeComma function and run the test again and when it passes it means our code is working.</p>
+<p>When you do test driven development constantly you can save hours by not needing to run your app after each code change. You simply test then code, test then code and eventually at the end you run your app and because every function works as it should your app should (in theory) work perfectly first go. It&#8217;s amazing when you get into this flow because if you&#8217;re building a large app you can continue to code for hours and really get into the zone without having to recompile everything and boot up your app to see if it&#8217;s working as it should.</p>
+<p><strong>Better testing with Integration and Acceptance tests</strong></p>
+<p>After you&#8217;ve mastered the art of the unit test there are even more powerful tests that you can use that will allow you to deploy your application without even running it and know that all functionality is working.</p>
+<p>You do this by creating integration and acceptance tests. Unlike unit tests Integration and Acceptance tests actually test your app in a real environment with database and network calls. Integration tests are similar to unit tests in that they run one function or a group of functions in order and check that they are all working as they should. The difference is integration tests run the code as if a real user was calling the function, so if the function creates records in the database the integration test will do that, and if your function calls another external service the integration test will do that too.</p>
+<p>Here&#8217;s an example of a PHP integration test in <a title="ZenTester" href="http://www.zentester.com/">ZenTester</a>:</p>
+<pre><code>/**
+* @test
+*/
+function Checklogin() {
+$this-&gt;ci-&gt;load-&gt;library('userManager');
+
+$random_key = self::$random_key;
+$reg_data = ut_get_registration_data($random_key);
+
+//logout first (check_login function in controller does this too). 
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;logout(), true, "logging out before logging in");        
+$this-&gt;assertEquals(is_array($this-&gt;ci-&gt;usermanager-&gt;register_user($reg_data, 0)), true, "Registering User With All information");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;login($reg_data['email'], $reg_data['password']), true, "logging in to this user");
+$user_id = $this-&gt;ci-&gt;user-&gt;get_user_id();
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;is_valid_user(), true, "Checking that after login we are a valid user.");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;logout(), true, "Testing logging out");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;is_valid_user(), false, "Checking that we are not a valid user after logging out. ");
+
+ut_erase_user($user_id);
+}
+
+</code></pre>
+<p>In this integration test we first create a new user with the helper function ut_get_registration_data. Then we register and log in with that user. After logging in we ensure that the user has successfully logged in and is valid. Then we log out and check that this also worked. Finally the user is deleted at the end.</p>
+<p>In this case we create and clean up all our data so the database isn&#8217;t littered with test data. The downside of always deleting your data at the end of the test is you may find that it&#8217;s hard to track down why an integration test is failing because you can&#8217;t see what was created and what wasn&#8217;t. At Wotif we don&#8217;t clean up our data at the end of each tests and instead re-use the test data upon every run and delete old data at the beginning of each test. This way you don&#8217;t add much test data to the database while still being able to figure out what went wrong when a test fails.</p>
+<p>Acceptance tests are another level of abstraction, they use your app from a users perspective, loading pages, clicking on links etc and ensuring what is shown to the user after performing specific functions is correct. They are often done with tools such as <a title="Selenium" href="http://docs.seleniumhq.org/">selenium</a> or <a title="Curl" href="http://curl.haxx.se/">curl</a>. At Wotif we&#8217;ve been using CucumberJVM to run selenium on a remote box which loads up our app, tests that all the main features are working from a user perspective and reports if anything is broken. These are then run automatically by Team City every time we push a change.</p>
+<p>&nbsp;</p>
+<p><strong>Using GruntJS to build your assets </strong></p>
+<p>Grunt is the second most amazing part of the deployment process. It basically takes the application and builds it so it&#8217;s ready to upload. It currently does all of the following (the grunt plugin used to do each item is in brackets):</p>
+<ul>
+<li><span style="line-height: 13px;">Bumps the game version number (grunt-bump)</span></li>
+<li>Checks the javascript for any errors (lint)</li>
+<li>Cleans the build directory (grunt-contrib-clean)</li>
+<li>Copies all the correct files to the build directory (grunt-contrib-copy)</li>
+<li>Turns all the cofeescript into javascript (grunt-contrib-coffee)</li>
+<li>Builds the core game javascript into a single js file (grunt-exec which runs impact.js&#8217;s build tool which is coded in php)</li>
+<li>Uglify&#8217;s (minifies) the javascript along with all external libraries and config files into a single game.min.js file (grunt-contrib-uglify)</li>
+<li>Compiles all the less css files (grunt-contrib-less)</li>
+<li>Minifies the css and puts it into one file (grunt-contrib-cssmin)</li>
+<li>Compiles the jade files into html (grunt-contrib-jade)</li>
+<li>Uploads all the compressed and compiled assets to a new folder on amazon s3, the folder name is the current game version number (grunt-s3)</li>
+</ul>
+<p>It&#8217;s a complicated process yet grunt.js handles most of these tasks with very little configuration needed and can do all of this in under 30 seconds.</p>
+<p>The assets are uploaded to a new amazon s3 folder of the builds version number so that assets are never overwritten and users who are still playing the game are not interrupted. You can do this by setting the variable pkg to your package.json file then using the variable &lt;% pkg.version %&gt; in your s3 upload script. My s3 task looks like this:</p>
+<pre><code>grunt.initConfig({
+bump: {},
+pkg: grunt.file.readJSON('package.json'), 
+s3: {
+bucket: 'towerstorm',
+access: 'public-read',
+
+// Files to be uploaded.
+upload: [        
+{
+src: 'build/public/js/lobby.min.js',
+dest: 'game-server/&lt;%= pkg.version %&gt;/js/lobby.min.js',
+gzip: true
+},
+{
+src: 'build/public/css/lobby.min.css',
+dest: 'game-server/&lt;%= pkg.version %&gt;/css/lobby.min.css',
+gzip: true
+}
+]
+}
+});
+</code></pre>
+<p>If you&#8217;re using grunt-bump to auto bump the version number with every build you&#8217;ll also need to modify the grunt-bump/tasks/bump.js file and add the following line to the bottom of the grunt.registerTask function so that after the version is bumped the variable pkg is set to the latest version:</p>
+<pre><code>grunt.config.set("pkg", grunt.file.readJSON("package.json"));
+</code></pre>
+<p>In the game code it simply loads the assets for it&#8217;s current version number so even if people start games after this build process is done they will load the old game assets and it&#8217;s only when the new version is deployed and Node.js is restarted that the new assets will be loaded. This way the server code and game client code are always in sync. Lastly versioning the assets also ensures that users browser don&#8217;t cache old assets which could cause errors if gameplay changes are introduced yet clients are loading an old cached version of the game.</p>
+<p>All the TowerStorm servers are hosted using Amazon EC2 and in the future I&#8217;m looking to implement a system where with each new version a bunch of new servers are spawned with the new game client and assets, then whenever players start new games they are all started on the new servers only and the old servers only stay alive until the last game is finished then they are powered down. This will allow us to continually release new versions of Tower Storm without ever having &#8216;patch downtime&#8217;.</p>
+<p><strong>Continuous Integration</strong></p>
+<p><strong></strong>The third step is to take this unit testing and asset building and automate it with a dedicated server that runs everything in a server like environment. This way if you have a team of developers they don&#8217;t each have to set up grunt and acceptance tests and full build environment on their machine, instead every time they commit a new change the continuous integration server downloads the new code from git, compiles it using grunt and runs all the unit tests using either a custom private server setup or running them on it&#8217;s own machine using it&#8217;s own browser or a headless browser like phantomjs.</p>
+<p>I haven&#8217;t yet set up a continuous integration server for Tower Storm as I&#8217;m currently the only developer and it was easier to set everything up locally (especially in these very early stages) but I&#8217;ll definitely be setting on up soon. At Wotif we&#8217;ve tried out Jenkins, Bamboo and Teamcity and all were good in some ways and bad in others. I myself prefer the layout and feel of Bamboo the most however this is often personal preference as other members of our team prefer Teamcity&#8217;s layout more. Jenkins is probably the least liked in usability and layout but it is completely free and comes with tons of plugins for doing almost every task you like so if that&#8217;s what you&#8217;re looking for then it&#8217;ll work well for you.</p>
+<p><strong>Automated cmd files and the 2 button deploy process</strong></p>
+<p><strong></strong>To tie all these various testing, running and deploying scripts together I&#8217;ve created a few command files (yes I run windows 8, although I use Ubuntu at Wotif and the Tower Storm servers are running Linux) that make things even easier. Here&#8217;s what they do:<span style="line-height: 13px;"><br>
+</span></p>
+<p>commitAndPush.cmd &#8211; Runs tortoisegit (my favourite git gui by far) commit screen then push&#8217;s the code after you&#8217;ve committed your changes. It looks like so:</p>
+<pre><code>call E:\\apps\\scripts\\tgit.cmd commit C:\\coding\\node\\towerstorm\\GameServer
+call git push --all --progress  BitBucket
+pause
+
+</code></pre>
+<p>the tgit.cmd file it refrences is a hook to tortoisegit to make it run any command from the command line. It&#8217;s contents are:</p>
+<pre><code>"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe" /command:%1 /path:%2
+</code></pre>
+<p>devenv.cmd &#8211; Runs the game locally using node-dev which makes it auto restart whenever a change is made and it also runs test.cmd explained next:</p>
+<pre><code>set NODE_ENV=development
+start cmd.exe /K "cd .. &amp;&amp; call ./node_modules/.bin/node-dev server.coffee"
+start cmd.exe /K "cd .. &amp;&amp; call scripts/test unit"
+</code></pre>
+<p>test.cmd &#8211; This loads a cmd prompt that automatically runs all the unit tests using mocha and re-runs them whenever a test is made. It scans the test directory for all coffeescript files and runs them:</p>
+<pre><code>setlocal EnableDelayedExpansion
+IF "%1" == "" (
+SET files=C:\\cygwin\\bin\\find test -name "*.coffee"
+) ELSE (
+SET files=C:\\cygwin\\bin\\find test\\%1 -name "*.coffee"
+)
+
+FOR /F %%i IN (' %files% ') DO SET tests=!tests! %%i 
+.\\node_modules\\.bin\\mocha --watch --reporter min --slow 10 --globals $ --compilers coffee:coffee-script --require coffee-script test\\_helper %tests%
+pause
+</code></pre>
+<p>I run these scripts by binding them to the macro keys on my Logitech G15 keyboard (which I bought mainly because it had these keys). I have the dev environment setup bound to one key, grunt bound to another and commit and push bound to a third. This way I can develop in one key press and deploy a new version of Tower Storm using just 2 buttons 🙂</p>
+<p>Hope this was informative enough and if you have any questions or are confused about any steps let me know.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/tower-storm-and-my-30-second-2-button-deployment-process/" data-a2a-title="Tower Storm and my 30 second 2 button deployment process">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+				
+<article id="post-69" class="post-69 post type-post status-publish format-standard hentry category-uncategorized tag-mocha tag-nodejs tag-programming tag-unit-testing tag-windows">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/how-to-stop-nodejs-mocha-unit-testing-console-beeping/" rel="bookmark"><time class="entry-date published" datetime="2012-11-27T10:00:04+00:00">November 27, 2012</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/how-to-stop-nodejs-mocha-unit-testing-console-beeping/" rel="bookmark">How to stop NodeJS Mocha unit testing console beeping</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>Thought I&#8217;d create this post to save others the 20 minutes I wasted wondering why NodeJS and Mocha Tests were making my console bleep over and over.</p>
+<p>The problem isn&#8217;t with node, it&#8217;s with windows console beeping whenever the console.error command is sent to it (I believe).</p>
+<p>You can disable the bleeping by following the instructions here:</p>
+<p><a href="http://superuser.com/questions/10575/turning-off-the-cmd-window-beep-sound">http://superuser.com/questions/10575/turning-off-the-cmd-window-beep-sound</a></p>
+<p>The instructions are also below in case this link is ever broken in the future:</p>
+<blockquote><p> The Windows command line command &#8220;net stop beep&#8221; will turn off the beeping, and &#8220;net start beep&#8221; will turn on the beeping.</p></blockquote>
+<p>And how to disable it permanently:</p>
+<blockquote>
+<ol>
+<li>Right-click My Computer and select Manage.</li>
+<li>Expand System Tools and select Device Manager.</li>
+<li>From the View menu, select Show hidden devices.</li>
+<li>Expand Non-Plug and Play Drivers.</li>
+<li>Right-click Beep, and select Properties.</li>
+<li>Select the Drivers tab.</li>
+<li>Click Stop. You can also change the start-up type to Disabled so the beep service never starts.</li>
+</ol>
+</blockquote>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/how-to-stop-nodejs-mocha-unit-testing-console-beeping/" data-a2a-title="How to stop NodeJS Mocha unit testing console beeping">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+				
+<article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-uncategorized tag-mysql tag-optimization tag-php tag-programming tag-speed-coding">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/mysql-using-select-in-x-y-z-vs-one-at-a-time/" rel="bookmark"><time class="entry-date published" datetime="2012-01-11T12:13:57+00:00">January 11, 2012</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/mysql-using-select-in-x-y-z-vs-one-at-a-time/" rel="bookmark">MySQL using SELECT IN (x, y, z) vs one at a time</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>Finally deployed the Zentester heatmapping re-write today and wanted to share a 3 things I&#8217;ve learnt on the way on optimization.</p>
+<ol>
+<li>Do &#8220;WHERE IN ()&#8221; instead of &#8220;WHERE =&#8221; Wherever possible &#8211; The biggest thing I discovered was that when selecting individual rows from a database by doing something like:</li>
+</ol>
+<pre><code>SELECT * FROM database WHERE id = 5
+SELECT * FROM database WHERE id = 6
+</code></pre>
+<p>It&#8217;s much much faster to select them all at once rather than doing it one row at a time. How much faster? In one section of the heatmapping I was grabbing visitor id&#8217;s from ipaddresses from the visitors database like so:</p>
+<pre><code>SELECT id FROM visitors WHERE ipaddress LIKE 'xxx.xxx.xxx.xxx'
+</code></pre>
+<p>The ipaddress column was a primary key but even then every time I did this query it took approximately 0.1 seconds. I combined all of these into one huge SQL query looking something like this:</p>
+<pre><code>SELECT id FROM visitors WHERE ipaddress IN ('xxx.xxx.xxx.xxx', 'yyy.yyy.yyy.yyy', 'zzz.zzz.zzz.zz')
+</code></pre>
+<p>Loading 1000 different rows in this way took just 0.7 seconds. Which equated to a 150 x speed increase over the old approach.</p>
+<ol>
+<li>PHP Arrays are really fast &#8211; I used to think PHP Associative arrays were slow and It&#8217;d be better to just grab everything from MySQL one at a time rather than caching it in php. Oh how wrong I was. I changed the overall code structure of my data processing from the following (psudo code):</li>
+</ol>
+<pre><code>while (data) {
+$visitorData = SELECT * FROM visitors WHERE ipaddress IN data-&gt;ipaddress
+$pageData = SELECT * FROM pagedata WHERE page IN data-&gt;page
+$siteData = SELECT * FROM sitedata WHERE site IN data-&gt;site
+//Process and insert data into another database
+}
+</code></pre>
+<p>To this:</p>
+<pre><code>while (data) {
+$ipAddressArray[] = $data-&gt;ipaddress;
+$pageArray[] = $data-&gt;page
+$siteArray[] = $data-&gt;site
+}
+
+$ipData = SELECT * FROM visitors WHERE ipaddress IN ($ipAddressArray) 
+while ($ipData) {
+$ipAddressMap[$ipData-&gt;ipaddress] = $ipData-&gt;visitorid;
+}
+
+$pageData = SELECT * FROM pages WHERE page IN ($pageArray)
+while ($pageData) {
+$pageMap[$pageData-&gt;page] = $pageData-&gt;id;
+}
+
+$siteData = SELECT * FROM sites WHERE site IN ($siteArray)
+while ($siteData) {
+$siteMap[$siteData-&gt;site] = $siteData-&gt;id;
+}
+
+while (data) {
+//process data using the maps instead of constantly querying the database
+}
+</code></pre>
+<p>Instead of looping through all the data to be processed and processing it one at a time It&#8217;s figuring out up front every single piece of data that&#8217;s going to be needed from the database and grabbing it in just a few queries.</p>
+<p>Then all this data is stored in associate php arrays (which actually hash the keys of the array so you can make the array keys literally anything, in one case ip addresses were used as the key). Then everything is processed grabbing the data out of these php associative arrays rather than pulling it from the database every single time.</p>
+<p>I&#8217;m processing approximately 10,000 rows of data at a time and after implementing this change it went from taking 5 &#8211; 10 minutes to process down to 10 &#8211; 15 seconds.</p>
+<ol>
+<li>Batch your inserts &#8211; I also got a small speed increase by combining all my inserts into one large statement, though don&#8217;t make this statement too large or MySQL will run out of memory when you try to run it (I discovered about 5000 inserts at once works best for me). Batching inserting took the insert time from about 60 seconds down to about 10, so it wasn&#8217;t as huge of an increase as the batched SELECT but it is noticeable especially when you&#8217;re dealing with lots of data.</li>
+</ol>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/mysql-using-select-in-x-y-z-vs-one-at-a-time/" data-a2a-title="MySQL using SELECT IN (x, y, z) vs one at a time">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fmysql-using-select-in-x-y-z-vs-one-at-a-time%2F&amp;linkname=MySQL%20using%20SELECT%20IN%20%28x%2C%20y%2C%20z%29%20vs%20one%20at%20a%20time" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+				
+<article id="post-46" class="post-46 post type-post status-publish format-standard hentry category-uncategorized tag-programming tag-speed-coding">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/netbeans-is-awesome/" rel="bookmark"><time class="entry-date published" datetime="2011-12-18T00:58:57+00:00">December 18, 2011</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/netbeans-is-awesome/" rel="bookmark">Netbeans is awesome</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>If you still can&#8217;t find that &#8216;perfect&#8217; IDE give Netbeans a try. I was recently introduced it and am still blown away by the amount of functionality and features it has. It&#8217;s similar to eclipse but I always found eclipse to be too sluggish to use on windows (everything seemed to take half a second to do which adds up and gets frustrating very fast).</p>
+<p>The main things I like</p>
+<ul>
+<li>Plugins for things like CoffeeScript, SCSS, Maven etc which make life a lot easier.</li>
+<li>Shortcuts for just about everything, so if you&#8217;re a keyboard ninja you can get things done really fast.</li>
+<li>It has everything else you&#8217;d expect in an IDE (code completion, jumping to definitions etc).</li>
+</ul>
+<p>I&#8217;ve been using PHPDesigner for about 2 years now and although it&#8217;s great for developing in PHP it doesn&#8217;t have the best support for other languages such as Javascript, Coffeescript and Ruby.</p>
+<p>If you&#8217;re a Windows coder give it a whirl, it&#8217;s open source and free.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/netbeans-is-awesome/" data-a2a-title="Netbeans is awesome">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fnetbeans-is-awesome%2F&amp;linkname=Netbeans%20is%20awesome" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fnetbeans-is-awesome%2F&amp;linkname=Netbeans%20is%20awesome" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fnetbeans-is-awesome%2F&amp;linkname=Netbeans%20is%20awesome" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fnetbeans-is-awesome%2F&amp;linkname=Netbeans%20is%20awesome" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fnetbeans-is-awesome%2F&amp;linkname=Netbeans%20is%20awesome" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+				
+<article id="post-45" class="post-45 post type-post status-publish format-standard hentry category-uncategorized tag-coffee-script tag-programming">
+		    <header class="post-header">
+        			<span class="post-meta">
+				<span class="posted-on"><a href="/coffeescript-classes-and-public-private-functions/" rel="bookmark"><time class="entry-date published" datetime="2011-12-17T07:05:54+00:00">December 17, 2011</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/author/tim/">Tim Robinson</a></span></span> on <a href="/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+		        <h1 class="post-title"><a href="/coffeescript-classes-and-public-private-functions/" rel="bookmark">Coffeescript Classes and Public / Private functions</a></h1>
+         
+    </header>
+	<section class="post-content">
+
+		<p>So I&#8217;ve seen some coders confused by how they should declare their functions in Coffeescript. Here&#8217;s some notes I took while learning on how to make the equivilant of Public and Private functions for your class in Coffeescript. Because of the way javascript works it&#8217;s not possible to have private functions in the way you&#8217;re used to with C / Java howevever you can come close.</p>
+<p><strong>Public Function </strong>&#8211; This is your bread and butter function, it is what most coders use by default with coffeescript and is accessible from outside the class.  Notice how it uses a colon after the function name instead of an equals sign.</p>
+<pre><code>class SomeClass
+functionName: -&gt;
+alert('hello world');        
+</code></pre>
+<p><strong>Private function &#8211; </strong>This will create a private function as it makes the function a variable inside the class. So the function is a closure and can only be accessed by functions of that class. Notice how it uses an equal sign instead of a colon.</p>
+<pre><code>class SomeClass
+functionName = -&gt;
+alert('hello world');
+</code></pre>
+<p>There are two catches with Private Functions. The first is because they are a completely seperate function the @ (this) variable will not point to the main object (even though it is called from another internal function). If you wish to use @ in a private function whenever you call the private function it you must use .call(this) which will load the function but use the main class object as the @ variable inside it. For example:</p>
+<pre><code>class Dog
+dogName: "fido"
+constructor: (@dogName) -&gt;
+
+doStuff: -&gt;
+alert('the dog is walking');
+sayHello.call(this);
+
+sayHello = -&gt;
+alert("Hi! I'm "+@dogName);
+
+ralph = new Dog("ralph");
+ralph.doStuff();
+
+peter = new Dog("peter");
+peter.doStuff();
+</code></pre>
+<p>If you run this example yourself you&#8217;ll notice both dogs have separate names and have the private function sayName. The sayName function cannot be called from outside the class (if you try and call it you&#8217;ll get an error) which is exactly how private functions should work.</p>
+<p>The second catch is that this private function is shared for every dog. This isn&#8217;t really an issue for private functions as whenever you use @ the @ variables are specific to each dog. Though it is an issue if you wish to create private variables for your dog, as if you create them in this way they will be shared between every dog which is most likely not what you want.</p>
+<p>If you have any questions or queries let me know via the contact form.</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://timjrobinson.com/coffeescript-classes-and-public-private-functions/" data-a2a-title="Coffeescript Classes and Public / Private functions">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fcoffeescript-classes-and-public-private-functions%2F&amp;linkname=Coffeescript%20Classes%20and%20Public%20%2F%20Private%20functions" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div></div>	    		<div class="clear">&nbsp;</div>
+	</section>
+</article><!-- #post-## -->
+			
+			
+		
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+	<div id="secondary" class="widget-area" role="complementary">
+		
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h1 class="widget-title">Recent Posts</h1>
+		<ul>
+											<li>
+					<a href="/universal-basic-income-is-capitalism-2-0/">Universal Basic Income is Capitalism 2.0</a>
+									</li>
+											<li>
+					<a href="/how-to-combine-getting-things-done-with-trello/">How to combine Getting Things Done with Trello</a>
+									</li>
+											<li>
+					<a href="/fixing-node-gyp-permission-denied-when-running-as-root/">Fixing node-gyp: Permission Denied when running as root</a>
+									</li>
+											<li>
+					<a href="/neato-the-evolutionary-ai-battle-simulator/">NEATo &#8211; The Evolutionary AI Battle Simulator</a>
+									</li>
+											<li>
+					<a href="/new-site-a-decentralized-world/">New Site &#8211; A Decentralized World</a>
+									</li>
+					</ul>
+
+		</aside><aside id="custom_html-3" class="widget_text widget widget_custom_html"><h1 class="widget-title">Newsletter</h1>
+<div class="textwidget custom-html-widget"><iframe src="https://timjrobinson.substack.com/embed" style="border:1px solid #EEE; background:white;" scrolling="no" width="700" height="320" frameborder="0"></iframe></div></aside>		<div class="clear">&nbsp;</div>
+	</div>
+<!-- #secondary -->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+	    <a class="subscribe icon-feed" href="/feed/"><span class="tooltip">Subscribe!</span></a>
+		<div class="site-info inner">
+		    <section class="copyright">
+		    			    		<a href="https://github.com/lacymorrow/casper" rel="home">Casper WP</a> by Lacy Morrow		    			    </section>
+		</div>
+<!-- .site-info -->
+	</footer><!-- #colophon -->
+</main><!-- /#content -->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px;top:100px;background-color:transparent">
+<a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Ftag%2Fprogramming%2F%3Fsimply_static_page%3D211&amp;linkname=programming%20%20TimJRobinson" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Ftag%2Fprogramming%2F%3Fsimply_static_page%3D211&amp;linkname=programming%20%20TimJRobinson" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Ftag%2Fprogramming%2F%3Fsimply_static_page%3D211&amp;linkname=programming%20%20TimJRobinson" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Ftag%2Fprogramming%2F%3Fsimply_static_page%3D211&amp;linkname=programming%20%20TimJRobinson" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Ftag%2Fprogramming%2F%3Fsimply_static_page%3D211&amp;linkname=programming%20%20TimJRobinson" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
+</div>
+<script type="text/javascript" id="disqus_count-js-extra">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"timjrobinsonblog"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.22" id="disqus_count-js"></script>
+<script type="text/javascript" src="/wp-content/themes/casper/js/main.js?ver=1.0.0" id="casper-index-js"></script>
+</body>
+
+
+<!-- Dynamic page generated in 0.034 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-02-19 09:58:30 -->
+
+<!-- Compression = gzip -->
+</html>

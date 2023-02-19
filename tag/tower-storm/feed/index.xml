@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>tower storm &#8211; TimJRobinson</title>
+	<atom:link href="/tag/tower-storm/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Mon, 01 May 2017 01:53:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Projects Status Update &#8211; April 2017</title>
+		<link>/projects-status-update-april-2017/</link>
+					<comments>/projects-status-update-april-2017/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Mon, 01 May 2017 01:53:35 +0000</pubDate>
+				<category><![CDATA[projects]]></category>
+		<category><![CDATA[status updates]]></category>
+		<category><![CDATA[cello]]></category>
+		<category><![CDATA[krav maga]]></category>
+		<category><![CDATA[paper towers]]></category>
+		<category><![CDATA[spanish]]></category>
+		<category><![CDATA[status update]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<guid isPermaLink="false">/?p=187</guid>
+
+					<description><![CDATA[I unfortunately procrastinated the March status update so much that it has melded into the April update. Over the past 2 months I&#8217;ve been working on 4 of my 10 Projects for 2017. Those 4 are: Paper Towers, Spanish, Krav Maga, and learning the Cello. My current core focus is learning the Cello and I&#8217;m <a class="read-more" href="/projects-status-update-april-2017/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I unfortunately procrastinated the March status update so much that it has melded into the April update. Over the past 2 months I&#8217;ve been working on 4 of my <a href="/one-project-every-month/">10 Projects for 2017</a>. Those 4 are: Paper Towers, Spanish, Krav Maga, and learning the Cello. My current core focus is learning the Cello and I&#8217;m spending 3 &#8211; 4 hours a week on the rest.</p>
+<h4>Paper Towers (Now Tower Storm again)</h4>
+<p>Firstly I decided to stick with the name Tower Storm instead of re-branding this project as Paper Towers. I&#8217;m proud to say that <a href="http://github.com/towerstorm/game">Tower Storm is finally Open Source!</a>. I spent around 30 hours in the last 2 months removing all copyrighted graphics and sounds from the game, and cleaning up the code so it&#8217;s easy for anyone to run and make modifications. I finally pulled the trigger a few hours ago and put it up on Github. I also did <a href="https://www.twitch.tv/videos/139235975">my first open source development stream</a>, if you&#8217;re interested in seeing how I develop Tower Storm, how to mod it yourself, and my thoughts on programming in general you can follow me on Twitch.</p>
+<h4>Spanish</h4>
+<p>As of the 21st of April I was up to a 25 day streak on Duolingo doing at least 30 minutes of spanish a day (50xp per day). Unfortunately I lost that streak, but I will be continually learning Spanish on Duolingo over the next year. Alongside that I&#8217;ve been watching movies, LoL games and random Youtube videos in Spanish. I&#8217;ve also switched my PC and Phone to use Spanish as their default language. Every little bit of learning helps.</p>
+<h4>Krav Maga</h4>
+<p>I signed up for Krav Maga 2 weeks ago and so far have done 6 classes. I&#8217;ll probably continue this 3 times a week schedule. So far we&#8217;ve practiced basic punching, hammer fist, kicking, roundhouse kicks, getting out of chokes, and defending yourself when you&#8217;re on the ground. I&#8217;m really enjoying it so far, it&#8217;s useful, it&#8217;s a ton of fun fighting as hard as you can (into pads) and it&#8217;s a great workout. I hadn&#8217;t been punched in maybe 15 years and it&#8217;s an eye opening experience, and made me realize I have to toughen up a lot if I want to survive a real life fight.</p>
+<h4>Cello</h4>
+<p>To celebrate the open sourcing of Tower Storm and the down-winding of that project I went out and hired a Cello for 3 months. I&#8217;ve only had it a week now and haven&#8217;t had lessons yet. I bought a beginners book and have been teaching myself how to play with that and YouTube tutorials. I&#8217;m excited to report that I can already play the beginning of the <a href="https://www.youtube.com/watch?v=9mcdMrZMKhc">Rains Of Castamere</a> song! Albeit with a lot of squeaks and quite slowly. I can&#8217;t wait to learn more.</p>
+<p>So that&#8217;s it. I&#8217;ll be continuing to focus on these 4 activities until at least the end of May whereupon I may start on another depending on my progress and time available.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fprojects-status-update-april-2017%2F&amp;linkname=Projects%20Status%20Update%20%E2%80%93%20April%202017" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fprojects-status-update-april-2017%2F&amp;linkname=Projects%20Status%20Update%20%E2%80%93%20April%202017" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fprojects-status-update-april-2017%2F&amp;linkname=Projects%20Status%20Update%20%E2%80%93%20April%202017" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fprojects-status-update-april-2017%2F&amp;linkname=Projects%20Status%20Update%20%E2%80%93%20April%202017" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fprojects-status-update-april-2017%2F&amp;linkname=Projects%20Status%20Update%20%E2%80%93%20April%202017" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fprojects-status-update-april-2017%2F&#038;title=Projects%20Status%20Update%20%E2%80%93%20April%202017" data-a2a-url="/projects-status-update-april-2017/" data-a2a-title="Projects Status Update – April 2017"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/projects-status-update-april-2017/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Hundreds of robots in every home</title>
+		<link>/hundreds-of-robots-in-every-home/</link>
+					<comments>/hundreds-of-robots-in-every-home/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Wed, 18 Jun 2014 16:02:00 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[automatic cooking]]></category>
+		<category><![CDATA[automation]]></category>
+		<category><![CDATA[food hackers]]></category>
+		<category><![CDATA[home automation]]></category>
+		<category><![CDATA[robotics]]></category>
+		<category><![CDATA[robots]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/hundreds-of-robots-in-every-home/</guid>
+
+					<description><![CDATA[I used to have hundreds dreams and ideas I wanted to pursue. So many that I jumped from task to task like mad trying to make something happen and only ended up scratching the surface of a few. Recently I&#8217;ve realized there only 2 major ideas I keep coming back to that I wish to <a class="read-more" href="/hundreds-of-robots-in-every-home/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I used to have hundreds dreams and ideas I wanted to pursue. So many that I jumped from task to task like mad trying to make something happen and only ended up scratching the surface of a few. Recently I&#8217;ve realized there only 2 major ideas I keep coming back to that I wish to pursue more than anything else:</p>
+<ul>
+<li>Building Tower Storm into a big successful game that millions of people play and enjoy and I earn enough off to never have to worry about money again.</p>
+</li>
+<li>
+<p>Building a robotics company that makes producing your own food automatically a possibility for everyone on the planet.</p>
+</li>
+</ul>
+<p>Tower Storm is already in progress, so in this post I want to talk about my vision for the future of robots.</p>
+<p>I don&#8217;t believe there will be human like robots in every home as in bionical man, but I do think there will be hundreds of machines that will do most menial chores automatically. They&#8217;re already being made, in a crude unrecognisable form, via 3D Printers and open source circuitboards.</p>
+<p>This reminds me of computers in the 70&#8217;s, they were toys that you had to solder and program yourself, there was no way everyone was going to have one let alone use it all the time. I feel that robots are at a similar stage.</p>
+<p>What is needed now is a standard platform that all robots can build upon to work together to accomplish larger tasks. The robots would be modular and accomplish one function in a simple way on their own and they could then be combined in thousands of ways or sold in pre-packed sets to the non geeks out there.</p>
+<p>Lets take cooking for an example. Making a spaghetti is somewhat complicated, but each step and microstep is pretty simple. Lets break down the steps:</p>
+<ul>
+<li>Cook Sauce
+<ul>
+<li>Put pot on hotplate</li>
+<li>Turn hotplate on</li>
+<li>Cook Onions
+<ul>
+<li>Peel onion</li>
+<li>Slice onion</li>
+<li>Transfer onion to pot</li>
+<li>Stir for 2 minutes</li>
+</ul>
+</li>
+<li>Add Mince
+<ul>
+<li>Defrost mince</li>
+<li>Transfer to pot</li>
+<li>Stir for 2 minutes</li>
+</ul>
+</li>
+<li>Add jar of sauce
+<ul>
+<li>Open jar</li>
+<li>Pour jar into pot</li>
+</ul>
+</li>
+<li>Stir for 10 Minutes</li>
+</ul>
+</li>
+<li>Cook Pasta
+<ul>
+<li>Open pasta packet</li>
+</ul>
+</li>
+<li>Put sauce on pasta</li>
+<li>Add cheese on sauce</li>
+</ul>
+<p>When you lay it out like that you can see there are a lot of small steps, but none are too complicated for a robot to do. So why don&#8217;t they do it? Well I believe they will 10 &#8211; 20 years from now, we simply need to build a system for robots to work together in a neat way (like unix pipes) so they can collaborate and make tasks like preparing dinner completely automated.</p>
+<p>We&#8217;ve already got the infrastructure with 3D Printers and arduinos to make this happen, if the community created open source designs for robots that can do each of these tasks then anyone, anywhere could build robots that automate many of their cooking tasks for them, eventually not needing to cook at all.</p>
+<p>What has me even more excited than cooking is producing food automatically. It seems even more complicated than cooking, but if we break it down into separate components we could build robots that create and maintain tiny at home vegetable farms or fruit trees.</p>
+<p>Then if these designs are open sourced anyone anywhere in the world can live effortlessly off the grid with all their food made for them by a team of robots. Once we&#8217;ve automated much of the first worlds food supply we can even help out those less fortunate in the world. Everyone in the world could use them to have their own completely automated unlimited production farm.</p>
+<p>This is what excites me most about 3D Printing and open source circuitboards. Not gadgets and toys but machines that can bring complete automation to everything we don&#8217;t want to do in our lives. so everyone in the world is free to focus on what they enjoy, creating amazing things and learning and giving back to society.</p>
+<p>Sure it&#8217;s insanely complicated, but it&#8217;s doable,</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhundreds-of-robots-in-every-home%2F&amp;linkname=Hundreds%20of%20robots%20in%20every%20home" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fhundreds-of-robots-in-every-home%2F&#038;title=Hundreds%20of%20robots%20in%20every%20home" data-a2a-url="/hundreds-of-robots-in-every-home/" data-a2a-title="Hundreds of robots in every home"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/hundreds-of-robots-in-every-home/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Tower Storm and my 30 second 2 button deployment process</title>
+		<link>/tower-storm-and-my-30-second-2-button-deployment-process/</link>
+					<comments>/tower-storm-and-my-30-second-2-button-deployment-process/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Fri, 26 Apr 2013 20:17:11 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[continuous integration]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<category><![CDATA[unit testing]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/tower-storm-and-my-30-second-2-button-deployment-process/</guid>
+
+					<description><![CDATA[2 years ago I read an amazing book The Lean Startup which made me completely rethink how I developed applications and websites. In the past I&#8217;d make a change to an application, spend 30 minutes going through the main features and release. Inevitably a few days later customers would come back saying x, y and z are <a class="read-more" href="/tower-storm-and-my-30-second-2-button-deployment-process/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>2 years ago I read an amazing book <a title="The Lean Startup" href="http://www.amazon.com/gp/product/0307887898/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0307887898&amp;linkCode=as2&amp;tag=tjrblog-20">The Lean Startup</a> which made me completely rethink how I developed applications and websites. In the past I&#8217;d make a change to an application, spend 30 minutes going through the main features and release. Inevitably a few days later customers would come back saying x, y and z are all broken. So I&#8217;d fix them and re-release and now 3 other completely different features would be broken. This happened consistently but with limited time and money I thought it was impossible to improve this process.</p>
+<p>Today I can make a change to <a title="Tower Storm" href="http://www.towerstorm.com/">Tower Storm</a> and within 30 seconds have this change live online with very little (soon to be none) manual testing and no old bugs are coming back to bite me. In this post I want to show you how I&#8217;ve done it.</p>
+<p><strong>Automated Testing</strong></p>
+<p>The first step is to eliminate this 30+ minutes of testing that I had to manually do after every change. There is absolutely no way you can quickly release and iterate on your app without either:</p>
+<p>a. An army of testers who are always able to detect any bug and will happily retest everything in your application upon every single change<br />
+b. Automated tests that find regressions and issues in your application for you</p>
+<p>Being that you&#8217;re running a <em>lean</em> startup here I don&#8217;t think you&#8217;ve got thousands of dollars to burn on many dedicated testers so lets explore the world of automated testing.</p>
+<p>Automated testing is where you create code that tests the functions of your application to determine if it&#8217;s doing what it should be doing. For example if you have a function that should remove every comma from a string and you want to ensure that it works for a variety of different strings you might create a test like so:</p>
+<pre><code>function testRemoveComma() {
+var sentence = "this,is,a,sentence";
+var expectedSentence = "thisisasentence";
+var actualSentence = removeComma(sentence);
+assert.equals(expectedSentence, actualSentence);
+
+}
+</code></pre>
+<p>In this javascript example we first create a sentence with commas in it, then we specify what we expect back from our function. Then we call that function and ensure that what we got back from it matches what we expect back from it.</p>
+<p>This example is what is known as a &#8220;unit test&#8221;, it is a test that checks one function by giving it inputs and receiving outputs and it doesn&#8217;t do other tasks such as connecting to your database or reading files. It should only check one function only. If that function calls other functions you need to use a technique called &#8216;<a title="Mocking" href="http://en.wikipedia.org/wiki/Mock_object">mocking</a>&#8216; so that they don&#8217;t really get called. I&#8217;ll go into more detail on how to create unit tests and mock objects in a variety of languages in a later post.</p>
+<p>To start unit testing you&#8217;ll need a library to run these tests. Generally there is one or two good testing libraries for most languages. For Javascript I&#8217;d recommend mocha for Node.js testing or Jasmine for client side testing, for Java JUnit with Mockito is awesome and for PHP PHPUnit works well.</p>
+<p>Unit tests are the simplest, fastest and often most fragile tests. They aren&#8217;t the best for ensuring your app is bug free but they are perfect for eliminating existing bugs and ensuring they never occur again.</p>
+<p>The thing I love about unit tests is because they are so fast and easy to write you can do a process known as test driven development. This is where you write unit tests for your code before you write a single line of code. So in the remove comma example above we could write an empty removeComma function, then write the above test and run it only to see it fail, then after it has failed we create our removeComma function and run the test again and when it passes it means our code is working.</p>
+<p>When you do test driven development constantly you can save hours by not needing to run your app after each code change. You simply test then code, test then code and eventually at the end you run your app and because every function works as it should your app should (in theory) work perfectly first go. It&#8217;s amazing when you get into this flow because if you&#8217;re building a large app you can continue to code for hours and really get into the zone without having to recompile everything and boot up your app to see if it&#8217;s working as it should.</p>
+<p><strong>Better testing with Integration and Acceptance tests</strong></p>
+<p>After you&#8217;ve mastered the art of the unit test there are even more powerful tests that you can use that will allow you to deploy your application without even running it and know that all functionality is working.</p>
+<p>You do this by creating integration and acceptance tests. Unlike unit tests Integration and Acceptance tests actually test your app in a real environment with database and network calls. Integration tests are similar to unit tests in that they run one function or a group of functions in order and check that they are all working as they should. The difference is integration tests run the code as if a real user was calling the function, so if the function creates records in the database the integration test will do that, and if your function calls another external service the integration test will do that too.</p>
+<p>Here&#8217;s an example of a PHP integration test in <a title="ZenTester" href="http://www.zentester.com/">ZenTester</a>:</p>
+<pre><code>/**
+* @test
+*/
+function Checklogin() {
+$this-&gt;ci-&gt;load-&gt;library('userManager');
+
+$random_key = self::$random_key;
+$reg_data = ut_get_registration_data($random_key);
+
+//logout first (check_login function in controller does this too). 
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;logout(), true, "logging out before logging in");        
+$this-&gt;assertEquals(is_array($this-&gt;ci-&gt;usermanager-&gt;register_user($reg_data, 0)), true, "Registering User With All information");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;login($reg_data['email'], $reg_data['password']), true, "logging in to this user");
+$user_id = $this-&gt;ci-&gt;user-&gt;get_user_id();
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;is_valid_user(), true, "Checking that after login we are a valid user.");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;logout(), true, "Testing logging out");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;is_valid_user(), false, "Checking that we are not a valid user after logging out. ");
+
+ut_erase_user($user_id);
+}
+
+</code></pre>
+<p>In this integration test we first create a new user with the helper function ut_get_registration_data. Then we register and log in with that user. After logging in we ensure that the user has successfully logged in and is valid. Then we log out and check that this also worked. Finally the user is deleted at the end.</p>
+<p>In this case we create and clean up all our data so the database isn&#8217;t littered with test data. The downside of always deleting your data at the end of the test is you may find that it&#8217;s hard to track down why an integration test is failing because you can&#8217;t see what was created and what wasn&#8217;t. At Wotif we don&#8217;t clean up our data at the end of each tests and instead re-use the test data upon every run and delete old data at the beginning of each test. This way you don&#8217;t add much test data to the database while still being able to figure out what went wrong when a test fails.</p>
+<p>Acceptance tests are another level of abstraction, they use your app from a users perspective, loading pages, clicking on links etc and ensuring what is shown to the user after performing specific functions is correct. They are often done with tools such as <a title="Selenium" href="http://docs.seleniumhq.org/">selenium</a> or <a title="Curl" href="http://curl.haxx.se/">curl</a>. At Wotif we&#8217;ve been using CucumberJVM to run selenium on a remote box which loads up our app, tests that all the main features are working from a user perspective and reports if anything is broken. These are then run automatically by Team City every time we push a change.</p>
+<p>&nbsp;</p>
+<p><strong>Using GruntJS to build your assets </strong></p>
+<p>Grunt is the second most amazing part of the deployment process. It basically takes the application and builds it so it&#8217;s ready to upload. It currently does all of the following (the grunt plugin used to do each item is in brackets):</p>
+<ul>
+<li><span style="line-height: 13px;">Bumps the game version number (grunt-bump)</span></li>
+<li>Checks the javascript for any errors (lint)</li>
+<li>Cleans the build directory (grunt-contrib-clean)</li>
+<li>Copies all the correct files to the build directory (grunt-contrib-copy)</li>
+<li>Turns all the cofeescript into javascript (grunt-contrib-coffee)</li>
+<li>Builds the core game javascript into a single js file (grunt-exec which runs impact.js&#8217;s build tool which is coded in php)</li>
+<li>Uglify&#8217;s (minifies) the javascript along with all external libraries and config files into a single game.min.js file (grunt-contrib-uglify)</li>
+<li>Compiles all the less css files (grunt-contrib-less)</li>
+<li>Minifies the css and puts it into one file (grunt-contrib-cssmin)</li>
+<li>Compiles the jade files into html (grunt-contrib-jade)</li>
+<li>Uploads all the compressed and compiled assets to a new folder on amazon s3, the folder name is the current game version number (grunt-s3)</li>
+</ul>
+<p>It&#8217;s a complicated process yet grunt.js handles most of these tasks with very little configuration needed and can do all of this in under 30 seconds.</p>
+<p>The assets are uploaded to a new amazon s3 folder of the builds version number so that assets are never overwritten and users who are still playing the game are not interrupted. You can do this by setting the variable pkg to your package.json file then using the variable &lt;% pkg.version %&gt; in your s3 upload script. My s3 task looks like this:</p>
+<pre><code>grunt.initConfig({
+bump: {},
+pkg: grunt.file.readJSON('package.json'), 
+s3: {
+bucket: 'towerstorm',
+access: 'public-read',
+
+// Files to be uploaded.
+upload: [        
+{
+src: 'build/public/js/lobby.min.js',
+dest: 'game-server/&lt;%= pkg.version %&gt;/js/lobby.min.js',
+gzip: true
+},
+{
+src: 'build/public/css/lobby.min.css',
+dest: 'game-server/&lt;%= pkg.version %&gt;/css/lobby.min.css',
+gzip: true
+}
+]
+}
+});
+</code></pre>
+<p>If you&#8217;re using grunt-bump to auto bump the version number with every build you&#8217;ll also need to modify the grunt-bump/tasks/bump.js file and add the following line to the bottom of the grunt.registerTask function so that after the version is bumped the variable pkg is set to the latest version:</p>
+<pre><code>grunt.config.set("pkg", grunt.file.readJSON("package.json"));
+</code></pre>
+<p>In the game code it simply loads the assets for it&#8217;s current version number so even if people start games after this build process is done they will load the old game assets and it&#8217;s only when the new version is deployed and Node.js is restarted that the new assets will be loaded. This way the server code and game client code are always in sync. Lastly versioning the assets also ensures that users browser don&#8217;t cache old assets which could cause errors if gameplay changes are introduced yet clients are loading an old cached version of the game.</p>
+<p>All the TowerStorm servers are hosted using Amazon EC2 and in the future I&#8217;m looking to implement a system where with each new version a bunch of new servers are spawned with the new game client and assets, then whenever players start new games they are all started on the new servers only and the old servers only stay alive until the last game is finished then they are powered down. This will allow us to continually release new versions of Tower Storm without ever having &#8216;patch downtime&#8217;.</p>
+<p><strong>Continuous Integration</strong></p>
+<p><strong></strong>The third step is to take this unit testing and asset building and automate it with a dedicated server that runs everything in a server like environment. This way if you have a team of developers they don&#8217;t each have to set up grunt and acceptance tests and full build environment on their machine, instead every time they commit a new change the continuous integration server downloads the new code from git, compiles it using grunt and runs all the unit tests using either a custom private server setup or running them on it&#8217;s own machine using it&#8217;s own browser or a headless browser like phantomjs.</p>
+<p>I haven&#8217;t yet set up a continuous integration server for Tower Storm as I&#8217;m currently the only developer and it was easier to set everything up locally (especially in these very early stages) but I&#8217;ll definitely be setting on up soon. At Wotif we&#8217;ve tried out Jenkins, Bamboo and Teamcity and all were good in some ways and bad in others. I myself prefer the layout and feel of Bamboo the most however this is often personal preference as other members of our team prefer Teamcity&#8217;s layout more. Jenkins is probably the least liked in usability and layout but it is completely free and comes with tons of plugins for doing almost every task you like so if that&#8217;s what you&#8217;re looking for then it&#8217;ll work well for you.</p>
+<p><strong>Automated cmd files and the 2 button deploy process</strong></p>
+<p><strong></strong>To tie all these various testing, running and deploying scripts together I&#8217;ve created a few command files (yes I run windows 8, although I use Ubuntu at Wotif and the Tower Storm servers are running Linux) that make things even easier. Here&#8217;s what they do:<span style="line-height: 13px;"><br />
+</span></p>
+<p>commitAndPush.cmd &#8211; Runs tortoisegit (my favourite git gui by far) commit screen then push&#8217;s the code after you&#8217;ve committed your changes. It looks like so:</p>
+<pre><code>call E:\\apps\\scripts\\tgit.cmd commit C:\\coding\\node\\towerstorm\\GameServer
+call git push --all --progress  BitBucket
+pause
+
+</code></pre>
+<p>the tgit.cmd file it refrences is a hook to tortoisegit to make it run any command from the command line. It&#8217;s contents are:</p>
+<pre><code>"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe" /command:%1 /path:%2
+</code></pre>
+<p>devenv.cmd &#8211; Runs the game locally using node-dev which makes it auto restart whenever a change is made and it also runs test.cmd explained next:</p>
+<pre><code>set NODE_ENV=development
+start cmd.exe /K "cd .. &amp;&amp; call ./node_modules/.bin/node-dev server.coffee"
+start cmd.exe /K "cd .. &amp;&amp; call scripts/test unit"
+</code></pre>
+<p>test.cmd &#8211; This loads a cmd prompt that automatically runs all the unit tests using mocha and re-runs them whenever a test is made. It scans the test directory for all coffeescript files and runs them:</p>
+<pre><code>setlocal EnableDelayedExpansion
+IF "%1" == "" (
+SET files=C:\\cygwin\\bin\\find test -name "*.coffee"
+) ELSE (
+SET files=C:\\cygwin\\bin\\find test\\%1 -name "*.coffee"
+)
+
+FOR /F %%i IN (' %files% ') DO SET tests=!tests! %%i 
+.\\node_modules\\.bin\\mocha --watch --reporter min --slow 10 --globals $ --compilers coffee:coffee-script --require coffee-script test\\_helper %tests%
+pause
+</code></pre>
+<p>I run these scripts by binding them to the macro keys on my Logitech G15 keyboard (which I bought mainly because it had these keys). I have the dev environment setup bound to one key, grunt bound to another and commit and push bound to a third. This way I can develop in one key press and deploy a new version of Tower Storm using just 2 buttons <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Hope this was informative enough and if you have any questions or are confused about any steps let me know.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&#038;title=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" data-a2a-url="/tower-storm-and-my-30-second-2-button-deployment-process/" data-a2a-title="Tower Storm and my 30 second 2 button deployment process"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/tower-storm-and-my-30-second-2-button-deployment-process/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Multiplayer online Tower Defense incoming :)</title>
+		<link>/multiplayer-online-tower-defense-incoming/</link>
+					<comments>/multiplayer-online-tower-defense-incoming/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Sun, 23 Dec 2012 01:13:35 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[multiplayer tower defense]]></category>
+		<category><![CDATA[pvp td]]></category>
+		<category><![CDATA[tower defense]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/multiplayer-online-tower-defense-incoming/</guid>
+
+					<description><![CDATA[The past few months I&#8217;ve been working on a browser based multiplayer tower defense game called Tower Storm, because it&#8217;s something I&#8217;ve been wanting to build for years. I had originally planned for it to be PvE where players work together to kill monsters similar to Azure Tower Defense, however we soon realised while PvE <a class="read-more" href="/multiplayer-online-tower-defense-incoming/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>The past few months I&#8217;ve been working on a browser based multiplayer tower defense game called <a href="http://www.towerstorm.com/">Tower Storm</a>, because it&#8217;s something I&#8217;ve been wanting to build for years.</p>
+<p>I had originally planned for it to be PvE where players work together to kill monsters similar to Azure Tower Defense, however we soon realised while PvE is easier for most people to understand it doesn&#8217;t have enough replayability without constantly adding new content.</p>
+<p>So I&#8217;m focusing on PvP first in the style of <a href="http://www.youtube.com/watch?v=52Od3eFgyGE">Wintermaul Wars</a> because I absolutely love it&#8217;s gameplay.</p>
+<p>I&#8217;ve been play testing with friends on the home lan for a while, hopefully will have a version online soon.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fmultiplayer-online-tower-defense-incoming%2F&amp;linkname=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fmultiplayer-online-tower-defense-incoming%2F&#038;title=Multiplayer%20online%20Tower%20Defense%20incoming%20%3A%29" data-a2a-url="/multiplayer-online-tower-defense-incoming/" data-a2a-title="Multiplayer online Tower Defense incoming :)"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/multiplayer-online-tower-defense-incoming/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

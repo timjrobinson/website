@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>nodejs &#8211; TimJRobinson</title>
+	<atom:link href="/tag/nodejs-2/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Wed, 11 Jun 2014 08:49:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>RethinkDB &#8211; Too many open files</title>
+		<link>/rethinkdb-too-many-open-files/</link>
+					<comments>/rethinkdb-too-many-open-files/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Wed, 11 Jun 2014 08:49:25 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[database connections]]></category>
+		<category><![CDATA[nodejs]]></category>
+		<category><![CDATA[rethinkdb]]></category>
+		<category><![CDATA[too many open files]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/rethinkdb-too-many-open-files/</guid>
+
+					<description><![CDATA[After dealing with RethinkDB &#8220;too many open files&#8221; errors for the past few weeks I finally submitted a github issue and discovered what the problem was &#8211; I wasn&#8217;t closing my connections. I thought there was some kind of connection pooling in rethinkdb so when you did r.connection it would either use an existing connection <a class="read-more" href="/rethinkdb-too-many-open-files/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>After dealing with RethinkDB &#8220;too many open files&#8221; errors for the past few weeks I finally submitted a github issue and discovered what the problem was &#8211; I wasn&#8217;t closing my connections.</p>
+<p>I thought there was some kind of connection pooling in rethinkdb so when you did r.connection it would either use an existing connection or get a new one. Unfortunately this wasn&#8217;t the case. Turns out when you&#8217;re done with your connection you have to close it or it will tie up resources until the connection times out. Do it enough times and you&#8217;ll run into this too many open files error.</p>
+<p>Here&#8217;s an example of how to code your nodejs models using rethinkdb best practices. This is based off the <a href="http://www.rethinkdb.com/docs/examples/node-socket-chat/">example on the rethinkdb site</a>.</p>
+<pre><code>### rethinkdb-client.coffee ###
+
+r = require('rethinkdb')
+netconfig = require('../config/netconfig')
+
+db = r
+db.onConnect = (callback) -&gt;
+r.connect {host: netconfig.db.host, port: netconfig.db.port, db: 'towerstorm'}, (err, conn) -&gt;
+if err then throw new Error(err)
+if !conn then throw new Error("No RethinkDB connection returned")
+callback(err, conn)
+
+module.exports = db
+</code></pre>
+<pre><code>### user.coffee ###
+
+db = require("./rethinkdb-client")
+
+class User
+data: null
+
+constructor: (data) -&gt;
+@data = data
+
+User.findById = (id, callback) -&gt;
+if !id then return callback(new Error("Invalid ID passed to User.findById"))
+db.onConnect (err, conn) -&gt;
+if err then return callback(err)
+db.table('users').get(id).run conn, (err, userInfo) -&gt;
+conn.close() #This is what I forgot, remember to do this
+if err then return callback(err)
+return callback(null, new User(userInfo))
+
+User.findByUsername = (username, callback) -&gt;
+db.onConnect (err, conn) =&gt;
+if err then return callback(err)
+db.table('users').getAll(username, {index: 'username'}).run conn, (err, cursor) -&gt;
+if err then return callback(err)
+cursor.toArray (err, results) -&gt;
+conn.close() #Do this after cursor.toArray, not before
+users = results.map((userInfo) -&gt; new User(userInfo))
+return callback(null, users)
+
+
+</code></pre>
+<p>If you&#8217;re only getting one item you should close the connection immediately after the run() callback returns. If you&#8217;re getting multiple items you&#8217;ll get a cursor instead of a single item to your callback so call conn.close() after you&#8217;ve done cursor.toArray().</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Frethinkdb-too-many-open-files%2F&amp;linkname=RethinkDB%20%E2%80%93%20Too%20many%20open%20files" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Frethinkdb-too-many-open-files%2F&amp;linkname=RethinkDB%20%E2%80%93%20Too%20many%20open%20files" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Frethinkdb-too-many-open-files%2F&amp;linkname=RethinkDB%20%E2%80%93%20Too%20many%20open%20files" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Frethinkdb-too-many-open-files%2F&amp;linkname=RethinkDB%20%E2%80%93%20Too%20many%20open%20files" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Frethinkdb-too-many-open-files%2F&amp;linkname=RethinkDB%20%E2%80%93%20Too%20many%20open%20files" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Frethinkdb-too-many-open-files%2F&#038;title=RethinkDB%20%E2%80%93%20Too%20many%20open%20files" data-a2a-url="/rethinkdb-too-many-open-files/" data-a2a-title="RethinkDB – Too many open files"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/rethinkdb-too-many-open-files/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

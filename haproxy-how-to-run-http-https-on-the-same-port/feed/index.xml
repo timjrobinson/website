@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: HAProxy &#8211; How to run http and https on the same port	</title>
+	<atom:link href="/haproxy-how-to-run-http-https-on-the-same-port/feed/" rel="self" type="application/rss+xml" />
+	<link>/haproxy-how-to-run-http-https-on-the-same-port/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Wed, 02 Sep 2015 16:08:55 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+</channel>
+</rss>

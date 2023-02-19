@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>unit testing &#8211; TimJRobinson</title>
+	<atom:link href="/tag/unit-testing-2/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Thu, 19 Jun 2014 07:57:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>If you&#8217;re unit testing Javascript use Sinon.js, it&#8217;s more useful than you expect</title>
+		<link>/unit-testing-javascript-use-sinon-js/</link>
+					<comments>/unit-testing-javascript-use-sinon-js/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Thu, 19 Jun 2014 07:57:07 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[mock]]></category>
+		<category><![CDATA[mocking]]></category>
+		<category><![CDATA[sinon]]></category>
+		<category><![CDATA[sinon.js]]></category>
+		<category><![CDATA[sinonjs]]></category>
+		<category><![CDATA[spy]]></category>
+		<category><![CDATA[stub]]></category>
+		<category><![CDATA[unit testing]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/unit-testing-javascript-use-sinon-js/</guid>
+
+					<description><![CDATA[For a long time I didn&#8217;t use any unit testing libraries with Javascript. After all unlike Java you can do anything with your objects. If you want your car to be a cat that can walk you simply modify the object directly. So what&#8217;s the point of having a mocking library? I discovered sinon.js a <a class="read-more" href="/unit-testing-javascript-use-sinon-js/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>For a long time I didn&#8217;t use any unit testing libraries with Javascript. After all unlike Java you can do anything with your objects. If you want your car to be a cat that can walk you simply modify the object directly. So what&#8217;s the point of having a mocking library?</p>
+<p>I discovered <a href="http://sinonjs.org/">sinon.js</a> a few months ago and immediately fell in love. It made me realize how much useless boilerplate code I had in my unit tests and immediately helped me write cleaner, more elegant code.</p>
+<p>Here&#8217;s a very basic example of how I used to mock functions before and after sinon:</p>
+<pre><code>/** Before sinon.js **/
+
+getAnimationSheetArgs = null;
+impactMock.game.cache.getAnimationSheet = function() {
+getAnimationSheetArgs = arguments
+};
+bullet.loadAnimations();
+assert(getAnimationSheetArgs != null);
+assert.equal(getAnimationSheetArgs[0], "img/bullets/awesome.png");
+assert.equal(getAnimationSheetArgs[1], 5);
+assert.equal(getAnimationSheetArgs[2], 15);
+</code></pre>
+<pre><code>/** After sinon.js **/
+
+impactMock.game.cache.getAnimationSheet = sinon.spy();
+bullet.loadAnimations();
+assert(impactMock.game.cache.getAnimationSheet.calledWith("img/bullets/awesome.png", 5, 15));
+</code></pre>
+<p>Before Sinon I had to declare a variable to hold the arguments passed to each function I wanted to mock. After using sinon this became one line and verifying the correct arguments were passed to the function can be done in one function call.</p>
+<p>It may not look like much, but when you have over 1000 unit tests (as <a href="http://www.towerstorm.com/">Tower Storm</a> now has) it adds up to a lot of time saved.</p>
+<p>Sinon also provides tons of functionality to stub out functions. You can make a method automatically return certain values or even call a callback with specific arguments (for testing async code).</p>
+<p>Let&#8217;s say you want to test a render function to ensure user details are displayed. It looks like this:</p>
+<pre><code>var AdminController = {
+userInfo: function (req, res) {
+userId = req.param('id');
+User.findById(userId, function (err, user) {
+if (err) return res.send(500);
+res.jsonp(200, user.data);
+});
+}
+}
+</code></pre>
+<p>Now we only want to test that user.data is being sent to the browser. We don&#8217;t want to actually hit the database and find a user with findById so we need to mock it out.</p>
+<pre><code>it("Should send user.data to the browser", function () {
+var mockUser = {data: {name: 'test'}};
+sinon.stub(User, 'findById').callsArgWith(1, null, mockUser);
+req = {param: sinon.stub().returns(123)};
+res = {jsonp: sinon.spy()};
+AdminController.userInfo(req, res);
+assert(res.jsonp.calledWith(200, {name: 'test'}));
+User.findById.restore()
+});
+</code></pre>
+<p>On line 1 we create a mock user which we want to display. Then we stub the User.findById method to instantly call argument 1 (the callback) with the 2 arguments null and mockUser (for it&#8217;s err and user arguments).<br />
+On line 3 we create req as an object with just the param method. We set param to a sinon stub and make it instantly return 123 (the user&#8217;s id, although it can return anything as User.findById doesn&#8217;t even use it).<br />
+On line 4 we create res as an object that only has a jsonp method. We set this method to be a sinon spy as it doesn&#8217;t need to return anything, it only needs to record what it was called with.<br />
+On lines 5 and 6 we call the method and check that res.jsonp was successfully called with the users data using sinons handy calledWith function.<br />
+Finally on line 7 we call restore on User.findById to remove the stub and restore it&#8217;s original functionality. This is so if we have tests in the future that want to use the original function they won&#8217;t break unexpectedly.</p>
+<p>This is by far the easiest way I&#8217;ve found to mock and unit test javascript though if you know of a better way let me know. I&#8217;m always trying to be as efficient as possible.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Funit-testing-javascript-use-sinon-js%2F&amp;linkname=If%20you%E2%80%99re%20unit%20testing%20Javascript%20use%20Sinon.js%2C%20it%E2%80%99s%20more%20useful%20than%20you%20expect" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Funit-testing-javascript-use-sinon-js%2F&amp;linkname=If%20you%E2%80%99re%20unit%20testing%20Javascript%20use%20Sinon.js%2C%20it%E2%80%99s%20more%20useful%20than%20you%20expect" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Funit-testing-javascript-use-sinon-js%2F&amp;linkname=If%20you%E2%80%99re%20unit%20testing%20Javascript%20use%20Sinon.js%2C%20it%E2%80%99s%20more%20useful%20than%20you%20expect" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Funit-testing-javascript-use-sinon-js%2F&amp;linkname=If%20you%E2%80%99re%20unit%20testing%20Javascript%20use%20Sinon.js%2C%20it%E2%80%99s%20more%20useful%20than%20you%20expect" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Funit-testing-javascript-use-sinon-js%2F&amp;linkname=If%20you%E2%80%99re%20unit%20testing%20Javascript%20use%20Sinon.js%2C%20it%E2%80%99s%20more%20useful%20than%20you%20expect" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Funit-testing-javascript-use-sinon-js%2F&#038;title=If%20you%E2%80%99re%20unit%20testing%20Javascript%20use%20Sinon.js%2C%20it%E2%80%99s%20more%20useful%20than%20you%20expect" data-a2a-url="/unit-testing-javascript-use-sinon-js/" data-a2a-title="If you’re unit testing Javascript use Sinon.js, it’s more useful than you expect"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/unit-testing-javascript-use-sinon-js/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

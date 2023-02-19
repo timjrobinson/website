@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>unit testing &#8211; TimJRobinson</title>
+	<atom:link href="/tag/unit-testing/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Tue, 17 Jun 2014 16:02:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>How to mock and unit test moment.js</title>
+		<link>/how-to-mock-and-unit-test-moment-js/</link>
+					<comments>/how-to-mock-and-unit-test-moment-js/#comments</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Tue, 17 Jun 2014 16:02:57 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[mocha]]></category>
+		<category><![CDATA[mocking]]></category>
+		<category><![CDATA[moment]]></category>
+		<category><![CDATA[moment timezone]]></category>
+		<category><![CDATA[moment.js]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[unit test]]></category>
+		<category><![CDATA[unit testing]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-mock-and-unit-test-moment-js/</guid>
+
+					<description><![CDATA[I&#8217;ve been using moment.js in some client work for a rather complex booking form.Unfortunately date related functionality is almost impossible to manually test so we implemented unit tests to ensure everything worked as it should. Code like this is perfect for unit testing because it&#8217;s completely rules based. Mocking moment.js seemed hard at first but <a class="read-more" href="/how-to-mock-and-unit-test-moment-js/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve been using moment.js in some client work for a rather complex booking form.Unfortunately date related functionality is almost impossible to manually test so we implemented unit tests to ensure everything worked as it should. Code like this is perfect for unit testing because it&#8217;s completely rules based.</p>
+<p>Mocking moment.js seemed hard at first but wasn&#8217;t too complicated after a bit of thought. Here&#8217;s an example of how to mock it using mocha.</p>
+<p>First we have the booking manager validate function that needs to be tested. This function ensures that customers cannot make bookings for the next day after 3pm. It also ensures customers cannot make bookings for saturday and monday after 3pm on friday.</p>
+<pre><code>/** booking-manager.js **/
+
+BookingManager = {
+getCurrentTime: function () {
+return moment().tz(config.TIMEZONE)    
+},
+validate: function(formData) {
+var bookingDay, currentTime;
+currentTime = this.getCurrentTime();
+bookingDay = moment(formData.dateAndTime.date, "YYYYMMDD").tz(config.TIMEZONE);
+if (bookingDay.isBefore(currentTime, 'day') || bookingDay.isSame(currentTime, 'day')) {
+return false;
+}
+if (currentTime.format('HH') &gt;= config.NEXT_DAY_CUTOFF_TIME) {
+if (bookingDay.isSame(moment(currentTime).add('days', 1), 'day')) {
+return false;
+}
+if (currentTime.day() === 5 &amp;&amp; bookingDay.day() === 1) {
+return false;
+}
+}
+if ((currentTime.day() === 6 || currentTime.day() === 0) &amp;&amp; bookingDay.day() === 1) {
+return false;
+}
+return true;
+}
+}
+
+</code></pre>
+<p>Now we need to test this function to ensure it works. The problem is we have to test booking restrictions are working on every day of the week. So we need to mock out the getCurrentTime function to pretend we&#8217;re submitting the form at different times.</p>
+<pre><code>/* booking-manager-unit-test.js **/
+
+describe("BookingManager", function() {
+var currentDayOfWeek, currentHour, originalGetCurrentTime, formData;
+currentHour = null;
+currentDayOfWeek = null;
+originalGetCurrentTime = null;
+formData = null;
+
+beforeEach(function() {
+var currentDayOfWeek, currentHour, originalGetCurrentTime;
+currentHour = 12;
+currentDayOfWeek = 1;
+formData = { dateAndTime: { date: null }};
+originalGetCurrentTime = bookingManager.getCurrentTime;
+bookingManager.getCurrentTime = function() {
+var currentTime;
+currentTime = originalGetCurrentTime.call(bookingManager);
+currentTime.day(currentDayOfWeek);
+currentTime.hour(currentHour);
+return currentTime;
+};
+});
+
+afterEach(function() {
+return bookingManager.getCurrentTime = originalGetCurrentTime;
+});
+});
+
+
+
+</code></pre>
+<p>This is the meat of the mocking. We set up two variables currentHour and currentDayOfWeek. Then we use these in our mock getCurrentTime function to fake the current time.</p>
+<pre><code>describe("validate", function() {
+it("Should return false if the booking date is the current day or before", function() {
+var formData, today;
+today = bookingManager.getCurrentTime();
+formData.dateAndTime.date = today.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is a next day booking and the time is past 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 16;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is a next day booking and the time hour is 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 15;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on saturday for monday", function() {
+var currentDayOfWeek, formData, monday;
+currentDayOfWeek = 6;
+monday = bookingManager.getCurrentTime().add('days', 2);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on sunday for monday", function() {
+var currentDayOfWeek, formData, monday;
+currentDayOfWeek = 0;
+monday = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on friday after 3pm for monday", function() {
+var currentDayOfWeek, currentHour, formData, monday;
+currentDayOfWeek = 5;
+currentHour = 15;
+monday = bookingManager.getCurrentTime().add('days', 3);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return true if the booking is made on friday before 3pm for monday", function() {
+var currentDayOfWeek, currentHour, formData, monday;
+currentDayOfWeek = 5;
+currentHour = 13;
+monday = bookingManager.getCurrentTime().add('days', 3);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+
+it("Should return true if the booking is a next day booking and the time is before 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 12;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+
+it("Should return true if it's past 3pm but the booking is not a next day booking", function() {
+var currentHour, formData, future;
+currentHour = 16;
+future = bookingManager.getCurrentTime().add('days', 2);
+formData.dateAndTime.date = future.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+});
+
+
+</code></pre>
+<p>As you can see using this mock function is quite easy. You simply change the currentHour or currentDayOfWeek variables and that&#8217;s what the time becomes.</p>
+<p>Have fun coding and let me know if you find any issues with the above code or feel it can be improved.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fhow-to-mock-and-unit-test-moment-js%2F&#038;title=How%20to%20mock%20and%20unit%20test%20moment.js" data-a2a-url="/how-to-mock-and-unit-test-moment-js/" data-a2a-title="How to mock and unit test moment.js"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/how-to-mock-and-unit-test-moment-js/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Tower Storm and my 30 second 2 button deployment process</title>
+		<link>/tower-storm-and-my-30-second-2-button-deployment-process/</link>
+					<comments>/tower-storm-and-my-30-second-2-button-deployment-process/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Fri, 26 Apr 2013 20:17:11 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[continuous integration]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[tower storm]]></category>
+		<category><![CDATA[unit testing]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/tower-storm-and-my-30-second-2-button-deployment-process/</guid>
+
+					<description><![CDATA[2 years ago I read an amazing book The Lean Startup which made me completely rethink how I developed applications and websites. In the past I&#8217;d make a change to an application, spend 30 minutes going through the main features and release. Inevitably a few days later customers would come back saying x, y and z are <a class="read-more" href="/tower-storm-and-my-30-second-2-button-deployment-process/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>2 years ago I read an amazing book <a title="The Lean Startup" href="http://www.amazon.com/gp/product/0307887898/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0307887898&amp;linkCode=as2&amp;tag=tjrblog-20">The Lean Startup</a> which made me completely rethink how I developed applications and websites. In the past I&#8217;d make a change to an application, spend 30 minutes going through the main features and release. Inevitably a few days later customers would come back saying x, y and z are all broken. So I&#8217;d fix them and re-release and now 3 other completely different features would be broken. This happened consistently but with limited time and money I thought it was impossible to improve this process.</p>
+<p>Today I can make a change to <a title="Tower Storm" href="http://www.towerstorm.com/">Tower Storm</a> and within 30 seconds have this change live online with very little (soon to be none) manual testing and no old bugs are coming back to bite me. In this post I want to show you how I&#8217;ve done it.</p>
+<p><strong>Automated Testing</strong></p>
+<p>The first step is to eliminate this 30+ minutes of testing that I had to manually do after every change. There is absolutely no way you can quickly release and iterate on your app without either:</p>
+<p>a. An army of testers who are always able to detect any bug and will happily retest everything in your application upon every single change<br />
+b. Automated tests that find regressions and issues in your application for you</p>
+<p>Being that you&#8217;re running a <em>lean</em> startup here I don&#8217;t think you&#8217;ve got thousands of dollars to burn on many dedicated testers so lets explore the world of automated testing.</p>
+<p>Automated testing is where you create code that tests the functions of your application to determine if it&#8217;s doing what it should be doing. For example if you have a function that should remove every comma from a string and you want to ensure that it works for a variety of different strings you might create a test like so:</p>
+<pre><code>function testRemoveComma() {
+var sentence = "this,is,a,sentence";
+var expectedSentence = "thisisasentence";
+var actualSentence = removeComma(sentence);
+assert.equals(expectedSentence, actualSentence);
+
+}
+</code></pre>
+<p>In this javascript example we first create a sentence with commas in it, then we specify what we expect back from our function. Then we call that function and ensure that what we got back from it matches what we expect back from it.</p>
+<p>This example is what is known as a &#8220;unit test&#8221;, it is a test that checks one function by giving it inputs and receiving outputs and it doesn&#8217;t do other tasks such as connecting to your database or reading files. It should only check one function only. If that function calls other functions you need to use a technique called &#8216;<a title="Mocking" href="http://en.wikipedia.org/wiki/Mock_object">mocking</a>&#8216; so that they don&#8217;t really get called. I&#8217;ll go into more detail on how to create unit tests and mock objects in a variety of languages in a later post.</p>
+<p>To start unit testing you&#8217;ll need a library to run these tests. Generally there is one or two good testing libraries for most languages. For Javascript I&#8217;d recommend mocha for Node.js testing or Jasmine for client side testing, for Java JUnit with Mockito is awesome and for PHP PHPUnit works well.</p>
+<p>Unit tests are the simplest, fastest and often most fragile tests. They aren&#8217;t the best for ensuring your app is bug free but they are perfect for eliminating existing bugs and ensuring they never occur again.</p>
+<p>The thing I love about unit tests is because they are so fast and easy to write you can do a process known as test driven development. This is where you write unit tests for your code before you write a single line of code. So in the remove comma example above we could write an empty removeComma function, then write the above test and run it only to see it fail, then after it has failed we create our removeComma function and run the test again and when it passes it means our code is working.</p>
+<p>When you do test driven development constantly you can save hours by not needing to run your app after each code change. You simply test then code, test then code and eventually at the end you run your app and because every function works as it should your app should (in theory) work perfectly first go. It&#8217;s amazing when you get into this flow because if you&#8217;re building a large app you can continue to code for hours and really get into the zone without having to recompile everything and boot up your app to see if it&#8217;s working as it should.</p>
+<p><strong>Better testing with Integration and Acceptance tests</strong></p>
+<p>After you&#8217;ve mastered the art of the unit test there are even more powerful tests that you can use that will allow you to deploy your application without even running it and know that all functionality is working.</p>
+<p>You do this by creating integration and acceptance tests. Unlike unit tests Integration and Acceptance tests actually test your app in a real environment with database and network calls. Integration tests are similar to unit tests in that they run one function or a group of functions in order and check that they are all working as they should. The difference is integration tests run the code as if a real user was calling the function, so if the function creates records in the database the integration test will do that, and if your function calls another external service the integration test will do that too.</p>
+<p>Here&#8217;s an example of a PHP integration test in <a title="ZenTester" href="http://www.zentester.com/">ZenTester</a>:</p>
+<pre><code>/**
+* @test
+*/
+function Checklogin() {
+$this-&gt;ci-&gt;load-&gt;library('userManager');
+
+$random_key = self::$random_key;
+$reg_data = ut_get_registration_data($random_key);
+
+//logout first (check_login function in controller does this too). 
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;logout(), true, "logging out before logging in");        
+$this-&gt;assertEquals(is_array($this-&gt;ci-&gt;usermanager-&gt;register_user($reg_data, 0)), true, "Registering User With All information");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;login($reg_data['email'], $reg_data['password']), true, "logging in to this user");
+$user_id = $this-&gt;ci-&gt;user-&gt;get_user_id();
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;is_valid_user(), true, "Checking that after login we are a valid user.");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;logout(), true, "Testing logging out");
+$this-&gt;assertEquals($this-&gt;ci-&gt;user-&gt;is_valid_user(), false, "Checking that we are not a valid user after logging out. ");
+
+ut_erase_user($user_id);
+}
+
+</code></pre>
+<p>In this integration test we first create a new user with the helper function ut_get_registration_data. Then we register and log in with that user. After logging in we ensure that the user has successfully logged in and is valid. Then we log out and check that this also worked. Finally the user is deleted at the end.</p>
+<p>In this case we create and clean up all our data so the database isn&#8217;t littered with test data. The downside of always deleting your data at the end of the test is you may find that it&#8217;s hard to track down why an integration test is failing because you can&#8217;t see what was created and what wasn&#8217;t. At Wotif we don&#8217;t clean up our data at the end of each tests and instead re-use the test data upon every run and delete old data at the beginning of each test. This way you don&#8217;t add much test data to the database while still being able to figure out what went wrong when a test fails.</p>
+<p>Acceptance tests are another level of abstraction, they use your app from a users perspective, loading pages, clicking on links etc and ensuring what is shown to the user after performing specific functions is correct. They are often done with tools such as <a title="Selenium" href="http://docs.seleniumhq.org/">selenium</a> or <a title="Curl" href="http://curl.haxx.se/">curl</a>. At Wotif we&#8217;ve been using CucumberJVM to run selenium on a remote box which loads up our app, tests that all the main features are working from a user perspective and reports if anything is broken. These are then run automatically by Team City every time we push a change.</p>
+<p>&nbsp;</p>
+<p><strong>Using GruntJS to build your assets </strong></p>
+<p>Grunt is the second most amazing part of the deployment process. It basically takes the application and builds it so it&#8217;s ready to upload. It currently does all of the following (the grunt plugin used to do each item is in brackets):</p>
+<ul>
+<li><span style="line-height: 13px;">Bumps the game version number (grunt-bump)</span></li>
+<li>Checks the javascript for any errors (lint)</li>
+<li>Cleans the build directory (grunt-contrib-clean)</li>
+<li>Copies all the correct files to the build directory (grunt-contrib-copy)</li>
+<li>Turns all the cofeescript into javascript (grunt-contrib-coffee)</li>
+<li>Builds the core game javascript into a single js file (grunt-exec which runs impact.js&#8217;s build tool which is coded in php)</li>
+<li>Uglify&#8217;s (minifies) the javascript along with all external libraries and config files into a single game.min.js file (grunt-contrib-uglify)</li>
+<li>Compiles all the less css files (grunt-contrib-less)</li>
+<li>Minifies the css and puts it into one file (grunt-contrib-cssmin)</li>
+<li>Compiles the jade files into html (grunt-contrib-jade)</li>
+<li>Uploads all the compressed and compiled assets to a new folder on amazon s3, the folder name is the current game version number (grunt-s3)</li>
+</ul>
+<p>It&#8217;s a complicated process yet grunt.js handles most of these tasks with very little configuration needed and can do all of this in under 30 seconds.</p>
+<p>The assets are uploaded to a new amazon s3 folder of the builds version number so that assets are never overwritten and users who are still playing the game are not interrupted. You can do this by setting the variable pkg to your package.json file then using the variable &lt;% pkg.version %&gt; in your s3 upload script. My s3 task looks like this:</p>
+<pre><code>grunt.initConfig({
+bump: {},
+pkg: grunt.file.readJSON('package.json'), 
+s3: {
+bucket: 'towerstorm',
+access: 'public-read',
+
+// Files to be uploaded.
+upload: [        
+{
+src: 'build/public/js/lobby.min.js',
+dest: 'game-server/&lt;%= pkg.version %&gt;/js/lobby.min.js',
+gzip: true
+},
+{
+src: 'build/public/css/lobby.min.css',
+dest: 'game-server/&lt;%= pkg.version %&gt;/css/lobby.min.css',
+gzip: true
+}
+]
+}
+});
+</code></pre>
+<p>If you&#8217;re using grunt-bump to auto bump the version number with every build you&#8217;ll also need to modify the grunt-bump/tasks/bump.js file and add the following line to the bottom of the grunt.registerTask function so that after the version is bumped the variable pkg is set to the latest version:</p>
+<pre><code>grunt.config.set("pkg", grunt.file.readJSON("package.json"));
+</code></pre>
+<p>In the game code it simply loads the assets for it&#8217;s current version number so even if people start games after this build process is done they will load the old game assets and it&#8217;s only when the new version is deployed and Node.js is restarted that the new assets will be loaded. This way the server code and game client code are always in sync. Lastly versioning the assets also ensures that users browser don&#8217;t cache old assets which could cause errors if gameplay changes are introduced yet clients are loading an old cached version of the game.</p>
+<p>All the TowerStorm servers are hosted using Amazon EC2 and in the future I&#8217;m looking to implement a system where with each new version a bunch of new servers are spawned with the new game client and assets, then whenever players start new games they are all started on the new servers only and the old servers only stay alive until the last game is finished then they are powered down. This will allow us to continually release new versions of Tower Storm without ever having &#8216;patch downtime&#8217;.</p>
+<p><strong>Continuous Integration</strong></p>
+<p><strong></strong>The third step is to take this unit testing and asset building and automate it with a dedicated server that runs everything in a server like environment. This way if you have a team of developers they don&#8217;t each have to set up grunt and acceptance tests and full build environment on their machine, instead every time they commit a new change the continuous integration server downloads the new code from git, compiles it using grunt and runs all the unit tests using either a custom private server setup or running them on it&#8217;s own machine using it&#8217;s own browser or a headless browser like phantomjs.</p>
+<p>I haven&#8217;t yet set up a continuous integration server for Tower Storm as I&#8217;m currently the only developer and it was easier to set everything up locally (especially in these very early stages) but I&#8217;ll definitely be setting on up soon. At Wotif we&#8217;ve tried out Jenkins, Bamboo and Teamcity and all were good in some ways and bad in others. I myself prefer the layout and feel of Bamboo the most however this is often personal preference as other members of our team prefer Teamcity&#8217;s layout more. Jenkins is probably the least liked in usability and layout but it is completely free and comes with tons of plugins for doing almost every task you like so if that&#8217;s what you&#8217;re looking for then it&#8217;ll work well for you.</p>
+<p><strong>Automated cmd files and the 2 button deploy process</strong></p>
+<p><strong></strong>To tie all these various testing, running and deploying scripts together I&#8217;ve created a few command files (yes I run windows 8, although I use Ubuntu at Wotif and the Tower Storm servers are running Linux) that make things even easier. Here&#8217;s what they do:<span style="line-height: 13px;"><br />
+</span></p>
+<p>commitAndPush.cmd &#8211; Runs tortoisegit (my favourite git gui by far) commit screen then push&#8217;s the code after you&#8217;ve committed your changes. It looks like so:</p>
+<pre><code>call E:\\apps\\scripts\\tgit.cmd commit C:\\coding\\node\\towerstorm\\GameServer
+call git push --all --progress  BitBucket
+pause
+
+</code></pre>
+<p>the tgit.cmd file it refrences is a hook to tortoisegit to make it run any command from the command line. It&#8217;s contents are:</p>
+<pre><code>"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe" /command:%1 /path:%2
+</code></pre>
+<p>devenv.cmd &#8211; Runs the game locally using node-dev which makes it auto restart whenever a change is made and it also runs test.cmd explained next:</p>
+<pre><code>set NODE_ENV=development
+start cmd.exe /K "cd .. &amp;&amp; call ./node_modules/.bin/node-dev server.coffee"
+start cmd.exe /K "cd .. &amp;&amp; call scripts/test unit"
+</code></pre>
+<p>test.cmd &#8211; This loads a cmd prompt that automatically runs all the unit tests using mocha and re-runs them whenever a test is made. It scans the test directory for all coffeescript files and runs them:</p>
+<pre><code>setlocal EnableDelayedExpansion
+IF "%1" == "" (
+SET files=C:\\cygwin\\bin\\find test -name "*.coffee"
+) ELSE (
+SET files=C:\\cygwin\\bin\\find test\\%1 -name "*.coffee"
+)
+
+FOR /F %%i IN (' %files% ') DO SET tests=!tests! %%i 
+.\\node_modules\\.bin\\mocha --watch --reporter min --slow 10 --globals $ --compilers coffee:coffee-script --require coffee-script test\\_helper %tests%
+pause
+</code></pre>
+<p>I run these scripts by binding them to the macro keys on my Logitech G15 keyboard (which I bought mainly because it had these keys). I have the dev environment setup bound to one key, grunt bound to another and commit and push bound to a third. This way I can develop in one key press and deploy a new version of Tower Storm using just 2 buttons <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Hope this was informative enough and if you have any questions or are confused about any steps let me know.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&amp;linkname=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Ftower-storm-and-my-30-second-2-button-deployment-process%2F&#038;title=Tower%20Storm%20and%20my%2030%20second%202%20button%20deployment%20process" data-a2a-url="/tower-storm-and-my-30-second-2-button-deployment-process/" data-a2a-title="Tower Storm and my 30 second 2 button deployment process"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/tower-storm-and-my-30-second-2-button-deployment-process/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to stop NodeJS Mocha unit testing console beeping</title>
+		<link>/how-to-stop-nodejs-mocha-unit-testing-console-beeping/</link>
+					<comments>/how-to-stop-nodejs-mocha-unit-testing-console-beeping/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Tue, 27 Nov 2012 10:00:04 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[mocha]]></category>
+		<category><![CDATA[nodejs]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[unit testing]]></category>
+		<category><![CDATA[windows]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-stop-nodejs-mocha-unit-testing-console-beeping/</guid>
+
+					<description><![CDATA[Thought I&#8217;d create this post to save others the 20 minutes I wasted wondering why NodeJS and Mocha Tests were making my console bleep over and over. The problem isn&#8217;t with node, it&#8217;s with windows console beeping whenever the console.error command is sent to it (I believe). You can disable the bleeping by following the <a class="read-more" href="/how-to-stop-nodejs-mocha-unit-testing-console-beeping/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Thought I&#8217;d create this post to save others the 20 minutes I wasted wondering why NodeJS and Mocha Tests were making my console bleep over and over.</p>
+<p>The problem isn&#8217;t with node, it&#8217;s with windows console beeping whenever the console.error command is sent to it (I believe).</p>
+<p>You can disable the bleeping by following the instructions here:</p>
+<p><a href="http://superuser.com/questions/10575/turning-off-the-cmd-window-beep-sound">http://superuser.com/questions/10575/turning-off-the-cmd-window-beep-sound</a></p>
+<p>The instructions are also below in case this link is ever broken in the future:</p>
+<blockquote><p> The Windows command line command &#8220;net stop beep&#8221; will turn off the beeping, and &#8220;net start beep&#8221; will turn on the beeping.</p></blockquote>
+<p>And how to disable it permanently:</p>
+<blockquote>
+<ol>
+<li>Right-click My Computer and select Manage.</li>
+<li>Expand System Tools and select Device Manager.</li>
+<li>From the View menu, select Show hidden devices.</li>
+<li>Expand Non-Plug and Play Drivers.</li>
+<li>Right-click Beep, and select Properties.</li>
+<li>Select the Drivers tab.</li>
+<li>Click Stop. You can also change the start-up type to Disabled so the beep service never starts.</li>
+</ol>
+</blockquote>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&amp;linkname=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fhow-to-stop-nodejs-mocha-unit-testing-console-beeping%2F&#038;title=How%20to%20stop%20NodeJS%20Mocha%20unit%20testing%20console%20beeping" data-a2a-url="/how-to-stop-nodejs-mocha-unit-testing-console-beeping/" data-a2a-title="How to stop NodeJS Mocha unit testing console beeping"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/how-to-stop-nodejs-mocha-unit-testing-console-beeping/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

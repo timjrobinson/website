@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>new technology &#8211; TimJRobinson</title>
+	<atom:link href="/tag/new-technology/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Mon, 18 Jun 2012 06:55:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>A Distributed, Open Source, Peer to Peer, Encrypted Data Store</title>
+		<link>/a-distributed-open-source-peer-to-peer-encrypted-data-store/</link>
+					<comments>/a-distributed-open-source-peer-to-peer-encrypted-data-store/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Mon, 18 Jun 2012 06:55:44 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[ideas]]></category>
+		<category><![CDATA[new technology]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/a-distributed-open-source-peer-to-peer-encrypted-data-store/</guid>
+
+					<description><![CDATA[The thing I love and hate most about Facebook is that it has ALL my data. It&#8217;s fantastic that third party programs such as AirTime are able to link into Facebook and get all my data to personalize their site experience to me, but it&#8217;s bad that Facebook is the one in control of all <a class="read-more" href="/a-distributed-open-source-peer-to-peer-encrypted-data-store/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>The thing I love and hate most about Facebook is that it has ALL my data. It&#8217;s fantastic that third party programs such as AirTime are able to link into Facebook and get all my data to personalize their site experience to me, but it&#8217;s bad that Facebook is the one in control of all this data, and one company having a monopoly over everyone&#8217;s information is a really bad idea.</p>
+<p>What I&#8217;d love to see created is something similar to Bitcoin but for data. An open source network of computers that allow you to store any arbitrary data in the network encrypted with your own private key, then retrieve that data at any time anywhere. I&#8217;d imagine it&#8217;d be a key-value library system similar to Redis. Apps could then easily integrate with this network to either store or retrieve any data when you give them the key for it. You could possibly have different keys for different types of data or sections of data.</p>
+<p>Basically it would allow everything that Facebook does currently but with a data store that no one controls and no one can access unless you give them explicit permission to.</p>
+<p>What could be possible using this data store:</p>
+<ul>
+<li>A radio for your car that via 3G connects to the data store, grabs all your favourite bands / songs / music and streams them + finds and streams related music automatically (like pandora). You could then press if you like or dislike songs and it would save that back to the data store. Then at home on your PC you could load up your favourite music buying site, connect it to the data store, see all the songs you&#8217;ve recently enjoyed in your car and purchase them instantly. It would completely disrupt the current radio and music industry and be amazing for the indie music scene.</p>
+</li>
+<li>
+<p>Your fridge auto monitors the food you put into it, and saves out what you&#8217;ve consumed to the database, then a shopping list app automatically generates a shopping list based on your personal food preferences and what&#8217;s currently missing in your fridge. Taking it one step further it a local grocer (or even farmer!) could tap into the database and auto ship you your weekly food based on what you&#8217;ve consumed.</p>
+</li>
+<li>
+<p>Dating sites could grab data for your likes / dislikes, partner preferences and so on to automatically find amazing matches for you (and most people are currently wary of linking dating sites to Facebook).</p>
+</li>
+</ul>
+<p>It would help create an amazingly interconnected world without the need to interface with Facebook or any other companies. Also there are already scripts out there for exporting Facebook data, so it should be easy enough to port your data into this new data store in seconds.</p>
+<p>Of course a lot of this is currently possible via Facebook, but most companies are afraid of Facebook and building technology that integrates deeply with it for fear of it not being around in the future or general fear of giving up so much data to another company. With a data store such as this companies are free to integrate as much as they like without worry of anyone taking it away from them, blocking them out or it shutting down.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&amp;linkname=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fa-distributed-open-source-peer-to-peer-encrypted-data-store%2F&#038;title=A%20Distributed%2C%20Open%20Source%2C%20Peer%20to%20Peer%2C%20Encrypted%20Data%20Store" data-a2a-url="/a-distributed-open-source-peer-to-peer-encrypted-data-store/" data-a2a-title="A Distributed, Open Source, Peer to Peer, Encrypted Data Store"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/a-distributed-open-source-peer-to-peer-encrypted-data-store/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

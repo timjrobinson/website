@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Daily coding lessons	</title>
+	<atom:link href="/daily-coding-lessons/feed/" rel="self" type="application/rss+xml" />
+	<link>/daily-coding-lessons/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Thu, 16 Feb 2017 18:20:00 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		By: Joe Zimmerman		</title>
+		<link>/daily-coding-lessons/#comment-16</link>
+
+		<dc:creator><![CDATA[Joe Zimmerman]]></dc:creator>
+		<pubDate>Thu, 16 Feb 2017 18:20:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-16</guid>
+
+					<description><![CDATA[You realize you essentially just recreated the models from Backbone, right? Except you don&#039;t have events and you use a back end DB instead of making an AJAX call to a REST service. Also you moved the &quot;findbyid&quot; function into the single User object rather than using a collection object. 
+
+You should try Ampersand for something similar to this that works nicer with Node. It was based off Backbone.
+
+Oh and thanks for linking to my site for the ES6 classes tutorial. :-)]]></description>
+			<content:encoded><![CDATA[<p>You realize you essentially just recreated the models from Backbone, right? Except you don&#8217;t have events and you use a back end DB instead of making an AJAX call to a REST service. Also you moved the &#8220;findbyid&#8221; function into the single User object rather than using a collection object. </p>
+<p>You should try Ampersand for something similar to this that works nicer with Node. It was based off Backbone.</p>
+<p>Oh and thanks for linking to my site for the ES6 classes tutorial. 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Emanuell Paredes		</title>
+		<link>/daily-coding-lessons/#comment-15</link>
+
+		<dc:creator><![CDATA[Emanuell Paredes]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2016 20:42:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-15</guid>
+
+					<description><![CDATA[which change are necesary for implement this practice in javascript 6.
+Thank]]></description>
+			<content:encoded><![CDATA[<p>which change are necesary for implement this practice in javascript 6.<br />
+Thank</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Dave Morris		</title>
+		<link>/daily-coding-lessons/#comment-14</link>
+
+		<dc:creator><![CDATA[Dave Morris]]></dc:creator>
+		<pubDate>Fri, 05 Aug 2016 15:56:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-14</guid>
+
+					<description><![CDATA[Thanks Tim, really useful!]]></description>
+			<content:encoded><![CDATA[<p>Thanks Tim, really useful!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Chaim Eliyah		</title>
+		<link>/daily-coding-lessons/#comment-12</link>
+
+		<dc:creator><![CDATA[Chaim Eliyah]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2015 21:01:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-12</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/daily-coding-lessons/#comment-10&quot;&gt;Chaim Eliyah&lt;/a&gt;.
+
+another question, though -- in schemas.js, would the practice be to have schemas.js match the database schemas, and then have the tables be elements within each schema?
+e.g.,
+schemas = {
+user : [ internalUser: { key: value }, externalUser: { key: value } ]
+}
+
+etc.?]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/daily-coding-lessons/#comment-10">Chaim Eliyah</a>.</p>
+<p>another question, though &#8212; in schemas.js, would the practice be to have schemas.js match the database schemas, and then have the tables be elements within each schema?<br />
+e.g.,<br />
+schemas = {<br />
+user : [ internalUser: { key: value }, externalUser: { key: value } ]<br />
+}</p>
+<p>etc.?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Chaim Eliyah		</title>
+		<link>/daily-coding-lessons/#comment-11</link>
+
+		<dc:creator><![CDATA[Chaim Eliyah]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2015 16:33:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-11</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/daily-coding-lessons/#comment-10&quot;&gt;Chaim Eliyah&lt;/a&gt;.
+
+Oh crud. I think you already answered that. var self = this.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/daily-coding-lessons/#comment-10">Chaim Eliyah</a>.</p>
+<p>Oh crud. I think you already answered that. var self = this.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Chaim Eliyah		</title>
+		<link>/daily-coding-lessons/#comment-10</link>
+
+		<dc:creator><![CDATA[Chaim Eliyah]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2015 16:30:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-10</guid>
+
+					<description><![CDATA[--first question already answered above]]></description>
+			<content:encoded><![CDATA[<p>&#8211;first question already answered above</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Dung Phan		</title>
+		<link>/daily-coding-lessons/#comment-9</link>
+
+		<dc:creator><![CDATA[Dung Phan]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2015 09:30:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-9</guid>
+
+					<description><![CDATA[So how can i struct model lile:
+model User {
+
+
+  function getAll(){
+}
+ function aaa(){
+}
+..}
+
+
+How can i do i with node js! thank.]]></description>
+			<content:encoded><![CDATA[<p>So how can i struct model lile:<br />
+model User {</p>
+<p>  function getAll(){<br />
+}<br />
+ function aaa(){<br />
+}<br />
+..}</p>
+<p>How can i do i with node js! thank.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Dung Phan		</title>
+		<link>/daily-coding-lessons/#comment-8</link>
+
+		<dc:creator><![CDATA[Dung Phan]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2015 09:21:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-8</guid>
+
+					<description><![CDATA[It usefull, 
+So i want to user collect data from rest api. so cant i do it. thank]]></description>
+			<content:encoded><![CDATA[<p>It usefull,<br />
+So i want to user collect data from rest api. so cant i do it. thank</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Gabor Szathmari		</title>
+		<link>/daily-coding-lessons/#comment-7</link>
+
+		<dc:creator><![CDATA[Gabor Szathmari]]></dc:creator>
+		<pubDate>Tue, 30 Jun 2015 21:53:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-7</guid>
+
+					<description><![CDATA[This is just what I was looking for, thanks for the informative article]]></description>
+			<content:encoded><![CDATA[<p>This is just what I was looking for, thanks for the informative article</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Diogo Alves		</title>
+		<link>/daily-coding-lessons/#comment-6</link>
+
+		<dc:creator><![CDATA[Diogo Alves]]></dc:creator>
+		<pubDate>Sat, 06 Jun 2015 00:33:00 +0000</pubDate>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/daily-coding-lessons/#comment-6</guid>
+
+					<description><![CDATA[Tim thank you for share. Could you create more one example that show models N:N, N:1 and 1:1? Eg. how can i update this code to use 1 user have a lot of posts, just add this attribute in schemas.js? Tnks.]]></description>
+			<content:encoded><![CDATA[<p>Tim thank you for share. Could you create more one example that show models N:N, N:1 and 1:1? Eg. how can i update this code to use 1 user have a lot of posts, just add this attribute in schemas.js? Tnks.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

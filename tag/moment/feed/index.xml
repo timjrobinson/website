@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>moment &#8211; TimJRobinson</title>
+	<atom:link href="/tag/moment/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Always be learning</description>
+	<lastBuildDate>Tue, 17 Jun 2014 16:02:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>How to mock and unit test moment.js</title>
+		<link>/how-to-mock-and-unit-test-moment-js/</link>
+					<comments>/how-to-mock-and-unit-test-moment-js/#comments</comments>
+		
+		<dc:creator><![CDATA[Tim Robinson]]></dc:creator>
+		<pubDate>Tue, 17 Jun 2014 16:02:57 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[mocha]]></category>
+		<category><![CDATA[mocking]]></category>
+		<category><![CDATA[moment]]></category>
+		<category><![CDATA[moment timezone]]></category>
+		<category><![CDATA[moment.js]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[unit test]]></category>
+		<category><![CDATA[unit testing]]></category>
+		<guid isPermaLink="false">http://ec2-52-36-187-147.us-west-2.compute.amazonaws.com/how-to-mock-and-unit-test-moment-js/</guid>
+
+					<description><![CDATA[I&#8217;ve been using moment.js in some client work for a rather complex booking form.Unfortunately date related functionality is almost impossible to manually test so we implemented unit tests to ensure everything worked as it should. Code like this is perfect for unit testing because it&#8217;s completely rules based. Mocking moment.js seemed hard at first but <a class="read-more" href="/how-to-mock-and-unit-test-moment-js/">&#8230;&#160;<span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve been using moment.js in some client work for a rather complex booking form.Unfortunately date related functionality is almost impossible to manually test so we implemented unit tests to ensure everything worked as it should. Code like this is perfect for unit testing because it&#8217;s completely rules based.</p>
+<p>Mocking moment.js seemed hard at first but wasn&#8217;t too complicated after a bit of thought. Here&#8217;s an example of how to mock it using mocha.</p>
+<p>First we have the booking manager validate function that needs to be tested. This function ensures that customers cannot make bookings for the next day after 3pm. It also ensures customers cannot make bookings for saturday and monday after 3pm on friday.</p>
+<pre><code>/** booking-manager.js **/
+
+BookingManager = {
+getCurrentTime: function () {
+return moment().tz(config.TIMEZONE)    
+},
+validate: function(formData) {
+var bookingDay, currentTime;
+currentTime = this.getCurrentTime();
+bookingDay = moment(formData.dateAndTime.date, "YYYYMMDD").tz(config.TIMEZONE);
+if (bookingDay.isBefore(currentTime, 'day') || bookingDay.isSame(currentTime, 'day')) {
+return false;
+}
+if (currentTime.format('HH') &gt;= config.NEXT_DAY_CUTOFF_TIME) {
+if (bookingDay.isSame(moment(currentTime).add('days', 1), 'day')) {
+return false;
+}
+if (currentTime.day() === 5 &amp;&amp; bookingDay.day() === 1) {
+return false;
+}
+}
+if ((currentTime.day() === 6 || currentTime.day() === 0) &amp;&amp; bookingDay.day() === 1) {
+return false;
+}
+return true;
+}
+}
+
+</code></pre>
+<p>Now we need to test this function to ensure it works. The problem is we have to test booking restrictions are working on every day of the week. So we need to mock out the getCurrentTime function to pretend we&#8217;re submitting the form at different times.</p>
+<pre><code>/* booking-manager-unit-test.js **/
+
+describe("BookingManager", function() {
+var currentDayOfWeek, currentHour, originalGetCurrentTime, formData;
+currentHour = null;
+currentDayOfWeek = null;
+originalGetCurrentTime = null;
+formData = null;
+
+beforeEach(function() {
+var currentDayOfWeek, currentHour, originalGetCurrentTime;
+currentHour = 12;
+currentDayOfWeek = 1;
+formData = { dateAndTime: { date: null }};
+originalGetCurrentTime = bookingManager.getCurrentTime;
+bookingManager.getCurrentTime = function() {
+var currentTime;
+currentTime = originalGetCurrentTime.call(bookingManager);
+currentTime.day(currentDayOfWeek);
+currentTime.hour(currentHour);
+return currentTime;
+};
+});
+
+afterEach(function() {
+return bookingManager.getCurrentTime = originalGetCurrentTime;
+});
+});
+
+
+
+</code></pre>
+<p>This is the meat of the mocking. We set up two variables currentHour and currentDayOfWeek. Then we use these in our mock getCurrentTime function to fake the current time.</p>
+<pre><code>describe("validate", function() {
+it("Should return false if the booking date is the current day or before", function() {
+var formData, today;
+today = bookingManager.getCurrentTime();
+formData.dateAndTime.date = today.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is a next day booking and the time is past 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 16;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is a next day booking and the time hour is 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 15;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on saturday for monday", function() {
+var currentDayOfWeek, formData, monday;
+currentDayOfWeek = 6;
+monday = bookingManager.getCurrentTime().add('days', 2);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on sunday for monday", function() {
+var currentDayOfWeek, formData, monday;
+currentDayOfWeek = 0;
+monday = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return false if the booking is made on friday after 3pm for monday", function() {
+var currentDayOfWeek, currentHour, formData, monday;
+currentDayOfWeek = 5;
+currentHour = 15;
+monday = bookingManager.getCurrentTime().add('days', 3);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), false);
+});
+
+it("Should return true if the booking is made on friday before 3pm for monday", function() {
+var currentDayOfWeek, currentHour, formData, monday;
+currentDayOfWeek = 5;
+currentHour = 13;
+monday = bookingManager.getCurrentTime().add('days', 3);
+formData.dateAndTime.date = monday.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+
+it("Should return true if the booking is a next day booking and the time is before 3pm", function() {
+var currentHour, formData, tomorrow;
+currentHour = 12;
+tomorrow = bookingManager.getCurrentTime().add('days', 1);
+formData.dateAndTime.date = tomorrow.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+
+it("Should return true if it's past 3pm but the booking is not a next day booking", function() {
+var currentHour, formData, future;
+currentHour = 16;
+future = bookingManager.getCurrentTime().add('days', 2);
+formData.dateAndTime.date = future.format('YYYYMMDD');
+assert.equal(bookingManager.validate(formData), true);
+});
+});
+
+
+</code></pre>
+<p>As you can see using this mock function is quite easy. You simply change the currentHour or currentDayOfWeek variables and that&#8217;s what the time becomes.</p>
+<p>Have fun coding and let me know if you find any issues with the above code or feel it can be improved.</p>
+<p><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_pocket" href="https://www.addtoany.com/add_to/pocket?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Pocket" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2Fhow-to-mock-and-unit-test-moment-js%2F&amp;linkname=How%20to%20mock%20and%20unit%20test%20moment.js" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share#url=%2Fhow-to-mock-and-unit-test-moment-js%2F&#038;title=How%20to%20mock%20and%20unit%20test%20moment.js" data-a2a-url="/how-to-mock-and-unit-test-moment-js/" data-a2a-title="How to mock and unit test moment.js"></a></p>]]></content:encoded>
+					
+					<wfw:commentRss>/how-to-mock-and-unit-test-moment-js/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
